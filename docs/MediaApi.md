@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InitiateChunkedUpload200Response**](InitiateChunkedUpload200Response.md)
+[**InitiateChunkedUpload201Response**](InitiateChunkedUpload201Response.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InitiateRemoteUpload200Response**](InitiateRemoteUpload200Response.md)
+[**InitiateRemoteUpload201Response**](InitiateRemoteUpload201Response.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UploadChunk200Response**](UploadChunk200Response.md)
+[**UploadChunk201Response**](UploadChunk201Response.md)
 
 ### Authorization
 

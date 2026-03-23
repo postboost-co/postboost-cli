@@ -152,6 +152,7 @@ operation_parameters_minimum_occurrences["deleteReceiptsBulk:::DeleteReceiptsBul
 operation_parameters_minimum_occurrences["getReceipt:::receiptUuid"]=1
 operation_parameters_minimum_occurrences["listReceipts:::workspace_uuid"]=0
 operation_parameters_minimum_occurrences["listReceipts:::invoice_number"]=0
+operation_parameters_minimum_occurrences["listReceipts:::page"]=0
 operation_parameters_minimum_occurrences["updateReceipt:::receiptUuid"]=1
 operation_parameters_minimum_occurrences["updateReceipt:::ReceiptUpdateInput"]=1
 operation_parameters_minimum_occurrences["addGenericSubscription:::workspaceUuid"]=1
@@ -184,6 +185,7 @@ operation_parameters_minimum_occurrences["deleteUser:::userId"]=1
 operation_parameters_minimum_occurrences["deleteUsersBulk:::DeleteUsersBulkRequest"]=1
 operation_parameters_minimum_occurrences["getUser:::userId"]=1
 operation_parameters_minimum_occurrences["listUsers:::keyword"]=0
+operation_parameters_minimum_occurrences["listUsers:::page"]=0
 operation_parameters_minimum_occurrences["updateUser:::userId"]=1
 operation_parameters_minimum_occurrences["updateUser:::UserUpdateInput"]=1
 operation_parameters_minimum_occurrences["addUserToWorkspace:::workspaceUuid"]=1
@@ -195,6 +197,7 @@ operation_parameters_minimum_occurrences["getWorkspace:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["listWorkspaces:::keyword"]=0
 operation_parameters_minimum_occurrences["listWorkspaces:::subscription_status"]=0
 operation_parameters_minimum_occurrences["listWorkspaces:::access_status"]=0
+operation_parameters_minimum_occurrences["listWorkspaces:::page"]=0
 operation_parameters_minimum_occurrences["removeUserFromWorkspace:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["removeUserFromWorkspace:::RemoveUserFromWorkspaceRequest"]=1
 operation_parameters_minimum_occurrences["updateWorkspace:::workspaceUuid"]=1
@@ -265,6 +268,7 @@ operation_parameters_maximum_occurrences["deleteReceiptsBulk:::DeleteReceiptsBul
 operation_parameters_maximum_occurrences["getReceipt:::receiptUuid"]=0
 operation_parameters_maximum_occurrences["listReceipts:::workspace_uuid"]=0
 operation_parameters_maximum_occurrences["listReceipts:::invoice_number"]=0
+operation_parameters_maximum_occurrences["listReceipts:::page"]=0
 operation_parameters_maximum_occurrences["updateReceipt:::receiptUuid"]=0
 operation_parameters_maximum_occurrences["updateReceipt:::ReceiptUpdateInput"]=0
 operation_parameters_maximum_occurrences["addGenericSubscription:::workspaceUuid"]=0
@@ -297,6 +301,7 @@ operation_parameters_maximum_occurrences["deleteUser:::userId"]=0
 operation_parameters_maximum_occurrences["deleteUsersBulk:::DeleteUsersBulkRequest"]=0
 operation_parameters_maximum_occurrences["getUser:::userId"]=0
 operation_parameters_maximum_occurrences["listUsers:::keyword"]=0
+operation_parameters_maximum_occurrences["listUsers:::page"]=0
 operation_parameters_maximum_occurrences["updateUser:::userId"]=0
 operation_parameters_maximum_occurrences["updateUser:::UserUpdateInput"]=0
 operation_parameters_maximum_occurrences["addUserToWorkspace:::workspaceUuid"]=0
@@ -308,6 +313,7 @@ operation_parameters_maximum_occurrences["getWorkspace:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["listWorkspaces:::keyword"]=0
 operation_parameters_maximum_occurrences["listWorkspaces:::subscription_status"]=0
 operation_parameters_maximum_occurrences["listWorkspaces:::access_status"]=0
+operation_parameters_maximum_occurrences["listWorkspaces:::page"]=0
 operation_parameters_maximum_occurrences["removeUserFromWorkspace:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["removeUserFromWorkspace:::RemoveUserFromWorkspaceRequest"]=0
 operation_parameters_maximum_occurrences["updateWorkspace:::workspaceUuid"]=0
@@ -375,6 +381,7 @@ operation_parameters_collection_type["deleteReceiptsBulk:::DeleteReceiptsBulkReq
 operation_parameters_collection_type["getReceipt:::receiptUuid"]=""
 operation_parameters_collection_type["listReceipts:::workspace_uuid"]=""
 operation_parameters_collection_type["listReceipts:::invoice_number"]=""
+operation_parameters_collection_type["listReceipts:::page"]=""
 operation_parameters_collection_type["updateReceipt:::receiptUuid"]=""
 operation_parameters_collection_type["updateReceipt:::ReceiptUpdateInput"]=""
 operation_parameters_collection_type["addGenericSubscription:::workspaceUuid"]=""
@@ -407,6 +414,7 @@ operation_parameters_collection_type["deleteUser:::userId"]=""
 operation_parameters_collection_type["deleteUsersBulk:::DeleteUsersBulkRequest"]=""
 operation_parameters_collection_type["getUser:::userId"]=""
 operation_parameters_collection_type["listUsers:::keyword"]=""
+operation_parameters_collection_type["listUsers:::page"]=""
 operation_parameters_collection_type["updateUser:::userId"]=""
 operation_parameters_collection_type["updateUser:::UserUpdateInput"]=""
 operation_parameters_collection_type["addUserToWorkspace:::workspaceUuid"]=""
@@ -418,6 +426,7 @@ operation_parameters_collection_type["getWorkspace:::workspaceUuid"]=""
 operation_parameters_collection_type["listWorkspaces:::keyword"]=""
 operation_parameters_collection_type["listWorkspaces:::subscription_status"]=""
 operation_parameters_collection_type["listWorkspaces:::access_status"]=""
+operation_parameters_collection_type["listWorkspaces:::page"]=""
 operation_parameters_collection_type["removeUserFromWorkspace:::workspaceUuid"]=""
 operation_parameters_collection_type["removeUserFromWorkspace:::RemoveUserFromWorkspaceRequest"]=""
 operation_parameters_collection_type["updateWorkspace:::workspaceUuid"]=""
@@ -1059,8 +1068,8 @@ print_completeChunkedUpload_help() {
     echo -e "  * ${GREEN}uploadUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: uploadUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Completed media object${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Completed media object${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
@@ -1150,8 +1159,8 @@ print_initiateChunkedUpload_help() {
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Chunked upload session details${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Chunked upload session details${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
@@ -1176,8 +1185,8 @@ For large files a 'download_id' is returned — poll the status endpoint." | pas
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Media object or download job${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Media object or download job${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
@@ -1246,8 +1255,8 @@ print_uploadChunk_help() {
     echo -e "  * ${GREEN}uploadUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: uploadUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Chunk received${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Chunk received${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
@@ -1268,8 +1277,8 @@ print_uploadMedia_help() {
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Uploaded media object${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Uploaded media object${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
@@ -1291,8 +1300,8 @@ print_addPostToQueue_help() {
     echo -e "  * ${GREEN}postUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the post. ${YELLOW}Specify as: postUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Queue confirmation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Queue confirmation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
@@ -1342,8 +1351,8 @@ smart publishing queue." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Created post${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Created post${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
@@ -1357,6 +1366,8 @@ smart publishing queue." | paste -sd' ' | fold -sw 80
 print_deletePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deletePost - Delete post${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Deletes a post. Use 'delete_mode' to control whether to also remove the published content from social platforms." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1402,6 +1413,8 @@ print_deletePostsBulk_help() {
 print_getPost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getPost - Get post${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Returns a single post with all its versions and associated accounts." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1471,6 +1484,8 @@ print_updatePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updatePost - Update post${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Replaces a post's versions, accounts, tags, and scheduling options. The post must not be in a published state." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}postUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the post. ${YELLOW}Specify as: postUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1496,15 +1511,19 @@ print_createReceipt_help() {
     echo ""
     echo -e "${BOLD}${WHITE}createReceipt - Create receipt${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Creates a billing receipt record for a workspace. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Created receipt${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Created receipt${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1517,6 +1536,8 @@ print_deleteReceipt_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteReceipt - Delete receipt${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Permanently deletes a single receipt. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}receiptUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the receipt. ${YELLOW}Specify as: receiptUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1525,6 +1546,8 @@ print_deleteReceipt_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1537,6 +1560,8 @@ print_deleteReceiptsBulk_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteReceiptsBulk - Delete receipts (bulk)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Permanently deletes one or more receipt records. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
@@ -1546,6 +1571,8 @@ print_deleteReceiptsBulk_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1556,6 +1583,8 @@ print_getReceipt_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getReceipt - Get receipt${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Returns a single receipt by UUID. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}receiptUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the receipt. ${YELLOW}Specify as: receiptUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1564,6 +1593,8 @@ print_getReceipt_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Receipt details${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1576,10 +1607,14 @@ print_listReceipts_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listReceipts - List receipts${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Returns a paginated list of billing receipts. Filter by workspace UUID or invoice number. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspace_uuid${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: workspace_uuid=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}invoice_number${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: invoice_number=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 1)${OFF} - Page number (15 items per page).${YELLOW} Specify as: page=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1587,6 +1622,8 @@ print_listReceipts_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Paginated list of receipts${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1596,6 +1633,8 @@ print_listReceipts_help() {
 print_updateReceipt_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateReceipt - Update receipt${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Updates a receipt's transaction details, amount, or payment date. Admin only." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}receiptUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the receipt. ${YELLOW}Specify as: receiptUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1607,6 +1646,8 @@ print_updateReceipt_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1619,16 +1660,20 @@ print_addGenericSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}addGenericSubscription - Add generic subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Assigns a non-Stripe (generic) subscription plan to the workspace, optionally granting a trial period. Used for AppSumo-style lifetime deals. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1639,6 +1684,8 @@ print_cancelSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}cancelSubscription - Cancel subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Cancels the workspace's Stripe subscription at the end of the current billing period. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1647,6 +1694,8 @@ print_cancelSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1656,6 +1705,8 @@ print_cancelSubscription_help() {
 print_changeSubscriptionPlan_help() {
     echo ""
     echo -e "${BOLD}${WHITE}changeSubscriptionPlan - Change subscription plan${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Switches the workspace to a different Stripe plan. Optionally prorates the change and bills immediately. Admin only." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1667,6 +1718,8 @@ print_changeSubscriptionPlan_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1689,6 +1742,8 @@ print_checkoutSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Checkout URL${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1698,6 +1753,8 @@ print_checkoutSubscription_help() {
 print_createSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}createSubscription - Create subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Manually creates a subscription record for the workspace (for external billing integrations). Admin only." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1709,6 +1766,8 @@ print_createSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  201;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1721,6 +1780,8 @@ print_deleteSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteSubscription - Delete subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Removes the subscription record from the workspace. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1729,6 +1790,8 @@ print_deleteSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1739,6 +1802,8 @@ print_getSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getSubscription - Get subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Returns the active subscription for the workspace, or 'null' if none exists. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1747,6 +1812,8 @@ print_getSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Subscription details or null${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1757,6 +1824,8 @@ print_removeGenericSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}removeGenericSubscription - Remove generic subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Removes the generic (non-Stripe) subscription from the workspace. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1765,6 +1834,8 @@ print_removeGenericSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1775,6 +1846,8 @@ print_resumeSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}resumeSubscription - Resume subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Resumes a previously canceled subscription before it expires. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1783,6 +1856,8 @@ print_resumeSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1793,6 +1868,8 @@ print_updateSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateSubscription - Update subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Updates the plan ID, status, or trial/pause dates of an existing subscription. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1803,6 +1880,8 @@ print_updateSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1813,14 +1892,16 @@ print_createTag_help() {
     echo ""
     echo -e "${BOLD}${WHITE}createTag - Create tag${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Creates a new color-coded tag in the workspace for organizing posts." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Created tag${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Created tag${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
@@ -1834,6 +1915,8 @@ print_createTag_help() {
 print_deleteTag_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteTag - Delete tag${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Permanently deletes a tag. Posts that had this tag attached are unaffected." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1856,6 +1939,8 @@ print_getTag_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getTag - Get tag${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Returns a single tag by UUID." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}tagUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the tag. ${YELLOW}Specify as: tagUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1877,6 +1962,8 @@ print_listTags_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listTags - List tags${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Returns all tags defined in the workspace." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1894,6 +1981,8 @@ print_listTags_help() {
 print_updateTag_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateTag - Update tag${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Updates a tag's name or color." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1920,15 +2009,19 @@ print_createUser_help() {
     echo ""
     echo -e "${BOLD}${WHITE}createUser - Create user${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Creates a new user account on the platform. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Created user${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Created user${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1941,6 +2034,8 @@ print_deleteUser_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteUser - Delete user${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Permanently deletes a user account. Returns 400 if you attempt to delete your own account. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}userId${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - ID of the user. ${YELLOW}Specify as: userId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1951,6 +2046,8 @@ print_deleteUser_help() {
     echo -e "${result_color_table[${code:0:1}]}  400;Cannot delete own account${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1961,6 +2058,8 @@ print_deleteUsersBulk_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteUsersBulk - Delete users (bulk)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Permanently deletes one or more user accounts. You cannot delete your own account. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
@@ -1970,6 +2069,8 @@ print_deleteUsersBulk_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1980,6 +2081,8 @@ print_getUser_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getUser - Get user${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Returns a single user account by ID. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}userId${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - ID of the user. ${YELLOW}Specify as: userId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -1988,6 +2091,8 @@ print_getUser_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;User details${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -2000,8 +2105,12 @@ print_listUsers_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listUsers - List users${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Returns a paginated list of all users on the platform. Optionally filter by name or email. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}keyword${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Search by name or email.${YELLOW} Specify as: keyword=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 1)${OFF} - Page number (15 items per page).${YELLOW} Specify as: page=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -2021,6 +2130,8 @@ print_updateUser_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateUser - Update user${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Updates a user's name, email, admin status, or password. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}userId${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - ID of the user. ${YELLOW}Specify as: userId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2031,6 +2142,8 @@ print_updateUser_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -2043,16 +2156,20 @@ print_addUserToWorkspace_help() {
     echo ""
     echo -e "${BOLD}${WHITE}addUserToWorkspace - Add user to workspace${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Adds an existing user to the workspace with a specified role. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -2072,8 +2189,8 @@ print_createWorkspace_help() {
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=200
-    echo -e "${result_color_table[${code:0:1}]}  200;Created workspace${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Created workspace${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=403
@@ -2090,6 +2207,8 @@ print_deleteWorkspace_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteWorkspace - Delete workspace${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Permanently deletes a single workspace and all its associated data. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -2098,6 +2217,8 @@ print_deleteWorkspace_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -2109,6 +2230,8 @@ print_deleteWorkspace_help() {
 print_deleteWorkspacesBulk_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteWorkspacesBulk - Delete workspaces (bulk)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Permanently deletes one or more workspaces and all their associated data. Admin only." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2131,6 +2254,8 @@ print_getWorkspace_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getWorkspace - Get workspace${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Returns a single workspace by UUID including its subscription status. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
@@ -2139,6 +2264,8 @@ print_getWorkspace_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Workspace details${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -2160,6 +2287,8 @@ print_listWorkspaces_help() {
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}access_status${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: access_status=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 1)${OFF} - Page number (15 items per page).${YELLOW} Specify as: page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -2178,6 +2307,8 @@ print_removeUserFromWorkspace_help() {
     echo ""
     echo -e "${BOLD}${WHITE}removeUserFromWorkspace - Remove user from workspace${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Removes a user's access to the workspace. The user account is not deleted. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2188,6 +2319,8 @@ print_removeUserFromWorkspace_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -2198,6 +2331,8 @@ print_updateWorkspace_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateWorkspace - Update workspace${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Updates a workspace's name, color, or access status. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2208,6 +2343,8 @@ print_updateWorkspace_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -2220,6 +2357,8 @@ print_updateWorkspaceUser_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateWorkspaceUser - Update user role in workspace${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
+    echo -e "Changes a user's role or permissions within the workspace. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2230,6 +2369,8 @@ print_updateWorkspaceUser_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 
 
@@ -3644,7 +3785,7 @@ call_listReceipts() {
     local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(workspace_uuid invoice_number  )
+    local query_parameter_names=(workspace_uuid invoice_number page  )
     local path
 
     if ! path=$(build_request_path "/app/api/panel/receipts" path_parameter_names query_parameter_names); then
@@ -4820,7 +4961,7 @@ call_listUsers() {
     local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(keyword  )
+    local query_parameter_names=(keyword page  )
     local path
 
     if ! path=$(build_request_path "/app/api/panel/users" path_parameter_names query_parameter_names); then
@@ -5240,7 +5381,7 @@ call_listWorkspaces() {
     local path_parameter_names=()
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(keyword subscription_status access_status  )
+    local query_parameter_names=(keyword subscription_status access_status page  )
     local path
 
     if ! path=$(build_request_path "/app/api/panel/workspaces" path_parameter_names query_parameter_names); then

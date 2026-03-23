@@ -130,6 +130,8 @@ Name | Type | Description  | Notes
 
 Delete post
 
+Deletes a post. Use 'delete_mode' to control whether to also remove the published content from social platforms.
+
 ### Example
 
 ```bash
@@ -200,6 +202,8 @@ Name | Type | Description  | Notes
 ## getPost
 
 Get post
+
+Returns a single post with all its versions and associated accounts.
 
 ### Example
 
@@ -307,6 +311,8 @@ Name | Type | Description  | Notes
 ## updatePost
 
 Update post
+
+Replaces a post's versions, accounts, tags, and scheduling options. The post must not be in a published state.
 
 ### Example
 

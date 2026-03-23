@@ -17,6 +17,8 @@ Method | HTTP request | Description
 
 Create receipt
 
+Creates a billing receipt record for a workspace. Admin only.
+
 ### Example
 
 ```bash
@@ -49,6 +51,8 @@ Name | Type | Description  | Notes
 ## deleteReceipt
 
 Delete receipt
+
+Permanently deletes a single receipt. Admin only.
 
 ### Example
 
@@ -83,6 +87,8 @@ Name | Type | Description  | Notes
 
 Delete receipts (bulk)
 
+Permanently deletes one or more receipt records. Admin only.
+
 ### Example
 
 ```bash
@@ -115,6 +121,8 @@ Name | Type | Description  | Notes
 ## getReceipt
 
 Get receipt
+
+Returns a single receipt by UUID. Admin only.
 
 ### Example
 
@@ -149,10 +157,12 @@ Name | Type | Description  | Notes
 
 List receipts
 
+Returns a paginated list of billing receipts. Filter by workspace UUID or invoice number. Admin only.
+
 ### Example
 
 ```bash
-postboost-cli listReceipts  workspace_uuid=value  invoice_number=value
+postboost-cli listReceipts  workspace_uuid=value  invoice_number=value  page=value
 ```
 
 ### Parameters
@@ -162,6 +172,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workspaceUuid** | **string** |  | [optional] [default to null]
  **invoiceNumber** | **string** |  | [optional] [default to null]
+ **page** | **integer** | Page number (15 items per page). | [optional] [default to 1]
 
 ### Return type
 
@@ -182,6 +193,8 @@ Name | Type | Description  | Notes
 ## updateReceipt
 
 Update receipt
+
+Updates a receipt's transaction details, amount, or payment date. Admin only.
 
 ### Example
 

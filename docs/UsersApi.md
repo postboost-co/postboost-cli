@@ -17,6 +17,8 @@ Method | HTTP request | Description
 
 Create user
 
+Creates a new user account on the platform. Admin only.
+
 ### Example
 
 ```bash
@@ -49,6 +51,8 @@ Name | Type | Description  | Notes
 ## deleteUser
 
 Delete user
+
+Permanently deletes a user account. Returns 400 if you attempt to delete your own account. Admin only.
 
 ### Example
 
@@ -83,6 +87,8 @@ Name | Type | Description  | Notes
 
 Delete users (bulk)
 
+Permanently deletes one or more user accounts. You cannot delete your own account. Admin only.
+
 ### Example
 
 ```bash
@@ -115,6 +121,8 @@ Name | Type | Description  | Notes
 ## getUser
 
 Get user
+
+Returns a single user account by ID. Admin only.
 
 ### Example
 
@@ -149,10 +157,12 @@ Name | Type | Description  | Notes
 
 List users
 
+Returns a paginated list of all users on the platform. Optionally filter by name or email. Admin only.
+
 ### Example
 
 ```bash
-postboost-cli listUsers  keyword=value
+postboost-cli listUsers  keyword=value  page=value
 ```
 
 ### Parameters
@@ -161,6 +171,7 @@ postboost-cli listUsers  keyword=value
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **keyword** | **string** | Search by name or email. | [optional] [default to null]
+ **page** | **integer** | Page number (15 items per page). | [optional] [default to 1]
 
 ### Return type
 
@@ -181,6 +192,8 @@ Name | Type | Description  | Notes
 ## updateUser
 
 Update user
+
+Updates a user's name, email, admin status, or password. Admin only.
 
 ### Example
 

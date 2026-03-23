@@ -16,6 +16,8 @@ Method | HTTP request | Description
 
 Create tag
 
+Creates a new color-coded tag in the workspace for organizing posts.
+
 ### Example
 
 ```bash
@@ -49,6 +51,8 @@ Name | Type | Description  | Notes
 ## deleteTag
 
 Delete tag
+
+Permanently deletes a tag. Posts that had this tag attached are unaffected.
 
 ### Example
 
@@ -84,6 +88,8 @@ Name | Type | Description  | Notes
 
 Get tag
 
+Returns a single tag by UUID.
+
 ### Example
 
 ```bash
@@ -118,6 +124,8 @@ Name | Type | Description  | Notes
 
 List tags
 
+Returns all tags defined in the workspace.
+
 ### Example
 
 ```bash
@@ -150,6 +158,8 @@ Name | Type | Description  | Notes
 ## updateTag
 
 Update tag
+
+Updates a tag's name or color.
 
 ### Example
 

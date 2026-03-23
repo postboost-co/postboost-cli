@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  | [optional] [default to null]
-**platformUnderscoresubscriptionUnderscoreid** | **string** |  | [optional] [default to null]
-**platformUnderscoreplanUnderscoreid** | **string** |  | [optional] [default to null]
-**status** | [**SubscriptionStatus**](SubscriptionStatus.md) |  | [optional] [default to null]
-**recurring** | **boolean** |  | [optional] [default to null]
+**name** | **string** |  | [default to null]
+**platformUnderscoresubscriptionUnderscoreid** | **string** |  | [default to null]
+**platformUnderscoreplanUnderscoreid** | **string** |  | [default to null]
+**status** | [**SubscriptionStatus**](SubscriptionStatus.md) |  | [default to null]
+**recurring** | **boolean** |  | [default to null]
 **trialUnderscoreendsUnderscoreat** | **string** |  | [optional] [default to null]
 **pausedUnderscorefrom** | **string** |  | [optional] [default to null]
 **endsUnderscoreat** | **string** |  | [optional] [default to null]

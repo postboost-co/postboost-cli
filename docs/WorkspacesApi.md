@@ -20,6 +20,8 @@ Method | HTTP request | Description
 
 Add user to workspace
 
+Adds an existing user to the workspace with a specified role. Admin only.
+
 ### Example
 
 ```bash
@@ -89,6 +91,8 @@ Name | Type | Description  | Notes
 
 Delete workspace
 
+Permanently deletes a single workspace and all its associated data. Admin only.
+
 ### Example
 
 ```bash
@@ -122,6 +126,8 @@ Name | Type | Description  | Notes
 
 Delete workspaces (bulk)
 
+Permanently deletes one or more workspaces and all their associated data. Admin only.
+
 ### Example
 
 ```bash
@@ -154,6 +160,8 @@ Name | Type | Description  | Notes
 ## getWorkspace
 
 Get workspace
+
+Returns a single workspace by UUID including its subscription status. Admin only.
 
 ### Example
 
@@ -193,7 +201,7 @@ Returns a paginated list of all workspaces. Admin only.
 ### Example
 
 ```bash
-postboost-cli listWorkspaces  keyword=value  subscription_status=value  access_status=value
+postboost-cli listWorkspaces  keyword=value  subscription_status=value  access_status=value  page=value
 ```
 
 ### Parameters
@@ -204,6 +212,7 @@ Name | Type | Description  | Notes
  **keyword** | **string** |  | [optional] [default to null]
  **subscriptionStatus** | **string** |  | [optional] [default to null]
  **accessStatus** | **string** |  | [optional] [default to null]
+ **page** | **integer** | Page number (15 items per page). | [optional] [default to 1]
 
 ### Return type
 
@@ -224,6 +233,8 @@ Name | Type | Description  | Notes
 ## removeUserFromWorkspace
 
 Remove user from workspace
+
+Removes a user's access to the workspace. The user account is not deleted. Admin only.
 
 ### Example
 
@@ -259,6 +270,8 @@ Name | Type | Description  | Notes
 
 Update workspace
 
+Updates a workspace's name, color, or access status. Admin only.
+
 ### Example
 
 ```bash
@@ -292,6 +305,8 @@ Name | Type | Description  | Notes
 ## updateWorkspaceUser
 
 Update user role in workspace
+
+Changes a user's role or permissions within the workspace. Admin only.
 
 ### Example
 
