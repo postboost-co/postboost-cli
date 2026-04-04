@@ -297,7 +297,7 @@ case $state in
   ops)
     # Operations
     _values "Operations" \
-            "getAccount[Get account]" \
+            "blogToSocial[Generate social media captions from a blog post]"             "getAccount[Get account]" \
             "listAccounts[List accounts]"             "abortChunkedUpload[Abort chunked upload]" \
             "completeChunkedUpload[Complete chunked upload]" \
             "deleteMediaBulk[Delete media (bulk)]" \
@@ -355,6 +355,13 @@ case $state in
     ;;
   args)
     case $line[1] in
+      blogToSocial)
+        local -a _op_arguments
+        _op_arguments=(
+          "workspaceUuid=:[PATH] UUID of the workspace."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getAccount)
         local -a _op_arguments
         _op_arguments=(

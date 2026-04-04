@@ -69,6 +69,7 @@ _postboost-cli()
     # The list of available operation in the REST service
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
+    operations["blogToSocial"]=1
     operations["getAccount"]=1
     operations["listAccounts"]=1
     operations["abortChunkedUpload"]=1
@@ -131,6 +132,7 @@ _postboost-cli()
     # An associative array of operations to their parameters
     # Only include path, query and header parameters
     declare -A operation_parameters
+    operation_parameters["blogToSocial"]="workspaceUuid= "
     operation_parameters["getAccount"]="workspaceUuid= accountUuid= "
     operation_parameters["listAccounts"]="workspaceUuid= "
     operation_parameters["abortChunkedUpload"]="workspaceUuid= uploadUuid= "
