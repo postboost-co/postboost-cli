@@ -70,6 +70,11 @@ _postboost-cli()
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
     operations["blogToSocial"]=1
+    operations["imageAltText"]=1
+    operations["imageEdit"]=1
+    operations["imageGenerate"]=1
+    operations["imagePrompt"]=1
+    operations["imageVariations"]=1
     operations["getAccount"]=1
     operations["listAccounts"]=1
     operations["abortChunkedUpload"]=1
@@ -133,6 +138,11 @@ _postboost-cli()
     # Only include path, query and header parameters
     declare -A operation_parameters
     operation_parameters["blogToSocial"]="workspaceUuid= "
+    operation_parameters["imageAltText"]="workspaceUuid= "
+    operation_parameters["imageEdit"]="workspaceUuid= "
+    operation_parameters["imageGenerate"]="workspaceUuid= "
+    operation_parameters["imagePrompt"]="workspaceUuid= "
+    operation_parameters["imageVariations"]="workspaceUuid= "
     operation_parameters["getAccount"]="workspaceUuid= accountUuid= "
     operation_parameters["listAccounts"]="workspaceUuid= "
     operation_parameters["abortChunkedUpload"]="workspaceUuid= uploadUuid= "
