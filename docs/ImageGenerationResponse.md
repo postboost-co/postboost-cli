@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**images** | [**array[GeneratedImageItem]**](GeneratedImageItem.md) |  | [default to null]
+**images** | [**array[Media]**](Media.md) |  | [default to null]
 **promptUnderscoreused** | **string** |  | [default to null]
 **revisedUnderscoreprompt** | **string** |  | [optional] [default to null]
 **aspectUnderscoreratio** | **string** |  | [default to null]

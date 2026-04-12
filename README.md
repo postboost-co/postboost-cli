@@ -14,7 +14,7 @@ tar xzf postboost-cli.tar.gz
 | **Releases** | [github.com/postboost-co/postboost-cli/releases](https://github.com/postboost-co/postboost-cli/releases) |
 | **GitHub** | [postboost-co/postboost-cli](https://github.com/postboost-co/postboost-cli) |
 | **Docs** | [postboost.co/docs/api](https://postboost.co/docs/api) |
-| **Version** | v1.6.0 |
+| **Version** | v1.7.0 |
 
 ## Quick start
 

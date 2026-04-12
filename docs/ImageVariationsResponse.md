@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**images** | [**array[GeneratedImageItem]**](GeneratedImageItem.md) |  | [default to null]
+**images** | [**array[Media]**](Media.md) |  | [default to null]
 **aspectUnderscoreratio** | **string** |  | [default to null]
 **quality** | **string** |  | [default to null]
 **creditsUnderscoreused** | **integer** |  | [default to null]
