@@ -5,7 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** |  | [default to null]
 **name** | **string** |  | [default to null]
-**hexUnderscorecolor** | **string** |  | [default to null]
+**hexUnderscorecolor** | **string** |  | [optional] [default to null]
+**avatar** | **string** |  | [optional] [default to null]
 **owner** | [**User**](User.md) |  | [optional] [default to null]
 **accessUnderscorestatus** | **string** |  | [default to null]
 **createdUnderscoreat** | **string** |  | [default to null]

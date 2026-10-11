@@ -77,24 +77,40 @@ _postboost-cli()
     operations["imageVariations"]=1
     operations["getAccount"]=1
     operations["listAccounts"]=1
+    operations["getAccountAnalytics"]=1
+    operations["getAnalyticsSummary"]=1
+    operations["getBestPostingTimes"]=1
+    operations["getPostAnalytics_0"]=1
+    operations["getPostingTimes"]=1
     operations["abortChunkedUpload"]=1
     operations["completeChunkedUpload"]=1
+    operations["createMediaFolder"]=1
     operations["deleteMediaBulk"]=1
+    operations["deleteMediaFolder"]=1
     operations["getMedia"]=1
     operations["getRemoteUploadStatus"]=1
     operations["initiateChunkedUpload"]=1
     operations["initiateRemoteUpload"]=1
     operations["listMedia"]=1
+    operations["listMediaFolders"]=1
     operations["updateMedia"]=1
+    operations["updateMediaFolder"]=1
     operations["uploadChunk"]=1
     operations["uploadMedia"]=1
+    operations["createMention"]=1
+    operations["deleteMention"]=1
+    operations["getMention"]=1
+    operations["listMentions"]=1
+    operations["updateMention"]=1
     operations["addPostToQueue"]=1
     operations["approvePost"]=1
     operations["createPost"]=1
     operations["deletePost"]=1
     operations["deletePostsBulk"]=1
     operations["getPost"]=1
+    operations["getPostAnalytics"]=1
     operations["listPosts"]=1
+    operations["retryPostAccount"]=1
     operations["schedulePost"]=1
     operations["updatePost"]=1
     operations["createReceipt"]=1
@@ -129,6 +145,8 @@ _postboost-cli()
     operations["deleteWorkspace"]=1
     operations["deleteWorkspacesBulk"]=1
     operations["getWorkspace"]=1
+    operations["getWorkspaceAICredits"]=1
+    operations["listMyWorkspaces"]=1
     operations["listWorkspaces"]=1
     operations["removeUserFromWorkspace"]=1
     operations["updateWorkspace"]=1
@@ -144,25 +162,41 @@ _postboost-cli()
     operation_parameters["imagePrompt"]="workspaceUuid= "
     operation_parameters["imageVariations"]="workspaceUuid= "
     operation_parameters["getAccount"]="workspaceUuid= accountUuid= "
-    operation_parameters["listAccounts"]="workspaceUuid= "
+    operation_parameters["listAccounts"]="workspaceUuid= keyword= group= providers[]= unauthorized= "
+    operation_parameters["getAccountAnalytics"]="workspaceUuid= accountUuid= period= date_from= date_to= type= page= per_page= sort_by= sort_dir= "
+    operation_parameters["getAnalyticsSummary"]="workspaceUuid= period= date_from= date_to= "
+    operation_parameters["getBestPostingTimes"]="workspaceUuid= accounts[]= from= timezone= "
+    operation_parameters["getPostAnalytics_0"]="workspaceUuid= postUuid= "
+    operation_parameters["getPostingTimes"]="workspaceUuid= accounts[]= timezone= "
     operation_parameters["abortChunkedUpload"]="workspaceUuid= uploadUuid= "
     operation_parameters["completeChunkedUpload"]="workspaceUuid= uploadUuid= "
+    operation_parameters["createMediaFolder"]="workspaceUuid= "
     operation_parameters["deleteMediaBulk"]="workspaceUuid= "
+    operation_parameters["deleteMediaFolder"]="workspaceUuid= folderUuid= "
     operation_parameters["getMedia"]="workspaceUuid= mediaUuid= "
     operation_parameters["getRemoteUploadStatus"]="workspaceUuid= downloadId= "
     operation_parameters["initiateChunkedUpload"]="workspaceUuid= "
     operation_parameters["initiateRemoteUpload"]="workspaceUuid= "
-    operation_parameters["listMedia"]="workspaceUuid= page= "
+    operation_parameters["listMedia"]="workspaceUuid= page= limit= folder= mime_types[]= type= keyword= usage= favorite= sort= "
+    operation_parameters["listMediaFolders"]="workspaceUuid= "
     operation_parameters["updateMedia"]="workspaceUuid= mediaUuid= "
+    operation_parameters["updateMediaFolder"]="workspaceUuid= folderUuid= "
     operation_parameters["uploadChunk"]="workspaceUuid= uploadUuid= "
     operation_parameters["uploadMedia"]="workspaceUuid= "
+    operation_parameters["createMention"]="workspaceUuid= "
+    operation_parameters["deleteMention"]="workspaceUuid= mentionId= "
+    operation_parameters["getMention"]="workspaceUuid= mentionId= "
+    operation_parameters["listMentions"]="workspaceUuid= q= per_page= page= "
+    operation_parameters["updateMention"]="workspaceUuid= mentionId= "
     operation_parameters["addPostToQueue"]="workspaceUuid= postUuid= "
     operation_parameters["approvePost"]="workspaceUuid= postUuid= "
     operation_parameters["createPost"]="workspaceUuid= "
     operation_parameters["deletePost"]="workspaceUuid= postUuid= "
     operation_parameters["deletePostsBulk"]="workspaceUuid= "
     operation_parameters["getPost"]="workspaceUuid= postUuid= "
+    operation_parameters["getPostAnalytics"]="workspaceUuid= postUuid= "
     operation_parameters["listPosts"]="workspaceUuid= page= "
+    operation_parameters["retryPostAccount"]="workspaceUuid= postUuid= accountUuid= "
     operation_parameters["schedulePost"]="workspaceUuid= postUuid= "
     operation_parameters["updatePost"]="workspaceUuid= postUuid= "
     operation_parameters["createReceipt"]=""
@@ -197,6 +231,8 @@ _postboost-cli()
     operation_parameters["deleteWorkspace"]="workspaceUuid= "
     operation_parameters["deleteWorkspacesBulk"]=""
     operation_parameters["getWorkspace"]="workspaceUuid= "
+    operation_parameters["getWorkspaceAICredits"]="workspaceUuid= "
+    operation_parameters["listMyWorkspaces"]=""
     operation_parameters["listWorkspaces"]="keyword= subscription_status= access_status= page= "
     operation_parameters["removeUserFromWorkspace"]="workspaceUuid= "
     operation_parameters["updateWorkspace"]="workspaceUuid= "
@@ -204,6 +240,21 @@ _postboost-cli()
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values
+    operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
+    operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
+    operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
+    operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
+    operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
+    operation_parameters_enum_values["listMedia::favorite"]="true false"
 
     #
     # Check if this is OSX and use special __osx_init_completion function

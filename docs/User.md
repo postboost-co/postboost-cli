@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **id** | **integer** |  | [default to null]
 **name** | **string** |  | [default to null]
 **email** | **string** |  | [default to null]
+**avatar** | **string** |  | [optional] [default to null]
 **isUnderscoreadmin** | **boolean** |  | [default to null]
 **emailUnderscoreverifiedUnderscoreat** | **string** |  | [optional] [default to null]
 **createdUnderscoreat** | **string** |  | [default to null]

@@ -111,12 +111,45 @@ operation_parameters_minimum_occurrences["imageVariations:::ImageVariationsInput
 operation_parameters_minimum_occurrences["getAccount:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["getAccount:::accountUuid"]=1
 operation_parameters_minimum_occurrences["listAccounts:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["listAccounts:::keyword"]=0
+operation_parameters_minimum_occurrences["listAccounts:::group"]=0
+operation_parameters_minimum_occurrences["listAccounts:::providers[]"]=0
+operation_parameters_minimum_occurrences["listAccounts:::unauthorized"]=0
+operation_parameters_minimum_occurrences["getAccountAnalytics:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getAccountAnalytics:::accountUuid"]=1
+operation_parameters_minimum_occurrences["getAccountAnalytics:::period"]=0
+operation_parameters_minimum_occurrences["getAccountAnalytics:::date_from"]=0
+operation_parameters_minimum_occurrences["getAccountAnalytics:::date_to"]=0
+operation_parameters_minimum_occurrences["getAccountAnalytics:::type"]=0
+operation_parameters_minimum_occurrences["getAccountAnalytics:::page"]=0
+operation_parameters_minimum_occurrences["getAccountAnalytics:::per_page"]=0
+operation_parameters_minimum_occurrences["getAccountAnalytics:::sort_by"]=0
+operation_parameters_minimum_occurrences["getAccountAnalytics:::sort_dir"]=0
+operation_parameters_minimum_occurrences["getAnalyticsSummary:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getAnalyticsSummary:::period"]=0
+operation_parameters_minimum_occurrences["getAnalyticsSummary:::date_from"]=0
+operation_parameters_minimum_occurrences["getAnalyticsSummary:::date_to"]=0
+operation_parameters_minimum_occurrences["getBestPostingTimes:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getBestPostingTimes:::accounts[]"]=0
+operation_parameters_minimum_occurrences["getBestPostingTimes:::from"]=0
+operation_parameters_minimum_occurrences["getBestPostingTimes:::timezone"]=0
+operation_parameters_minimum_occurrences["getPostAnalytics_0:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getPostAnalytics_0:::postUuid"]=1
+operation_parameters_minimum_occurrences["getPostingTimes:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getPostingTimes:::accounts[]"]=0
+operation_parameters_minimum_occurrences["getPostingTimes:::timezone"]=0
 operation_parameters_minimum_occurrences["abortChunkedUpload:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["abortChunkedUpload:::uploadUuid"]=1
 operation_parameters_minimum_occurrences["completeChunkedUpload:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["completeChunkedUpload:::uploadUuid"]=1
+operation_parameters_minimum_occurrences["completeChunkedUpload:::CompleteChunkedUploadRequest"]=0
+operation_parameters_minimum_occurrences["createMediaFolder:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["createMediaFolder:::CreateMediaFolderRequest"]=1
 operation_parameters_minimum_occurrences["deleteMediaBulk:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["deleteMediaBulk:::DeleteMediaBulkRequest"]=1
+operation_parameters_minimum_occurrences["deleteMediaFolder:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["deleteMediaFolder:::folderUuid"]=1
+operation_parameters_minimum_occurrences["deleteMediaFolder:::DeleteMediaFolderRequest"]=0
 operation_parameters_minimum_occurrences["getMedia:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["getMedia:::mediaUuid"]=1
 operation_parameters_minimum_occurrences["getRemoteUploadStatus:::workspaceUuid"]=1
@@ -127,9 +160,21 @@ operation_parameters_minimum_occurrences["initiateRemoteUpload:::workspaceUuid"]
 operation_parameters_minimum_occurrences["initiateRemoteUpload:::InitiateRemoteUploadRequest"]=1
 operation_parameters_minimum_occurrences["listMedia:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["listMedia:::page"]=0
+operation_parameters_minimum_occurrences["listMedia:::limit"]=0
+operation_parameters_minimum_occurrences["listMedia:::folder"]=0
+operation_parameters_minimum_occurrences["listMedia:::mime_types[]"]=0
+operation_parameters_minimum_occurrences["listMedia:::type"]=0
+operation_parameters_minimum_occurrences["listMedia:::keyword"]=0
+operation_parameters_minimum_occurrences["listMedia:::usage"]=0
+operation_parameters_minimum_occurrences["listMedia:::favorite"]=0
+operation_parameters_minimum_occurrences["listMedia:::sort"]=0
+operation_parameters_minimum_occurrences["listMediaFolders:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["updateMedia:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["updateMedia:::mediaUuid"]=1
 operation_parameters_minimum_occurrences["updateMedia:::UpdateMediaRequest"]=1
+operation_parameters_minimum_occurrences["updateMediaFolder:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["updateMediaFolder:::folderUuid"]=1
+operation_parameters_minimum_occurrences["updateMediaFolder:::MediaFolderInput"]=1
 operation_parameters_minimum_occurrences["uploadChunk:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["uploadChunk:::uploadUuid"]=1
 operation_parameters_minimum_occurrences["uploadChunk:::chunk"]=1
@@ -137,10 +182,26 @@ operation_parameters_minimum_occurrences["uploadChunk:::chunk_index"]=1
 operation_parameters_minimum_occurrences["uploadMedia:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["uploadMedia:::file"]=1
 operation_parameters_minimum_occurrences["uploadMedia:::alt_text"]=0
+operation_parameters_minimum_occurrences["uploadMedia:::folder"]=0
+operation_parameters_minimum_occurrences["createMention:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["createMention:::MentionInput"]=1
+operation_parameters_minimum_occurrences["deleteMention:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["deleteMention:::mentionId"]=1
+operation_parameters_minimum_occurrences["getMention:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getMention:::mentionId"]=1
+operation_parameters_minimum_occurrences["listMentions:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["listMentions:::q"]=0
+operation_parameters_minimum_occurrences["listMentions:::per_page"]=0
+operation_parameters_minimum_occurrences["listMentions:::page"]=0
+operation_parameters_minimum_occurrences["updateMention:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["updateMention:::mentionId"]=1
+operation_parameters_minimum_occurrences["updateMention:::MentionInput"]=1
 operation_parameters_minimum_occurrences["addPostToQueue:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["addPostToQueue:::postUuid"]=1
+operation_parameters_minimum_occurrences["addPostToQueue:::AddPostToQueueRequest"]=0
 operation_parameters_minimum_occurrences["approvePost:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["approvePost:::postUuid"]=1
+operation_parameters_minimum_occurrences["approvePost:::ApprovePostRequest"]=0
 operation_parameters_minimum_occurrences["createPost:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["createPost:::PostInput"]=1
 operation_parameters_minimum_occurrences["deletePost:::workspaceUuid"]=1
@@ -150,8 +211,13 @@ operation_parameters_minimum_occurrences["deletePostsBulk:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["deletePostsBulk:::DeletePostsBulkRequest"]=1
 operation_parameters_minimum_occurrences["getPost:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["getPost:::postUuid"]=1
+operation_parameters_minimum_occurrences["getPostAnalytics:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getPostAnalytics:::postUuid"]=1
 operation_parameters_minimum_occurrences["listPosts:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["listPosts:::page"]=0
+operation_parameters_minimum_occurrences["retryPostAccount:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["retryPostAccount:::postUuid"]=1
+operation_parameters_minimum_occurrences["retryPostAccount:::accountUuid"]=1
 operation_parameters_minimum_occurrences["schedulePost:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["schedulePost:::postUuid"]=1
 operation_parameters_minimum_occurrences["schedulePost:::SchedulePostRequest"]=1
@@ -170,6 +236,7 @@ operation_parameters_minimum_occurrences["updateReceipt:::ReceiptUpdateInput"]=1
 operation_parameters_minimum_occurrences["addGenericSubscription:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["addGenericSubscription:::AddGenericSubscriptionRequest"]=1
 operation_parameters_minimum_occurrences["cancelSubscription:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["cancelSubscription:::CancelSubscriptionRequest"]=0
 operation_parameters_minimum_occurrences["changeSubscriptionPlan:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["changeSubscriptionPlan:::ChangeSubscriptionPlanRequest"]=1
 operation_parameters_minimum_occurrences["checkoutSubscription:::workspaceUuid"]=1
@@ -206,6 +273,7 @@ operation_parameters_minimum_occurrences["createWorkspace:::WorkspaceInput"]=1
 operation_parameters_minimum_occurrences["deleteWorkspace:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["deleteWorkspacesBulk:::DeleteWorkspacesBulkRequest"]=1
 operation_parameters_minimum_occurrences["getWorkspace:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getWorkspaceAICredits:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["listWorkspaces:::keyword"]=0
 operation_parameters_minimum_occurrences["listWorkspaces:::subscription_status"]=0
 operation_parameters_minimum_occurrences["listWorkspaces:::access_status"]=0
@@ -239,12 +307,45 @@ operation_parameters_maximum_occurrences["imageVariations:::ImageVariationsInput
 operation_parameters_maximum_occurrences["getAccount:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["getAccount:::accountUuid"]=0
 operation_parameters_maximum_occurrences["listAccounts:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["listAccounts:::keyword"]=0
+operation_parameters_maximum_occurrences["listAccounts:::group"]=0
+operation_parameters_maximum_occurrences["listAccounts:::providers[]"]=0
+operation_parameters_maximum_occurrences["listAccounts:::unauthorized"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::accountUuid"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::period"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::date_from"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::date_to"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::type"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::page"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::per_page"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::sort_by"]=0
+operation_parameters_maximum_occurrences["getAccountAnalytics:::sort_dir"]=0
+operation_parameters_maximum_occurrences["getAnalyticsSummary:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getAnalyticsSummary:::period"]=0
+operation_parameters_maximum_occurrences["getAnalyticsSummary:::date_from"]=0
+operation_parameters_maximum_occurrences["getAnalyticsSummary:::date_to"]=0
+operation_parameters_maximum_occurrences["getBestPostingTimes:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getBestPostingTimes:::accounts[]"]=0
+operation_parameters_maximum_occurrences["getBestPostingTimes:::from"]=0
+operation_parameters_maximum_occurrences["getBestPostingTimes:::timezone"]=0
+operation_parameters_maximum_occurrences["getPostAnalytics_0:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getPostAnalytics_0:::postUuid"]=0
+operation_parameters_maximum_occurrences["getPostingTimes:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getPostingTimes:::accounts[]"]=0
+operation_parameters_maximum_occurrences["getPostingTimes:::timezone"]=0
 operation_parameters_maximum_occurrences["abortChunkedUpload:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["abortChunkedUpload:::uploadUuid"]=0
 operation_parameters_maximum_occurrences["completeChunkedUpload:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["completeChunkedUpload:::uploadUuid"]=0
+operation_parameters_maximum_occurrences["completeChunkedUpload:::CompleteChunkedUploadRequest"]=0
+operation_parameters_maximum_occurrences["createMediaFolder:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["createMediaFolder:::CreateMediaFolderRequest"]=0
 operation_parameters_maximum_occurrences["deleteMediaBulk:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["deleteMediaBulk:::DeleteMediaBulkRequest"]=0
+operation_parameters_maximum_occurrences["deleteMediaFolder:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["deleteMediaFolder:::folderUuid"]=0
+operation_parameters_maximum_occurrences["deleteMediaFolder:::DeleteMediaFolderRequest"]=0
 operation_parameters_maximum_occurrences["getMedia:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["getMedia:::mediaUuid"]=0
 operation_parameters_maximum_occurrences["getRemoteUploadStatus:::workspaceUuid"]=0
@@ -255,9 +356,21 @@ operation_parameters_maximum_occurrences["initiateRemoteUpload:::workspaceUuid"]
 operation_parameters_maximum_occurrences["initiateRemoteUpload:::InitiateRemoteUploadRequest"]=0
 operation_parameters_maximum_occurrences["listMedia:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["listMedia:::page"]=0
+operation_parameters_maximum_occurrences["listMedia:::limit"]=0
+operation_parameters_maximum_occurrences["listMedia:::folder"]=0
+operation_parameters_maximum_occurrences["listMedia:::mime_types[]"]=0
+operation_parameters_maximum_occurrences["listMedia:::type"]=0
+operation_parameters_maximum_occurrences["listMedia:::keyword"]=0
+operation_parameters_maximum_occurrences["listMedia:::usage"]=0
+operation_parameters_maximum_occurrences["listMedia:::favorite"]=0
+operation_parameters_maximum_occurrences["listMedia:::sort"]=0
+operation_parameters_maximum_occurrences["listMediaFolders:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["updateMedia:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["updateMedia:::mediaUuid"]=0
 operation_parameters_maximum_occurrences["updateMedia:::UpdateMediaRequest"]=0
+operation_parameters_maximum_occurrences["updateMediaFolder:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["updateMediaFolder:::folderUuid"]=0
+operation_parameters_maximum_occurrences["updateMediaFolder:::MediaFolderInput"]=0
 operation_parameters_maximum_occurrences["uploadChunk:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["uploadChunk:::uploadUuid"]=0
 operation_parameters_maximum_occurrences["uploadChunk:::chunk"]=0
@@ -265,10 +378,26 @@ operation_parameters_maximum_occurrences["uploadChunk:::chunk_index"]=0
 operation_parameters_maximum_occurrences["uploadMedia:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["uploadMedia:::file"]=0
 operation_parameters_maximum_occurrences["uploadMedia:::alt_text"]=0
+operation_parameters_maximum_occurrences["uploadMedia:::folder"]=0
+operation_parameters_maximum_occurrences["createMention:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["createMention:::MentionInput"]=0
+operation_parameters_maximum_occurrences["deleteMention:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["deleteMention:::mentionId"]=0
+operation_parameters_maximum_occurrences["getMention:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getMention:::mentionId"]=0
+operation_parameters_maximum_occurrences["listMentions:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["listMentions:::q"]=0
+operation_parameters_maximum_occurrences["listMentions:::per_page"]=0
+operation_parameters_maximum_occurrences["listMentions:::page"]=0
+operation_parameters_maximum_occurrences["updateMention:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["updateMention:::mentionId"]=0
+operation_parameters_maximum_occurrences["updateMention:::MentionInput"]=0
 operation_parameters_maximum_occurrences["addPostToQueue:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["addPostToQueue:::postUuid"]=0
+operation_parameters_maximum_occurrences["addPostToQueue:::AddPostToQueueRequest"]=0
 operation_parameters_maximum_occurrences["approvePost:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["approvePost:::postUuid"]=0
+operation_parameters_maximum_occurrences["approvePost:::ApprovePostRequest"]=0
 operation_parameters_maximum_occurrences["createPost:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["createPost:::PostInput"]=0
 operation_parameters_maximum_occurrences["deletePost:::workspaceUuid"]=0
@@ -278,8 +407,13 @@ operation_parameters_maximum_occurrences["deletePostsBulk:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["deletePostsBulk:::DeletePostsBulkRequest"]=0
 operation_parameters_maximum_occurrences["getPost:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["getPost:::postUuid"]=0
+operation_parameters_maximum_occurrences["getPostAnalytics:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getPostAnalytics:::postUuid"]=0
 operation_parameters_maximum_occurrences["listPosts:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["listPosts:::page"]=0
+operation_parameters_maximum_occurrences["retryPostAccount:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["retryPostAccount:::postUuid"]=0
+operation_parameters_maximum_occurrences["retryPostAccount:::accountUuid"]=0
 operation_parameters_maximum_occurrences["schedulePost:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["schedulePost:::postUuid"]=0
 operation_parameters_maximum_occurrences["schedulePost:::SchedulePostRequest"]=0
@@ -298,6 +432,7 @@ operation_parameters_maximum_occurrences["updateReceipt:::ReceiptUpdateInput"]=0
 operation_parameters_maximum_occurrences["addGenericSubscription:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["addGenericSubscription:::AddGenericSubscriptionRequest"]=0
 operation_parameters_maximum_occurrences["cancelSubscription:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["cancelSubscription:::CancelSubscriptionRequest"]=0
 operation_parameters_maximum_occurrences["changeSubscriptionPlan:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["changeSubscriptionPlan:::ChangeSubscriptionPlanRequest"]=0
 operation_parameters_maximum_occurrences["checkoutSubscription:::workspaceUuid"]=0
@@ -334,6 +469,7 @@ operation_parameters_maximum_occurrences["createWorkspace:::WorkspaceInput"]=0
 operation_parameters_maximum_occurrences["deleteWorkspace:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["deleteWorkspacesBulk:::DeleteWorkspacesBulkRequest"]=0
 operation_parameters_maximum_occurrences["getWorkspace:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getWorkspaceAICredits:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["listWorkspaces:::keyword"]=0
 operation_parameters_maximum_occurrences["listWorkspaces:::subscription_status"]=0
 operation_parameters_maximum_occurrences["listWorkspaces:::access_status"]=0
@@ -364,12 +500,45 @@ operation_parameters_collection_type["imageVariations:::ImageVariationsInput"]="
 operation_parameters_collection_type["getAccount:::workspaceUuid"]=""
 operation_parameters_collection_type["getAccount:::accountUuid"]=""
 operation_parameters_collection_type["listAccounts:::workspaceUuid"]=""
+operation_parameters_collection_type["listAccounts:::keyword"]=""
+operation_parameters_collection_type["listAccounts:::group"]=""
+operation_parameters_collection_type["listAccounts:::providers[]"]="multi"
+operation_parameters_collection_type["listAccounts:::unauthorized"]=""
+operation_parameters_collection_type["getAccountAnalytics:::workspaceUuid"]=""
+operation_parameters_collection_type["getAccountAnalytics:::accountUuid"]=""
+operation_parameters_collection_type["getAccountAnalytics:::period"]=""
+operation_parameters_collection_type["getAccountAnalytics:::date_from"]=""
+operation_parameters_collection_type["getAccountAnalytics:::date_to"]=""
+operation_parameters_collection_type["getAccountAnalytics:::type"]=""
+operation_parameters_collection_type["getAccountAnalytics:::page"]=""
+operation_parameters_collection_type["getAccountAnalytics:::per_page"]=""
+operation_parameters_collection_type["getAccountAnalytics:::sort_by"]=""
+operation_parameters_collection_type["getAccountAnalytics:::sort_dir"]=""
+operation_parameters_collection_type["getAnalyticsSummary:::workspaceUuid"]=""
+operation_parameters_collection_type["getAnalyticsSummary:::period"]=""
+operation_parameters_collection_type["getAnalyticsSummary:::date_from"]=""
+operation_parameters_collection_type["getAnalyticsSummary:::date_to"]=""
+operation_parameters_collection_type["getBestPostingTimes:::workspaceUuid"]=""
+operation_parameters_collection_type["getBestPostingTimes:::accounts[]"]="multi"
+operation_parameters_collection_type["getBestPostingTimes:::from"]=""
+operation_parameters_collection_type["getBestPostingTimes:::timezone"]=""
+operation_parameters_collection_type["getPostAnalytics_0:::workspaceUuid"]=""
+operation_parameters_collection_type["getPostAnalytics_0:::postUuid"]=""
+operation_parameters_collection_type["getPostingTimes:::workspaceUuid"]=""
+operation_parameters_collection_type["getPostingTimes:::accounts[]"]="multi"
+operation_parameters_collection_type["getPostingTimes:::timezone"]=""
 operation_parameters_collection_type["abortChunkedUpload:::workspaceUuid"]=""
 operation_parameters_collection_type["abortChunkedUpload:::uploadUuid"]=""
 operation_parameters_collection_type["completeChunkedUpload:::workspaceUuid"]=""
 operation_parameters_collection_type["completeChunkedUpload:::uploadUuid"]=""
+operation_parameters_collection_type["completeChunkedUpload:::CompleteChunkedUploadRequest"]=""
+operation_parameters_collection_type["createMediaFolder:::workspaceUuid"]=""
+operation_parameters_collection_type["createMediaFolder:::CreateMediaFolderRequest"]=""
 operation_parameters_collection_type["deleteMediaBulk:::workspaceUuid"]=""
 operation_parameters_collection_type["deleteMediaBulk:::DeleteMediaBulkRequest"]=""
+operation_parameters_collection_type["deleteMediaFolder:::workspaceUuid"]=""
+operation_parameters_collection_type["deleteMediaFolder:::folderUuid"]=""
+operation_parameters_collection_type["deleteMediaFolder:::DeleteMediaFolderRequest"]=""
 operation_parameters_collection_type["getMedia:::workspaceUuid"]=""
 operation_parameters_collection_type["getMedia:::mediaUuid"]=""
 operation_parameters_collection_type["getRemoteUploadStatus:::workspaceUuid"]=""
@@ -380,9 +549,21 @@ operation_parameters_collection_type["initiateRemoteUpload:::workspaceUuid"]=""
 operation_parameters_collection_type["initiateRemoteUpload:::InitiateRemoteUploadRequest"]=""
 operation_parameters_collection_type["listMedia:::workspaceUuid"]=""
 operation_parameters_collection_type["listMedia:::page"]=""
+operation_parameters_collection_type["listMedia:::limit"]=""
+operation_parameters_collection_type["listMedia:::folder"]=""
+operation_parameters_collection_type["listMedia:::mime_types[]"]="multi"
+operation_parameters_collection_type["listMedia:::type"]=""
+operation_parameters_collection_type["listMedia:::keyword"]=""
+operation_parameters_collection_type["listMedia:::usage"]=""
+operation_parameters_collection_type["listMedia:::favorite"]=""
+operation_parameters_collection_type["listMedia:::sort"]=""
+operation_parameters_collection_type["listMediaFolders:::workspaceUuid"]=""
 operation_parameters_collection_type["updateMedia:::workspaceUuid"]=""
 operation_parameters_collection_type["updateMedia:::mediaUuid"]=""
 operation_parameters_collection_type["updateMedia:::UpdateMediaRequest"]=""
+operation_parameters_collection_type["updateMediaFolder:::workspaceUuid"]=""
+operation_parameters_collection_type["updateMediaFolder:::folderUuid"]=""
+operation_parameters_collection_type["updateMediaFolder:::MediaFolderInput"]=""
 operation_parameters_collection_type["uploadChunk:::workspaceUuid"]=""
 operation_parameters_collection_type["uploadChunk:::uploadUuid"]=""
 operation_parameters_collection_type["uploadChunk:::chunk"]=""
@@ -390,10 +571,26 @@ operation_parameters_collection_type["uploadChunk:::chunk_index"]=""
 operation_parameters_collection_type["uploadMedia:::workspaceUuid"]=""
 operation_parameters_collection_type["uploadMedia:::file"]=""
 operation_parameters_collection_type["uploadMedia:::alt_text"]=""
+operation_parameters_collection_type["uploadMedia:::folder"]=""
+operation_parameters_collection_type["createMention:::workspaceUuid"]=""
+operation_parameters_collection_type["createMention:::MentionInput"]=""
+operation_parameters_collection_type["deleteMention:::workspaceUuid"]=""
+operation_parameters_collection_type["deleteMention:::mentionId"]=""
+operation_parameters_collection_type["getMention:::workspaceUuid"]=""
+operation_parameters_collection_type["getMention:::mentionId"]=""
+operation_parameters_collection_type["listMentions:::workspaceUuid"]=""
+operation_parameters_collection_type["listMentions:::q"]=""
+operation_parameters_collection_type["listMentions:::per_page"]=""
+operation_parameters_collection_type["listMentions:::page"]=""
+operation_parameters_collection_type["updateMention:::workspaceUuid"]=""
+operation_parameters_collection_type["updateMention:::mentionId"]=""
+operation_parameters_collection_type["updateMention:::MentionInput"]=""
 operation_parameters_collection_type["addPostToQueue:::workspaceUuid"]=""
 operation_parameters_collection_type["addPostToQueue:::postUuid"]=""
+operation_parameters_collection_type["addPostToQueue:::AddPostToQueueRequest"]=""
 operation_parameters_collection_type["approvePost:::workspaceUuid"]=""
 operation_parameters_collection_type["approvePost:::postUuid"]=""
+operation_parameters_collection_type["approvePost:::ApprovePostRequest"]=""
 operation_parameters_collection_type["createPost:::workspaceUuid"]=""
 operation_parameters_collection_type["createPost:::PostInput"]=""
 operation_parameters_collection_type["deletePost:::workspaceUuid"]=""
@@ -403,8 +600,13 @@ operation_parameters_collection_type["deletePostsBulk:::workspaceUuid"]=""
 operation_parameters_collection_type["deletePostsBulk:::DeletePostsBulkRequest"]=""
 operation_parameters_collection_type["getPost:::workspaceUuid"]=""
 operation_parameters_collection_type["getPost:::postUuid"]=""
+operation_parameters_collection_type["getPostAnalytics:::workspaceUuid"]=""
+operation_parameters_collection_type["getPostAnalytics:::postUuid"]=""
 operation_parameters_collection_type["listPosts:::workspaceUuid"]=""
 operation_parameters_collection_type["listPosts:::page"]=""
+operation_parameters_collection_type["retryPostAccount:::workspaceUuid"]=""
+operation_parameters_collection_type["retryPostAccount:::postUuid"]=""
+operation_parameters_collection_type["retryPostAccount:::accountUuid"]=""
 operation_parameters_collection_type["schedulePost:::workspaceUuid"]=""
 operation_parameters_collection_type["schedulePost:::postUuid"]=""
 operation_parameters_collection_type["schedulePost:::SchedulePostRequest"]=""
@@ -423,6 +625,7 @@ operation_parameters_collection_type["updateReceipt:::ReceiptUpdateInput"]=""
 operation_parameters_collection_type["addGenericSubscription:::workspaceUuid"]=""
 operation_parameters_collection_type["addGenericSubscription:::AddGenericSubscriptionRequest"]=""
 operation_parameters_collection_type["cancelSubscription:::workspaceUuid"]=""
+operation_parameters_collection_type["cancelSubscription:::CancelSubscriptionRequest"]=""
 operation_parameters_collection_type["changeSubscriptionPlan:::workspaceUuid"]=""
 operation_parameters_collection_type["changeSubscriptionPlan:::ChangeSubscriptionPlanRequest"]=""
 operation_parameters_collection_type["checkoutSubscription:::workspaceUuid"]=""
@@ -459,6 +662,7 @@ operation_parameters_collection_type["createWorkspace:::WorkspaceInput"]=""
 operation_parameters_collection_type["deleteWorkspace:::workspaceUuid"]=""
 operation_parameters_collection_type["deleteWorkspacesBulk:::DeleteWorkspacesBulkRequest"]=""
 operation_parameters_collection_type["getWorkspace:::workspaceUuid"]=""
+operation_parameters_collection_type["getWorkspaceAICredits:::workspaceUuid"]=""
 operation_parameters_collection_type["listWorkspaces:::keyword"]=""
 operation_parameters_collection_type["listWorkspaces:::subscription_status"]=""
 operation_parameters_collection_type["listWorkspaces:::access_status"]=""
@@ -826,7 +1030,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.0.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.8.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -876,19 +1080,43 @@ read -r -d '' ops <<EOF
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
+    echo -e "${BOLD}${WHITE}[analytics]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}getAccountAnalytics${OFF};Get account analytics (AUTH)
+  ${CYAN}getAnalyticsSummary${OFF};Get analytics summary (AUTH)
+  ${CYAN}getBestPostingTimes${OFF};Get best posting times (AUTH)
+  ${CYAN}getPostAnalytics_0${OFF};Get post analytics (AUTH)
+  ${CYAN}getPostingTimes${OFF};Get posting times heatmap (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
     echo -e "${BOLD}${WHITE}[media]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}abortChunkedUpload${OFF};Abort chunked upload (AUTH)
   ${CYAN}completeChunkedUpload${OFF};Complete chunked upload (AUTH)
+  ${CYAN}createMediaFolder${OFF};Create media folder (AUTH)
   ${CYAN}deleteMediaBulk${OFF};Delete media (bulk) (AUTH)
+  ${CYAN}deleteMediaFolder${OFF};Delete media folder (AUTH)
   ${CYAN}getMedia${OFF};Get media (AUTH)
   ${CYAN}getRemoteUploadStatus${OFF};Get remote upload status (AUTH)
   ${CYAN}initiateChunkedUpload${OFF};Initiate chunked upload (AUTH)
   ${CYAN}initiateRemoteUpload${OFF};Initiate remote upload (AUTH)
   ${CYAN}listMedia${OFF};List media (AUTH)
+  ${CYAN}listMediaFolders${OFF};List media folders (AUTH)
   ${CYAN}updateMedia${OFF};Update media (AUTH)
+  ${CYAN}updateMediaFolder${OFF};Update media folder (AUTH)
   ${CYAN}uploadChunk${OFF};Upload a chunk (AUTH)
   ${CYAN}uploadMedia${OFF};Upload media (binary) (AUTH)
+EOF
+echo "  $ops" | column -t -s ';'
+    echo ""
+    echo -e "${BOLD}${WHITE}[mentions]${OFF}"
+read -r -d '' ops <<EOF
+  ${CYAN}createMention${OFF};Create mention (AUTH)
+  ${CYAN}deleteMention${OFF};Delete mention (AUTH)
+  ${CYAN}getMention${OFF};Get mention (AUTH)
+  ${CYAN}listMentions${OFF};List mentions (AUTH)
+  ${CYAN}updateMention${OFF};Update mention (AUTH)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -900,7 +1128,9 @@ read -r -d '' ops <<EOF
   ${CYAN}deletePost${OFF};Delete post (AUTH)
   ${CYAN}deletePostsBulk${OFF};Delete posts (bulk) (AUTH)
   ${CYAN}getPost${OFF};Get post (AUTH)
+  ${CYAN}getPostAnalytics${OFF};Get post analytics (AUTH)
   ${CYAN}listPosts${OFF};List posts (AUTH)
+  ${CYAN}retryPostAccount${OFF};Retry publishing to one account (AUTH)
   ${CYAN}schedulePost${OFF};Schedule post (AUTH)
   ${CYAN}updatePost${OFF};Update post (AUTH)
 EOF
@@ -960,6 +1190,8 @@ read -r -d '' ops <<EOF
   ${CYAN}deleteWorkspace${OFF};Delete workspace (AUTH)
   ${CYAN}deleteWorkspacesBulk${OFF};Delete workspaces (bulk) (AUTH)
   ${CYAN}getWorkspace${OFF};Get workspace (AUTH)
+  ${CYAN}getWorkspaceAICredits${OFF};Get workspace AI credits (AUTH)
+  ${CYAN}listMyWorkspaces${OFF};List my workspaces (AUTH)
   ${CYAN}listWorkspaces${OFF};List workspaces (AUTH)
   ${CYAN}removeUserFromWorkspace${OFF};Remove user from workspace (AUTH)
   ${CYAN}updateWorkspace${OFF};Update workspace (AUTH)
@@ -993,7 +1225,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.0.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.8.0)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -1007,6 +1239,14 @@ PostBoost handles platform authorization for you.
 ## Base URL
 All workspace-scoped endpoints are prefixed with '/{workspaceUuid}'.
 Panel/admin endpoints are prefixed with '/panel'.
+
+## Plan access
+Every workspace-scoped endpoint returns '403' when the workspace's plan does not
+include API access (capability 'api').
+
+## Dates and times
+Post dates and times ('date', 'time', 'accounts_schedule') are read in the request's
+'timezone' when one is given, otherwise in the workspace timezone.
 
 ## Authentication
 All requests require a Bearer token in the 'Authorization' header.
@@ -1027,7 +1267,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.0.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.8.0)${OFF}"
     echo ""
 }
 
@@ -1095,6 +1335,8 @@ Costs 1 AI credit per call." | paste -sd' ' | fold -sw 80
     echo -e "${result_color_table[${code:0:1}]}  200;Alt text generated and saved to media record${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
@@ -1123,6 +1365,8 @@ Saves results to the media library. Credits: 'count × credit_weight'." | paste 
     echo -e "${result_color_table[${code:0:1}]}  200;Images edited and saved to media library${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
@@ -1159,6 +1403,8 @@ Credits: 'count x credit_weight' (default: 5 per image)." | paste -sd' ' | fold 
     echo -e "${result_color_table[${code:0:1}]}  200;Images generated and saved to media library${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
@@ -1190,6 +1436,8 @@ no credit is charged for the prompt step." | paste -sd' ' | fold -sw 80
     echo -e "${result_color_table[${code:0:1}]}  200;Prompt built successfully${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
@@ -1218,6 +1466,8 @@ Credits: 'count × credit_weight'." | paste -sd' ' | fold -sw 80
     echo -e "${result_color_table[${code:0:1}]}  200;Variations generated and saved to media library${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
@@ -1257,10 +1507,18 @@ print_listAccounts_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listAccounts - List accounts${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Returns all social media accounts connected to the workspace." | paste -sd' ' | fold -sw 80
+    echo -e "Returns all social media accounts connected to the workspace, newest first. Optional filters narrow the list." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}keyword${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Match the account name or username.${YELLOW} Specify as: keyword=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}group${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Only accounts in this account group.${YELLOW} Specify as: group=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}providers[]${OFF} ${BLUE}[array[string]]${OFF} ${CYAN}(default: null)${OFF} - Only accounts of these providers (for example 'instagram', 'linkedin').${YELLOW} Specify as: providers[]=value1 providers[]=value2 providers[]=...${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}unauthorized${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - When 'true', only accounts that need to be reconnected.${YELLOW} Specify as: unauthorized=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -1269,6 +1527,162 @@ print_listAccounts_help() {
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=403
     echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getAccountAnalytics operation
+#
+##############################################################################
+print_getAccountAnalytics_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getAccountAnalytics - Get account analytics${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Analytics for one account. 'type' selects one of the tabs the account supports (listed in 'tabs' of the response); returns '422' when the account does not support analytics." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}accountUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the social media account. ${YELLOW}Specify as: accountUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}period${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: this_month)${OFF} - Preset reporting period. Ignored when 'date_from' and 'date_to' are given.${YELLOW} Specify as: period=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}date_from${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Start of a custom range (Y-m-d). Required with 'date_to'; the range may span at most 366 days.${YELLOW} Specify as: date_from=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}date_to${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - End of a custom range (Y-m-d). Required with 'date_from'; must not be before it.${YELLOW} Specify as: date_to=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}type${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Analytics tab. Defaults to the account's default tab.${YELLOW} Specify as: type=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 1)${OFF} - Page for list-style tabs (for example per-post metrics).${YELLOW} Specify as: page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}per_page${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: per_page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort_by${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: sort_by=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort_dir${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: desc)${OFF} - ${YELLOW} Specify as: sort_dir=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Account analytics${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getAnalyticsSummary operation
+#
+##############################################################################
+print_getAnalyticsSummary_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getAnalyticsSummary - Get analytics summary${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Cross-platform summary (followers, growth, posts, leaderboard, posting streak) over every account that supports analytics, for a preset period or a custom date range." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}period${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: this_month)${OFF} - Preset reporting period. Ignored when 'date_from' and 'date_to' are given.${YELLOW} Specify as: period=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}date_from${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Start of a custom range (Y-m-d). Required with 'date_to'; the range may span at most 366 days.${YELLOW} Specify as: date_from=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}date_to${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - End of a custom range (Y-m-d). Required with 'date_from'; must not be before it.${YELLOW} Specify as: date_to=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Analytics summary${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getBestPostingTimes operation
+#
+##############################################################################
+print_getBestPostingTimes_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getBestPostingTimes - Get best posting times${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "The next recommended date and time per account, on or after 'from' (never in the past), within the next 14 days." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}accounts[]${OFF} ${BLUE}[array[string]]${OFF} ${CYAN}(default: null)${OFF} - Account UUIDs. Defaults to every account in the workspace.${YELLOW} Specify as: accounts[]=value1 accounts[]=value2 accounts[]=...${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}from${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Earliest date to recommend (Y-m-d). Defaults to now.${YELLOW} Specify as: from=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}timezone${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Timezone for 'from' and the returned times. Defaults to the workspace timezone.${YELLOW} Specify as: timezone=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Best posting times${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getPostAnalytics_0 operation
+#
+##############################################################################
+print_getPostAnalytics_0_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getPostAnalytics_0 - Get post analytics${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Engagement metrics for a published post across its accounts (also works for trashed posts), with totals, trends and the best-performing account." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}postUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the post. ${YELLOW}Specify as: postUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Post analytics${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getPostingTimes operation
+#
+##############################################################################
+print_getPostingTimes_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getPostingTimes - Get posting times heatmap${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Engagement scores per weekday and hour, merged across the given accounts (all accounts when none is given), in the requested timezone. Also returns up to three recommended slots." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}accounts[]${OFF} ${BLUE}[array[string]]${OFF} ${CYAN}(default: null)${OFF} - Account UUIDs. Defaults to every account in the workspace.${YELLOW} Specify as: accounts[]=value1 accounts[]=value2 accounts[]=...${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}timezone${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Timezone the grid is expressed in. Defaults to the workspace timezone.${YELLOW} Specify as: timezone=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Posting times${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1290,6 +1704,8 @@ print_abortChunkedUpload_help() {
     echo -e "${result_color_table[${code:0:1}]}  204;Upload aborted${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1300,17 +1716,47 @@ print_completeChunkedUpload_help() {
     echo ""
     echo -e "${BOLD}${WHITE}completeChunkedUpload - Complete chunked upload${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Signal that all chunks have been uploaded. Returns the final media object." | paste -sd' ' | fold -sw 80
+    echo -e "Signal that all chunks have been uploaded. Returns the final media object. A video may come back with 'is_processing' set to 'true' while its conversion runs." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}uploadUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} -  ${YELLOW}Specify as: uploadUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Completed media object${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for createMediaFolder operation
+#
+##############################################################################
+print_createMediaFolder_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}createMediaFolder - Create media folder${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Creates a folder at the top level or under 'parent'. The name must be unique among its siblings." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Created folder${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1323,7 +1769,7 @@ print_deleteMediaBulk_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteMediaBulk - Delete media (bulk)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Delete one or more media items by their IDs." | paste -sd' ' | fold -sw 80
+    echo -e "Delete one or more media items by their numeric IDs or UUIDs (both may be mixed, up to 500 per request)." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1335,6 +1781,39 @@ print_deleteMediaBulk_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for deleteMediaFolder operation
+#
+##############################################################################
+print_deleteMediaFolder_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}deleteMediaFolder - Delete media folder${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Deletes a folder. By default its media and sub-folders move up to the folder's parent; with 'delete_media' set to true every media item below the folder is deleted as well." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}folderUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the media folder. ${YELLOW}Specify as: folderUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1356,6 +1835,8 @@ print_getMedia_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Media asset${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1379,6 +1860,8 @@ print_getRemoteUploadStatus_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Download status${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1402,6 +1885,8 @@ print_initiateChunkedUpload_help() {
     echo -e "${result_color_table[${code:0:1}]}  201;Chunked upload session details${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1428,6 +1913,8 @@ For large files a 'download_id' is returned — poll the status endpoint." | pas
     echo -e "${result_color_table[${code:0:1}]}  201;Media object or download job${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1440,11 +1927,29 @@ print_listMedia_help() {
     echo ""
     echo -e "${BOLD}${WHITE}listMedia - List media${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Returns a paginated list of media assets in the workspace library." | paste -sd' ' | fold -sw 80
+    echo -e "Returns a paginated list of media assets in the workspace library. Without 'folder'
+every item is listed, whatever folder it is filed in. A 'keyword' search always looks at
+the whole library and ignores 'folder' and 'favorite'." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
-    echo -e "  * ${GREEN}page${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 1)${OFF} - Page number (20 items per page).${YELLOW} Specify as: page=value${OFF}" \
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 1)${OFF} - Page number.${YELLOW} Specify as: page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}limit${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 50)${OFF} - Items per page. Values below 1 fall back to 50; values above 100 are capped at 100.${YELLOW} Specify as: limit=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}folder${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Media folder UUID, or 'root' for items not filed in any folder.${YELLOW} Specify as: folder=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}mime_types[]${OFF} ${BLUE}[array[string]]${OFF} ${CYAN}(default: null)${OFF} - Only these MIME types (for example 'image/png').${YELLOW} Specify as: mime_types[]=value1 mime_types[]=value2 mime_types[]=...${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}type${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Only this media type.${YELLOW} Specify as: type=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}keyword${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Search media by name.${YELLOW} Specify as: keyword=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}usage${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Filter by how the media is used in posts.${YELLOW} Specify as: usage=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}favorite${OFF} ${BLUE}[boolean]${OFF} ${CYAN}(default: null)${OFF} - When 'true', only media the caller marked as favorite.${YELLOW} Specify as: favorite=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}sort${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: newest)${OFF} - ${YELLOW} Specify as: sort=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -1452,6 +1957,30 @@ print_listMedia_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Paginated list of media${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for listMediaFolders operation
+#
+##############################################################################
+print_listMediaFolders_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listMediaFolders - List media folders${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Returns the whole folder tree of the media library in one response (not paginated). Rebuild the tree from each folder's 'parent'." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;All media folders${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1462,7 +1991,9 @@ print_updateMedia_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateMedia - Update media${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Update the alt text of a media asset." | paste -sd' ' | fold -sw 80
+    echo -e "Update the name, alt text, or folder of a media asset. Only the keys present in the body
+are written. Sending 'folder: null' moves the item to the library root; omitting 'folder'
+leaves it where it is." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1475,8 +2006,41 @@ print_updateMedia_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for updateMediaFolder operation
+#
+##############################################################################
+print_updateMediaFolder_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}updateMediaFolder - Update media folder${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Renames a folder and/or moves it. Sending 'parent' moves the folder (null = top level); omitting it keeps the current parent. A folder cannot be moved into itself or one of its descendants." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}folderUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the media folder. ${YELLOW}Specify as: folderUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Updated folder${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1498,6 +2062,8 @@ print_uploadChunk_help() {
     echo -e "${result_color_table[${code:0:1}]}  201;Chunk received${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1517,9 +2083,146 @@ print_uploadMedia_help() {
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=201
-    echo -e "${result_color_table[${code:0:1}]}  201;Uploaded media object${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  201;Uploaded media object. A video may come back with 'is_processing' set to 'true' while its conversion runs.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for createMention operation
+#
+##############################################################################
+print_createMention_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}createMention - Create mention${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Adds a person or page to the mention book. When one of the submitted identities already
+belongs to a stored mention, that mention is reused and the identities are added to it
+(status '200' instead of '201')." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Created mention${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Existing mention reused${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for deleteMention operation
+#
+##############################################################################
+print_deleteMention_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}deleteMention - Delete mention${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Removes a mention from the mention book. 'success' is false when nothing was deleted." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}mentionId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The mention's 'id' (a UUID). ${YELLOW}Specify as: mentionId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getMention operation
+#
+##############################################################################
+print_getMention_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getMention - Get mention${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Returns a single mention with its identities." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}mentionId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The mention's 'id' (a UUID). ${YELLOW}Specify as: mentionId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Mention${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for listMentions operation
+#
+##############################################################################
+print_listMentions_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listMentions - List mentions${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Returns a paginated list of the workspace's mention book, ranked, with each entry's network identities." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}q${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - Search keyword.${YELLOW} Specify as: q=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}per_page${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 25)${OFF} - ${YELLOW} Specify as: per_page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}page${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: 1)${OFF} - ${YELLOW} Specify as: page=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Paginated list of mentions${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for updateMention operation
+#
+##############################################################################
+print_updateMention_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}updateMention - Update mention${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Replaces the mention's name, avatar and identities. Identities for providers not in the payload are removed. An identity already held by another mention returns '422'." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}mentionId${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The mention's 'id' (a UUID). ${YELLOW}Specify as: mentionId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Updated mention${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1532,19 +2235,27 @@ print_addPostToQueue_help() {
     echo ""
     echo -e "${BOLD}${WHITE}addPostToQueue - Add post to queue${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Add an existing post to the smart publishing queue." | paste -sd' ' | fold -sw 80
+    echo -e "Add an existing post to the smart publishing queue. Each account of the post gets its own
+next free queue slot. Returns '422' when the post has no accounts, the posting schedule has no
+available times, or provider requirements are not met." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}postUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the post. ${YELLOW}Specify as: postUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=201
     echo -e "${result_color_table[${code:0:1}]}  201;Queue confirmation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1555,11 +2266,15 @@ print_approvePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}approvePost - Approve post${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Approve a post that is pending review." | paste -sd' ' | fold -sw 80
+    echo -e "Approve a post that is pending review. The approver may move the post with 'date'/'time'
+(read in 'timezone') and set per-account times with 'accounts_schedule'; without them the
+post keeps the time it was submitted with. Provider requirements are validated and reported as '422'." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e "  * ${GREEN}postUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the post. ${YELLOW}Specify as: postUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -1570,6 +2285,8 @@ print_approvePost_help() {
     echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1582,7 +2299,15 @@ print_createPost_help() {
     echo -e ""
     echo -e "Create a new post. Use 'schedule: true' with 'date' and 'time' to schedule,
 'schedule_now: true' to publish immediately, or 'queue: true' to add to the
-smart publishing queue." | paste -sd' ' | fold -sw 80
+smart publishing queue (each account gets its own queue slot).
+
+'date', 'time' and 'accounts_schedule' are read in 'timezone' when given,
+otherwise in the workspace timezone. Use 'accounts_schedule' to give individual
+accounts their own departure time.
+
+Post bodies may reference mentions with '{{mention:<reference>}}' (see the
+Mentions endpoints). When the post is scheduled, provider requirements (for example
+a network that requires media) are validated up front and reported as '422'." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1594,6 +2319,8 @@ smart publishing queue." | paste -sd' ' | fold -sw 80
     echo -e "${result_color_table[${code:0:1}]}  201;Created post${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1619,6 +2346,8 @@ print_deletePost_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Deletion result${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1643,6 +2372,8 @@ print_deletePostsBulk_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Deletion result${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1664,6 +2395,33 @@ print_getPost_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Post details${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getPostAnalytics operation
+#
+##############################################################################
+print_getPostAnalytics_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getPostAnalytics - Get post analytics${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Engagement metrics for a published post across its accounts (also works for trashed posts), with totals, trends and the best-performing account." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}postUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the post. ${YELLOW}Specify as: postUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Post analytics${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -1688,6 +2446,36 @@ print_listPosts_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Paginated list of posts${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for retryPostAccount operation
+#
+##############################################################################
+print_retryPostAccount_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}retryPostAccount - Retry publishing to one account${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Re-publishes a post to a single account whose publishing failed. Returns '422' when the account is not on the post, the post is still publishing, or the account did not fail." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}postUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the post. ${YELLOW}Specify as: postUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}accountUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the social media account. ${YELLOW}Specify as: accountUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Retry started${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1698,7 +2486,10 @@ print_schedulePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}schedulePost - Schedule post${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Schedule an existing post. Set 'postNow: true' to publish immediately." | paste -sd' ' | fold -sw 80
+    echo -e "Schedule an existing post. Optionally move it with 'date'/'time' (read in 'timezone') and give
+accounts their own times with 'accounts_schedule'. Set 'postNow: true' to publish immediately;
+publishing starts within the request and any per-account times are dropped.
+Provider requirements are validated and reported as '422'." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1711,8 +2502,12 @@ print_schedulePost_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Schedule confirmation${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -1723,7 +2518,9 @@ print_updatePost_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updatePost - Update post${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Replaces a post's versions, accounts, tags, and scheduling options. The post must not be in a published state." | paste -sd' ' | fold -sw 80
+    echo -e "Replaces a post's versions, accounts, tags, and scheduling options. The post must not be in a published state.
+'timezone' is honoured: 'date', 'time' and 'accounts_schedule' are read in it. When the post stays
+scheduled, provider requirements are validated and reported as '422'." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -1736,6 +2533,8 @@ print_updatePost_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
@@ -1923,10 +2722,13 @@ print_cancelSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}cancelSubscription - Cancel subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Cancels the workspace's Stripe subscription at the end of the current billing period. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e "Cancels the workspace's Stripe subscription at the end of the current billing period, or right away
+with 'immediately: true'. Works for active and past-due subscriptions. Admin only." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
@@ -1935,6 +2737,8 @@ print_cancelSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=403
     echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;The workspace has no active or past-due subscription, or the billing provider rejected the cancellation.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -2063,7 +2867,7 @@ print_removeGenericSubscription_help() {
     echo ""
     echo -e "${BOLD}${WHITE}removeGenericSubscription - Remove generic subscription${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Removes the generic (non-Stripe) subscription from the workspace. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e "Removes the generic (non-Stripe) subscription from the workspace. Returns '422' when the workspace has no generic subscription. Admin only." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2075,6 +2879,8 @@ print_removeGenericSubscription_help() {
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=403
     echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;The workspace has no generic subscription.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -2143,6 +2949,8 @@ print_createTag_help() {
     echo -e "${result_color_table[${code:0:1}]}  201;Created tag${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -2166,6 +2974,8 @@ print_deleteTag_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -2189,6 +2999,8 @@ print_getTag_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;Tag details${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
@@ -2211,6 +3023,8 @@ print_listTags_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;List of tags${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -2234,6 +3048,8 @@ print_updateTag_help() {
     echo -e "${result_color_table[${code:0:1}]}  200;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
@@ -2510,6 +3326,48 @@ print_getWorkspace_help() {
 }
 ##############################################################################
 #
+# Print help for getWorkspaceAICredits operation
+#
+##############################################################################
+print_getWorkspaceAICredits_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getWorkspaceAICredits - Get workspace AI credits${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Returns whether the workspace can use AI credits, its remaining balance, and whether the balance is low. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;AI credit status${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for listMyWorkspaces operation
+#
+##############################################################################
+print_listMyWorkspaces_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}listMyWorkspaces - List my workspaces${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Returns the workspaces the authenticated user belongs to, most recently updated first, with the caller's role in each. Use a returned 'uuid' as 'workspaceUuid'." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The caller's workspaces${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for listWorkspaces operation
 #
 ##############################################################################
@@ -2570,7 +3428,7 @@ print_updateWorkspace_help() {
     echo ""
     echo -e "${BOLD}${WHITE}updateWorkspace - Update workspace${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Updates a workspace's name, color, or access status. Admin only." | paste -sd' ' | fold -sw 80
+    echo -e "Updates a workspace's name, owner, or access status. Admin only. 'hex_color' is accepted but ignored." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -3128,10 +3986,190 @@ call_listAccounts() {
     local path_parameter_names=(workspaceUuid)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(  )
+    local query_parameter_names=(keyword group providers[] unauthorized  )
     local path
 
     if ! path=$(build_request_path "/app/api/{workspaceUuid}/accounts" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getAccountAnalytics operation
+#
+##############################################################################
+call_getAccountAnalytics() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid accountUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(period date_from date_to type page per_page sort_by sort_dir  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/analytics/accounts/{accountUuid}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getAnalyticsSummary operation
+#
+##############################################################################
+call_getAnalyticsSummary() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(period date_from date_to  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/analytics" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getBestPostingTimes operation
+#
+##############################################################################
+call_getBestPostingTimes() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(accounts[] from timezone  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/analytics/best-times" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getPostAnalytics_0 operation
+#
+##############################################################################
+call_getPostAnalytics_0() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid postUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/posts/{postUuid}/analytics" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getPostingTimes operation
+#
+##############################################################################
+call_getPostingTimes() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(accounts[] timezone  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/analytics/posting-times" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -3218,10 +4256,130 @@ call_completeChunkedUpload() {
     if [[ -n $basic_auth_credential ]]; then
         basic_auth_option="-u ${basic_auth_credential}"
     fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
     else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call createMediaFolder operation
+#
+##############################################################################
+call_createMediaFolder() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/media/folders" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -3240,6 +4398,84 @@ call_deleteMediaBulk() {
     local path
 
     if ! path=$(build_request_path "/app/api/{workspaceUuid}/media" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call deleteMediaFolder operation
+#
+##############################################################################
+call_deleteMediaFolder() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid folderUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/media/folders/{folderUuid}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -3542,10 +4778,46 @@ call_listMedia() {
     local path_parameter_names=(workspaceUuid)
     # ignore error about 'query_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
-    local query_parameter_names=(page  )
+    local query_parameter_names=(page limit folder mime_types[] type keyword usage favorite sort  )
     local path
 
     if ! path=$(build_request_path "/app/api/{workspaceUuid}/media" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call listMediaFolders operation
+#
+##############################################################################
+call_listMediaFolders() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/media/folders" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -3582,6 +4854,84 @@ call_updateMedia() {
     local path
 
     if ! path=$(build_request_path "/app/api/{workspaceUuid}/media/{mediaUuid}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PUT"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call updateMediaFolder operation
+#
+##############################################################################
+call_updateMediaFolder() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid folderUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/media/folders/{folderUuid}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -3721,6 +5071,270 @@ call_uploadMedia() {
 
 ##############################################################################
 #
+# Call createMention operation
+#
+##############################################################################
+call_createMention() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/mentions" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call deleteMention operation
+#
+##############################################################################
+call_deleteMention() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid mentionId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/mentions/{mentionId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="DELETE"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getMention operation
+#
+##############################################################################
+call_getMention() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid mentionId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/mentions/{mentionId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call listMentions operation
+#
+##############################################################################
+call_listMentions() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(q per_page page  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/mentions" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call updateMention operation
+#
+##############################################################################
+call_updateMention() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid mentionId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/mentions/{mentionId}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="PUT"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call addPostToQueue operation
 #
 ##############################################################################
@@ -3748,10 +5362,52 @@ call_addPostToQueue() {
     if [[ -n $basic_auth_credential ]]; then
         basic_auth_option="-u ${basic_auth_credential}"
     fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
     else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -3784,10 +5440,52 @@ call_approvePost() {
     if [[ -n $basic_auth_credential ]]; then
         basic_auth_option="-u ${basic_auth_credential}"
     fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
     else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -4063,6 +5761,42 @@ call_getPost() {
 
 ##############################################################################
 #
+# Call getPostAnalytics operation
+#
+##############################################################################
+call_getPostAnalytics() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid postUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/posts/{postUuid}/analytics" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call listPosts operation
 #
 ##############################################################################
@@ -4080,6 +5814,42 @@ call_listPosts() {
         exit 1
     fi
     local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call retryPostAccount operation
+#
+##############################################################################
+call_retryPostAccount() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid postUuid accountUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/posts/retry/{postUuid}/{accountUuid}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
     local headers_curl
     headers_curl=$(header_arguments_to_curl)
     if [[ -n $header_accept ]]; then
@@ -4702,10 +6472,52 @@ call_cancelSubscription() {
     if [[ -n $basic_auth_credential ]]; then
         basic_auth_option="-u ${basic_auth_credential}"
     fi
-    if [[ "$print_curl" = true ]]; then
-        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
     else
-        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -6079,6 +7891,78 @@ call_getWorkspace() {
 
 ##############################################################################
 #
+# Call getWorkspaceAICredits operation
+#
+##############################################################################
+call_getWorkspaceAICredits() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/panel/workspaces/{workspaceUuid}/ai-credits" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call listMyWorkspaces operation
+#
+##############################################################################
+call_listMyWorkspaces() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/workspaces" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call listWorkspaces operation
 #
 ##############################################################################
@@ -6468,14 +8352,35 @@ case $key in
     listAccounts)
     operation="listAccounts"
     ;;
+    getAccountAnalytics)
+    operation="getAccountAnalytics"
+    ;;
+    getAnalyticsSummary)
+    operation="getAnalyticsSummary"
+    ;;
+    getBestPostingTimes)
+    operation="getBestPostingTimes"
+    ;;
+    getPostAnalytics_0)
+    operation="getPostAnalytics_0"
+    ;;
+    getPostingTimes)
+    operation="getPostingTimes"
+    ;;
     abortChunkedUpload)
     operation="abortChunkedUpload"
     ;;
     completeChunkedUpload)
     operation="completeChunkedUpload"
     ;;
+    createMediaFolder)
+    operation="createMediaFolder"
+    ;;
     deleteMediaBulk)
     operation="deleteMediaBulk"
+    ;;
+    deleteMediaFolder)
+    operation="deleteMediaFolder"
     ;;
     getMedia)
     operation="getMedia"
@@ -6492,14 +8397,35 @@ case $key in
     listMedia)
     operation="listMedia"
     ;;
+    listMediaFolders)
+    operation="listMediaFolders"
+    ;;
     updateMedia)
     operation="updateMedia"
+    ;;
+    updateMediaFolder)
+    operation="updateMediaFolder"
     ;;
     uploadChunk)
     operation="uploadChunk"
     ;;
     uploadMedia)
     operation="uploadMedia"
+    ;;
+    createMention)
+    operation="createMention"
+    ;;
+    deleteMention)
+    operation="deleteMention"
+    ;;
+    getMention)
+    operation="getMention"
+    ;;
+    listMentions)
+    operation="listMentions"
+    ;;
+    updateMention)
+    operation="updateMention"
     ;;
     addPostToQueue)
     operation="addPostToQueue"
@@ -6519,8 +8445,14 @@ case $key in
     getPost)
     operation="getPost"
     ;;
+    getPostAnalytics)
+    operation="getPostAnalytics"
+    ;;
     listPosts)
     operation="listPosts"
+    ;;
+    retryPostAccount)
+    operation="retryPostAccount"
     ;;
     schedulePost)
     operation="schedulePost"
@@ -6623,6 +8555,12 @@ case $key in
     ;;
     getWorkspace)
     operation="getWorkspace"
+    ;;
+    getWorkspaceAICredits)
+    operation="getWorkspaceAICredits"
+    ;;
+    listMyWorkspaces)
+    operation="listMyWorkspaces"
     ;;
     listWorkspaces)
     operation="listWorkspaces"
@@ -6747,14 +8685,35 @@ case $operation in
     listAccounts)
     call_listAccounts
     ;;
+    getAccountAnalytics)
+    call_getAccountAnalytics
+    ;;
+    getAnalyticsSummary)
+    call_getAnalyticsSummary
+    ;;
+    getBestPostingTimes)
+    call_getBestPostingTimes
+    ;;
+    getPostAnalytics_0)
+    call_getPostAnalytics_0
+    ;;
+    getPostingTimes)
+    call_getPostingTimes
+    ;;
     abortChunkedUpload)
     call_abortChunkedUpload
     ;;
     completeChunkedUpload)
     call_completeChunkedUpload
     ;;
+    createMediaFolder)
+    call_createMediaFolder
+    ;;
     deleteMediaBulk)
     call_deleteMediaBulk
+    ;;
+    deleteMediaFolder)
+    call_deleteMediaFolder
     ;;
     getMedia)
     call_getMedia
@@ -6771,14 +8730,35 @@ case $operation in
     listMedia)
     call_listMedia
     ;;
+    listMediaFolders)
+    call_listMediaFolders
+    ;;
     updateMedia)
     call_updateMedia
+    ;;
+    updateMediaFolder)
+    call_updateMediaFolder
     ;;
     uploadChunk)
     call_uploadChunk
     ;;
     uploadMedia)
     call_uploadMedia
+    ;;
+    createMention)
+    call_createMention
+    ;;
+    deleteMention)
+    call_deleteMention
+    ;;
+    getMention)
+    call_getMention
+    ;;
+    listMentions)
+    call_listMentions
+    ;;
+    updateMention)
+    call_updateMention
     ;;
     addPostToQueue)
     call_addPostToQueue
@@ -6798,8 +8778,14 @@ case $operation in
     getPost)
     call_getPost
     ;;
+    getPostAnalytics)
+    call_getPostAnalytics
+    ;;
     listPosts)
     call_listPosts
+    ;;
+    retryPostAccount)
+    call_retryPostAccount
     ;;
     schedulePost)
     call_schedulePost
@@ -6902,6 +8888,12 @@ case $operation in
     ;;
     getWorkspace)
     call_getWorkspace
+    ;;
+    getWorkspaceAICredits)
+    call_getWorkspaceAICredits
+    ;;
+    listMyWorkspaces)
+    call_listMyWorkspaces
     ;;
     listWorkspaces)
     call_listWorkspaces

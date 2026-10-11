@@ -57,7 +57,8 @@ Name | Type | Description  | Notes
 
 Cancel subscription
 
-Cancels the workspace's Stripe subscription at the end of the current billing period. Admin only.
+Cancels the workspace's Stripe subscription at the end of the current billing period, or right away
+with 'immediately: true'. Works for active and past-due subscriptions. Admin only.
 
 ### Example
 
@@ -71,6 +72,7 @@ postboost-cli cancelSubscription workspaceUuid=value
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **cancelSubscriptionRequest** | [**CancelSubscriptionRequest**](CancelSubscriptionRequest.md) |  | [optional]
 
 ### Return type
 
@@ -82,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not Applicable
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -270,7 +272,7 @@ Name | Type | Description  | Notes
 
 Remove generic subscription
 
-Removes the generic (non-Stripe) subscription from the workspace. Admin only.
+Removes the generic (non-Stripe) subscription from the workspace. Returns '422' when the workspace has no generic subscription. Admin only.
 
 ### Example
 

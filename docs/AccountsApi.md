@@ -49,12 +49,12 @@ Name | Type | Description  | Notes
 
 List accounts
 
-Returns all social media accounts connected to the workspace.
+Returns all social media accounts connected to the workspace, newest first. Optional filters narrow the list.
 
 ### Example
 
 ```bash
-postboost-cli listAccounts workspaceUuid=value
+postboost-cli listAccounts workspaceUuid=value  keyword=value  group=value  Specify as:  providers[]=value1 providers[]=value2 providers[]=...  unauthorized=value
 ```
 
 ### Parameters
@@ -63,6 +63,10 @@ postboost-cli listAccounts workspaceUuid=value
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **keyword** | **string** | Match the account name or username. | [optional] [default to null]
+ **group** | **string** | Only accounts in this account group. | [optional] [default to null]
+ **providersLeft_Square_BracketRight_Square_Bracket** | [**array[string]**](string.md) | Only accounts of these providers (for example 'instagram', 'linkedin'). | [optional] [default to null]
+ **unauthorized** | **boolean** | When 'true', only accounts that need to be reconnected. | [optional] [default to null]
 
 ### Return type
 

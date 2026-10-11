@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | [default to null]
-**hexUnderscorecolor** | **string** |  | [default to null]
+**hexUnderscorecolor** | **string** |  | [optional] [default to null]
 **ownerUnderscoreid** | **integer** |  | [optional] [default to null]
 **accessUnderscorestatus** | **string** |  | [default to null]
 

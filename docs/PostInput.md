@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **date** | **string** |  | [optional] [default to null]
 **_time** | **string** |  | [optional] [default to null]
 **timezone** | **string** |  | [optional] [default to null]
+**accountsUnderscoreschedule** | [**array[AccountSchedule]**](AccountSchedule.md) |  | [optional] [default to null]
 **schedule** | **boolean** |  | [optional] [default to null]
 **scheduleUnderscorenow** | **boolean** |  | [optional] [default to null]
 **queue** | **boolean** |  | [optional] [default to null]
