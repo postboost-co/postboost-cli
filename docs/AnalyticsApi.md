@@ -4,12 +4,96 @@ All URIs are relative to */app/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createReportExport**](AnalyticsApi.md#createReportExport) | **POST** /{workspaceUuid}/reports/exports | Create a report export
+[**downloadReportExport**](AnalyticsApi.md#downloadReportExport) | **GET** /{workspaceUuid}/reports/exports/{exportUuid}/download | Download a report file
 [**getAccountAnalytics**](AnalyticsApi.md#getAccountAnalytics) | **GET** /{workspaceUuid}/analytics/accounts/{accountUuid} | Get account analytics
 [**getAnalyticsSummary**](AnalyticsApi.md#getAnalyticsSummary) | **GET** /{workspaceUuid}/analytics | Get analytics summary
 [**getBestPostingTimes**](AnalyticsApi.md#getBestPostingTimes) | **GET** /{workspaceUuid}/analytics/best-times | Get best posting times
 [**getPostAnalytics_0**](AnalyticsApi.md#getPostAnalytics_0) | **GET** /{workspaceUuid}/posts/{postUuid}/analytics | Get post analytics
 [**getPostingTimes**](AnalyticsApi.md#getPostingTimes) | **GET** /{workspaceUuid}/analytics/posting-times | Get posting times heatmap
+[**getReportBranding**](AnalyticsApi.md#getReportBranding) | **GET** /{workspaceUuid}/report-branding | Get the report branding
+[**getReportExport**](AnalyticsApi.md#getReportExport) | **GET** /{workspaceUuid}/reports/exports/{exportUuid} | Get a report export
+[**listReportExports**](AnalyticsApi.md#listReportExports) | **GET** /{workspaceUuid}/reports/exports | List report exports
+[**updateReportBranding**](AnalyticsApi.md#updateReportBranding) | **PUT** /{workspaceUuid}/report-branding | Update the report branding
+[**uploadReportBrandingLogo**](AnalyticsApi.md#uploadReportBrandingLogo) | **POST** /{workspaceUuid}/report-branding/logo | Upload the report logo
 
+
+
+## createReportExport
+
+Create a report export
+
+Generates a report for a period (default 'last_month') or a custom 'date_from'/'date_to'
+range: a branded PDF (summary, accounts, top 10 posts; the header uses the report branding)
+or a CSV with one row per published post and account ('dataset: posts', default) or per
+account ('dataset: accounts'). CSV files are UTF-8 with a byte order mark. At most 500 posts
+per report. The file is ready when the call returns; fetch it from 'download_url' with the
+same token. Admins and members only; 20 per minute.
+
+### Example
+
+```bash
+postboost-cli createReportExport workspaceUuid=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **reportExportInput** | [**ReportExportInput**](ReportExportInput.md) |  |
+
+### Return type
+
+[**CreateReportExport201Response**](CreateReportExport201Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## downloadReportExport
+
+Download a report file
+
+The PDF or CSV file. '410' once it expired (7 days) or if the export failed.
+
+### Example
+
+```bash
+postboost-cli downloadReportExport workspaceUuid=value exportUuid=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **exportUuid** | **string** | UUID of the report export. | [default to null]
+
+### Return type
+
+**binary**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/pdf, text/csv, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
 ## getAccountAnalytics
@@ -200,6 +284,182 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## getReportBranding
+
+Get the report branding
+
+The white-label header of the workspace's PDF reports. Unset fields are 'null'; the workspace name is used then.
+
+### Example
+
+```bash
+postboost-cli getReportBranding workspaceUuid=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+
+### Return type
+
+[**GetReportBranding200Response**](GetReportBranding200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## getReportExport
+
+Get a report export
+
+### Example
+
+```bash
+postboost-cli getReportExport workspaceUuid=value exportUuid=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **exportUuid** | **string** | UUID of the report export. | [default to null]
+
+### Return type
+
+[**CreateReportExport201Response**](CreateReportExport201Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## listReportExports
+
+List report exports
+
+The workspace's latest 50 report exports, newest first. Files can be downloaded for 7 days.
+
+### Example
+
+```bash
+postboost-cli listReportExports workspaceUuid=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+
+### Return type
+
+[**ListReportExports200Response**](ListReportExports200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## updateReportBranding
+
+Update the report branding
+
+Name, colour and footer of PDF reports. Fields you leave out keep their value. Upload the logo with 'uploadReportBrandingLogo'. Admins and members only.
+
+### Example
+
+```bash
+postboost-cli updateReportBranding workspaceUuid=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **reportBrandingInput** | [**ReportBrandingInput**](ReportBrandingInput.md) |  |
+
+### Return type
+
+[**GetReportBranding200Response**](GetReportBranding200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uploadReportBrandingLogo
+
+Upload the report logo
+
+PNG or JPEG, up to 1 MB (SVG is not accepted). Replaces the current logo. Admins and members only.
+
+### Example
+
+```bash
+postboost-cli uploadReportBrandingLogo workspaceUuid=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **logo** | **binary** |  | [default to null]
+
+### Return type
+
+[**GetReportBranding200Response**](GetReportBranding200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -14,7 +14,7 @@ tar xzf postboost-cli.tar.gz
 | **Releases** | [github.com/postboost-co/postboost-cli/releases](https://github.com/postboost-co/postboost-cli/releases) |
 | **GitHub** | [postboost-co/postboost-cli](https://github.com/postboost-co/postboost-cli) |
 | **Docs** | [postboost.co/docs/api](https://postboost.co/docs/api) |
-| **Version** | v1.8.0 |
+| **Version** | v1.14.0 |
 
 ## Quick start
 
@@ -37,18 +37,69 @@ All URIs are relative to */app/api*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AIApi* | [**blogToSocial**](docs/AIApi.md#blogtosocial) | **POST** /{workspaceUuid}/ai/blog-to-social | Generate social media captions from a blog post
+*AIApi* | [**deleteBrandVoice**](docs/AIApi.md#deletebrandvoice) | **DELETE** /{workspaceUuid}/brand-voice | Delete the brand voice
+*AIApi* | [**getAIUsage**](docs/AIApi.md#getaiusage) | **GET** /{workspaceUuid}/usage/ai | AI credit usage
+*AIApi* | [**getBrandVoice**](docs/AIApi.md#getbrandvoice) | **GET** /{workspaceUuid}/brand-voice | Get the brand voice
 *AIApi* | [**imageAltText**](docs/AIApi.md#imagealttext) | **POST** /{workspaceUuid}/ai/image-alt-text | Generate alt text for a media image using AI
 *AIApi* | [**imageEdit**](docs/AIApi.md#imageedit) | **POST** /{workspaceUuid}/ai/image-edit | Edit an existing media image using AI
 *AIApi* | [**imageGenerate**](docs/AIApi.md#imagegenerate) | **POST** /{workspaceUuid}/ai/image-generate | Generate social media images from a caption
 *AIApi* | [**imagePrompt**](docs/AIApi.md#imageprompt) | **POST** /{workspaceUuid}/ai/image-prompt | Build an optimized image prompt from a social media caption
 *AIApi* | [**imageVariations**](docs/AIApi.md#imagevariations) | **POST** /{workspaceUuid}/ai/image-variations | Generate variations of an existing media image
+*AIApi* | [**learnBrandVoice**](docs/AIApi.md#learnbrandvoice) | **POST** /{workspaceUuid}/brand-voice/learn | Learn a brand voice from past posts
+*AIApi* | [**repurposeContent**](docs/AIApi.md#repurposecontent) | **POST** /{workspaceUuid}/ai/repurpose | Repurpose long-form content into a draft post set with a carousel
+*AIApi* | [**updateBrandVoice**](docs/AIApi.md#updatebrandvoice) | **PUT** /{workspaceUuid}/brand-voice | Create or update the brand voice
+*AccountGroupsApi* | [**createAccountGroup**](docs/AccountGroupsApi.md#createaccountgroup) | **POST** /{workspaceUuid}/account-groups | Create an account group
+*AccountGroupsApi* | [**deleteAccountGroup**](docs/AccountGroupsApi.md#deleteaccountgroup) | **DELETE** /{workspaceUuid}/account-groups/{accountGroupUuid} | Delete an account group
+*AccountGroupsApi* | [**getAccountGroup**](docs/AccountGroupsApi.md#getaccountgroup) | **GET** /{workspaceUuid}/account-groups/{accountGroupUuid} | Get an account group
+*AccountGroupsApi* | [**listAccountGroups**](docs/AccountGroupsApi.md#listaccountgroups) | **GET** /{workspaceUuid}/account-groups | List account groups
+*AccountGroupsApi* | [**updateAccountGroup**](docs/AccountGroupsApi.md#updateaccountgroup) | **PUT** /{workspaceUuid}/account-groups/{accountGroupUuid} | Update an account group
+*AccountsApi* | [**connectChannel**](docs/AccountsApi.md#connectchannel) | **POST** /{workspaceUuid}/accounts/connect/{provider} | Connect a Telegram, Discord or Slack channel
+*AccountsApi* | [**createReconnectLink**](docs/AccountsApi.md#createreconnectlink) | **POST** /{workspaceUuid}/accounts/{accountUuid}/reconnect-links | Create a reconnect link
 *AccountsApi* | [**getAccount**](docs/AccountsApi.md#getaccount) | **GET** /{workspaceUuid}/accounts/{accountUuid} | Get account
+*AccountsApi* | [**getAccountHealth**](docs/AccountsApi.md#getaccounthealth) | **GET** /{workspaceUuid}/account-health | Account health
 *AccountsApi* | [**listAccounts**](docs/AccountsApi.md#listaccounts) | **GET** /{workspaceUuid}/accounts | List accounts
+*ActivityApi* | [**listApiActivity**](docs/ActivityApi.md#listapiactivity) | **GET** /{workspaceUuid}/activity | List API activity
+*AgentsApi* | [**approveAgentProposal**](docs/AgentsApi.md#approveagentproposal) | **POST** /{workspaceUuid}/agent-proposals/{proposalUuid}/approve | Approve and apply an agent proposal
+*AgentsApi* | [**createAgent**](docs/AgentsApi.md#createagent) | **POST** /{workspaceUuid}/agents | Switch on a background agent
+*AgentsApi* | [**deleteAgent**](docs/AgentsApi.md#deleteagent) | **DELETE** /{workspaceUuid}/agents/{agentUuid} | Delete a background agent
+*AgentsApi* | [**getAgentRun**](docs/AgentsApi.md#getagentrun) | **GET** /{workspaceUuid}/agent-runs/{runUuid} | Get an agent run with its proposals
+*AgentsApi* | [**listAgentProposals**](docs/AgentsApi.md#listagentproposals) | **GET** /{workspaceUuid}/agent-proposals | List agent proposals (approval queue)
+*AgentsApi* | [**listAgentRuns**](docs/AgentsApi.md#listagentruns) | **GET** /{workspaceUuid}/agents/{agentUuid}/runs | Run history of an agent
+*AgentsApi* | [**listAgents**](docs/AgentsApi.md#listagents) | **GET** /{workspaceUuid}/agents | List background agents
+*AgentsApi* | [**rejectAgentProposal**](docs/AgentsApi.md#rejectagentproposal) | **POST** /{workspaceUuid}/agent-proposals/{proposalUuid}/reject | Reject an agent proposal
+*AgentsApi* | [**runAgent**](docs/AgentsApi.md#runagent) | **POST** /{workspaceUuid}/agents/{agentUuid}/run | Run a background agent now
+*AgentsApi* | [**updateAgent**](docs/AgentsApi.md#updateagent) | **PUT** /{workspaceUuid}/agents/{agentUuid} | Update a background agent
+*AnalyticsApi* | [**createReportExport**](docs/AnalyticsApi.md#createreportexport) | **POST** /{workspaceUuid}/reports/exports | Create a report export
+*AnalyticsApi* | [**downloadReportExport**](docs/AnalyticsApi.md#downloadreportexport) | **GET** /{workspaceUuid}/reports/exports/{exportUuid}/download | Download a report file
 *AnalyticsApi* | [**getAccountAnalytics**](docs/AnalyticsApi.md#getaccountanalytics) | **GET** /{workspaceUuid}/analytics/accounts/{accountUuid} | Get account analytics
 *AnalyticsApi* | [**getAnalyticsSummary**](docs/AnalyticsApi.md#getanalyticssummary) | **GET** /{workspaceUuid}/analytics | Get analytics summary
 *AnalyticsApi* | [**getBestPostingTimes**](docs/AnalyticsApi.md#getbestpostingtimes) | **GET** /{workspaceUuid}/analytics/best-times | Get best posting times
 *AnalyticsApi* | [**getPostAnalytics_0**](docs/AnalyticsApi.md#getpostanalytics_0) | **GET** /{workspaceUuid}/posts/{postUuid}/analytics | Get post analytics
 *AnalyticsApi* | [**getPostingTimes**](docs/AnalyticsApi.md#getpostingtimes) | **GET** /{workspaceUuid}/analytics/posting-times | Get posting times heatmap
+*AnalyticsApi* | [**getReportBranding**](docs/AnalyticsApi.md#getreportbranding) | **GET** /{workspaceUuid}/report-branding | Get the report branding
+*AnalyticsApi* | [**getReportExport**](docs/AnalyticsApi.md#getreportexport) | **GET** /{workspaceUuid}/reports/exports/{exportUuid} | Get a report export
+*AnalyticsApi* | [**listReportExports**](docs/AnalyticsApi.md#listreportexports) | **GET** /{workspaceUuid}/reports/exports | List report exports
+*AnalyticsApi* | [**updateReportBranding**](docs/AnalyticsApi.md#updatereportbranding) | **PUT** /{workspaceUuid}/report-branding | Update the report branding
+*AnalyticsApi* | [**uploadReportBrandingLogo**](docs/AnalyticsApi.md#uploadreportbrandinglogo) | **POST** /{workspaceUuid}/report-branding/logo | Upload the report logo
+*CompetitorsApi* | [**addCompetitor**](docs/CompetitorsApi.md#addcompetitor) | **POST** /{workspaceUuid}/competitors | Track a competitor
+*CompetitorsApi* | [**deleteCompetitor**](docs/CompetitorsApi.md#deletecompetitor) | **DELETE** /{workspaceUuid}/competitors/{competitorId} | Stop tracking a competitor
+*CompetitorsApi* | [**getCompetitor**](docs/CompetitorsApi.md#getcompetitor) | **GET** /{workspaceUuid}/competitors/{competitorId} | Get a competitor
+*CompetitorsApi* | [**listCompetitors**](docs/CompetitorsApi.md#listcompetitors) | **GET** /{workspaceUuid}/competitors | List competitors
+*HashtagGroupsApi* | [**createHashtagGroup**](docs/HashtagGroupsApi.md#createhashtaggroup) | **POST** /{workspaceUuid}/hashtag-groups | Create a hashtag group
+*HashtagGroupsApi* | [**deleteHashtagGroup**](docs/HashtagGroupsApi.md#deletehashtaggroup) | **DELETE** /{workspaceUuid}/hashtag-groups/{hashtagGroupId} | Delete a hashtag group
+*HashtagGroupsApi* | [**getHashtagGroup**](docs/HashtagGroupsApi.md#gethashtaggroup) | **GET** /{workspaceUuid}/hashtag-groups/{hashtagGroupId} | Get a hashtag group
+*HashtagGroupsApi* | [**listHashtagGroups**](docs/HashtagGroupsApi.md#listhashtaggroups) | **GET** /{workspaceUuid}/hashtag-groups | List hashtag groups
+*HashtagGroupsApi* | [**updateHashtagGroup**](docs/HashtagGroupsApi.md#updatehashtaggroup) | **PUT** /{workspaceUuid}/hashtag-groups/{hashtagGroupId} | Update a hashtag group
+*InboxApi* | [**approveInboxReplyDraft**](docs/InboxApi.md#approveinboxreplydraft) | **POST** /{workspaceUuid}/inbox/drafts/{draftId}/approve | Approve and send a reply draft
+*InboxApi* | [**createInboxReplyDraft**](docs/InboxApi.md#createinboxreplydraft) | **POST** /{workspaceUuid}/inbox/conversations/{conversationId}/drafts | Draft a reply
+*InboxApi* | [**deleteInboxReplyDraft**](docs/InboxApi.md#deleteinboxreplydraft) | **DELETE** /{workspaceUuid}/inbox/drafts/{draftId} | Withdraw a reply draft
+*InboxApi* | [**getInboxConversation**](docs/InboxApi.md#getinboxconversation) | **GET** /{workspaceUuid}/inbox/conversations/{conversationId} | Get an inbox conversation
+*InboxApi* | [**getInboxReplyDraft**](docs/InboxApi.md#getinboxreplydraft) | **GET** /{workspaceUuid}/inbox/drafts/{draftId} | Get a reply draft
+*InboxApi* | [**listInboxConversations**](docs/InboxApi.md#listinboxconversations) | **GET** /{workspaceUuid}/inbox/conversations | List inbox conversations
+*InboxApi* | [**listInboxReplyDrafts**](docs/InboxApi.md#listinboxreplydrafts) | **GET** /{workspaceUuid}/inbox/drafts | List reply drafts
+*InboxApi* | [**rejectInboxReplyDraft**](docs/InboxApi.md#rejectinboxreplydraft) | **POST** /{workspaceUuid}/inbox/drafts/{draftId}/reject | Reject a reply draft
+*InboxApi* | [**updateInboxConversation**](docs/InboxApi.md#updateinboxconversation) | **PATCH** /{workspaceUuid}/inbox/conversations/{conversationId} | Update an inbox conversation
+*InboxApi* | [**updateInboxReplyDraft**](docs/InboxApi.md#updateinboxreplydraft) | **PUT** /{workspaceUuid}/inbox/drafts/{draftId} | Edit a reply draft
 *MediaApi* | [**abortChunkedUpload**](docs/MediaApi.md#abortchunkedupload) | **DELETE** /{workspaceUuid}/media/chunked/{uploadUuid} | Abort chunked upload
 *MediaApi* | [**completeChunkedUpload**](docs/MediaApi.md#completechunkedupload) | **POST** /{workspaceUuid}/media/chunked/{uploadUuid}/complete | Complete chunked upload
 *MediaApi* | [**createMediaFolder**](docs/MediaApi.md#createmediafolder) | **POST** /{workspaceUuid}/media/folders | Create media folder
@@ -64,22 +115,42 @@ Class | Method | HTTP request | Description
 *MediaApi* | [**updateMediaFolder**](docs/MediaApi.md#updatemediafolder) | **PUT** /{workspaceUuid}/media/folders/{folderUuid} | Update media folder
 *MediaApi* | [**uploadChunk**](docs/MediaApi.md#uploadchunk) | **POST** /{workspaceUuid}/media/chunked/{uploadUuid}/upload | Upload a chunk
 *MediaApi* | [**uploadMedia**](docs/MediaApi.md#uploadmedia) | **POST** /{workspaceUuid}/media | Upload media (binary)
+*MediaApi* | [**uploadMediaBase64**](docs/MediaApi.md#uploadmediabase64) | **POST** /{workspaceUuid}/media/base64 | Upload media (base64 JSON)
 *MentionsApi* | [**createMention**](docs/MentionsApi.md#createmention) | **POST** /{workspaceUuid}/mentions | Create mention
 *MentionsApi* | [**deleteMention**](docs/MentionsApi.md#deletemention) | **DELETE** /{workspaceUuid}/mentions/{mentionId} | Delete mention
 *MentionsApi* | [**getMention**](docs/MentionsApi.md#getmention) | **GET** /{workspaceUuid}/mentions/{mentionId} | Get mention
 *MentionsApi* | [**listMentions**](docs/MentionsApi.md#listmentions) | **GET** /{workspaceUuid}/mentions | List mentions
 *MentionsApi* | [**updateMention**](docs/MentionsApi.md#updatemention) | **PUT** /{workspaceUuid}/mentions/{mentionId} | Update mention
+*PostingScheduleApi* | [**getPostingSchedule**](docs/PostingScheduleApi.md#getpostingschedule) | **GET** /{workspaceUuid}/posting-schedule | Get the posting schedule
+*PostingScheduleApi* | [**getRecommendedPostingTimes**](docs/PostingScheduleApi.md#getrecommendedpostingtimes) | **GET** /{workspaceUuid}/posting-schedule/recommended | Get recommended posting times
+*PostingScheduleApi* | [**listQueueSlots**](docs/PostingScheduleApi.md#listqueueslots) | **GET** /{workspaceUuid}/queue/slots | List upcoming queue slots
+*PostingScheduleApi* | [**resetAccountPostingSchedule**](docs/PostingScheduleApi.md#resetaccountpostingschedule) | **DELETE** /{workspaceUuid}/posting-schedule/{accountId} | Reset an account schedule
+*PostingScheduleApi* | [**updatePostingSchedule**](docs/PostingScheduleApi.md#updatepostingschedule) | **PUT** /{workspaceUuid}/posting-schedule | Set the posting schedule
 *PostsApi* | [**addPostToQueue**](docs/PostsApi.md#addposttoqueue) | **POST** /{workspaceUuid}/posts/add-to-queue/{postUuid} | Add post to queue
 *PostsApi* | [**approvePost**](docs/PostsApi.md#approvepost) | **POST** /{workspaceUuid}/posts/approve/{postUuid} | Approve post
 *PostsApi* | [**createPost**](docs/PostsApi.md#createpost) | **POST** /{workspaceUuid}/posts | Create post
+*PostsApi* | [**createRecyclingRule**](docs/PostsApi.md#createrecyclingrule) | **POST** /{workspaceUuid}/recycling-rules | Create a recycling rule
+*PostsApi* | [**createRssFeed**](docs/PostsApi.md#createrssfeed) | **POST** /{workspaceUuid}/rss-feeds | Add an RSS feed
 *PostsApi* | [**deletePost**](docs/PostsApi.md#deletepost) | **DELETE** /{workspaceUuid}/posts/{postUuid} | Delete post
 *PostsApi* | [**deletePostsBulk**](docs/PostsApi.md#deletepostsbulk) | **DELETE** /{workspaceUuid}/posts | Delete posts (bulk)
+*PostsApi* | [**deleteRecyclingRule**](docs/PostsApi.md#deleterecyclingrule) | **DELETE** /{workspaceUuid}/recycling-rules/{ruleUuid} | Delete a recycling rule
+*PostsApi* | [**deleteRssFeed**](docs/PostsApi.md#deleterssfeed) | **DELETE** /{workspaceUuid}/rss-feeds/{feedUuid} | Delete an RSS feed
 *PostsApi* | [**getPost**](docs/PostsApi.md#getpost) | **GET** /{workspaceUuid}/posts/{postUuid} | Get post
 *PostsApi* | [**getPostAnalytics**](docs/PostsApi.md#getpostanalytics) | **GET** /{workspaceUuid}/posts/{postUuid}/analytics | Get post analytics
+*PostsApi* | [**getRecyclingRule**](docs/PostsApi.md#getrecyclingrule) | **GET** /{workspaceUuid}/recycling-rules/{ruleUuid} | Get a recycling rule
+*PostsApi* | [**getRssFeed**](docs/PostsApi.md#getrssfeed) | **GET** /{workspaceUuid}/rss-feeds/{feedUuid} | Get an RSS feed
 *PostsApi* | [**listPosts**](docs/PostsApi.md#listposts) | **GET** /{workspaceUuid}/posts | List posts
+*PostsApi* | [**listRecyclingRules**](docs/PostsApi.md#listrecyclingrules) | **GET** /{workspaceUuid}/recycling-rules | List recycling rules
+*PostsApi* | [**listRecyclingRuns**](docs/PostsApi.md#listrecyclingruns) | **GET** /{workspaceUuid}/recycling-rules/{ruleUuid}/runs | List a recycling rule&#39;s runs
+*PostsApi* | [**listRssFeeds**](docs/PostsApi.md#listrssfeeds) | **GET** /{workspaceUuid}/rss-feeds | List RSS feeds
+*PostsApi* | [**pollRssFeed**](docs/PostsApi.md#pollrssfeed) | **POST** /{workspaceUuid}/rss-feeds/{feedUuid}/poll | Check an RSS feed now
+*PostsApi* | [**recyclePost**](docs/PostsApi.md#recyclepost) | **POST** /{workspaceUuid}/posts/{postUuid}/recycle | Recycle a post on an interval
 *PostsApi* | [**retryPostAccount**](docs/PostsApi.md#retrypostaccount) | **POST** /{workspaceUuid}/posts/retry/{postUuid}/{accountUuid} | Retry publishing to one account
 *PostsApi* | [**schedulePost**](docs/PostsApi.md#schedulepost) | **POST** /{workspaceUuid}/posts/schedule/{postUuid} | Schedule post
 *PostsApi* | [**updatePost**](docs/PostsApi.md#updatepost) | **PUT** /{workspaceUuid}/posts/{postUuid} | Update post
+*PostsApi* | [**updateRecyclingRule**](docs/PostsApi.md#updaterecyclingrule) | **PUT** /{workspaceUuid}/recycling-rules/{ruleUuid} | Update, pause or resume a recycling rule
+*PostsApi* | [**updateRssFeed**](docs/PostsApi.md#updaterssfeed) | **PUT** /{workspaceUuid}/rss-feeds/{feedUuid} | Update, pause or resume an RSS feed
+*PostsApi* | [**validatePost**](docs/PostsApi.md#validatepost) | **POST** /{workspaceUuid}/posts/validate | Validate post (dry run)
 *ReceiptsApi* | [**createReceipt**](docs/ReceiptsApi.md#createreceipt) | **POST** /panel/receipts | Create receipt
 *ReceiptsApi* | [**deleteReceipt**](docs/ReceiptsApi.md#deletereceipt) | **DELETE** /panel/receipts/{receiptUuid} | Delete receipt
 *ReceiptsApi* | [**deleteReceiptsBulk**](docs/ReceiptsApi.md#deletereceiptsbulk) | **DELETE** /panel/receipts | Delete receipts (bulk)
@@ -101,20 +172,82 @@ Class | Method | HTTP request | Description
 *TagsApi* | [**getTag**](docs/TagsApi.md#gettag) | **GET** /{workspaceUuid}/tags/{tagUuid} | Get tag
 *TagsApi* | [**listTags**](docs/TagsApi.md#listtags) | **GET** /{workspaceUuid}/tags | List tags
 *TagsApi* | [**updateTag**](docs/TagsApi.md#updatetag) | **PUT** /{workspaceUuid}/tags/{tagUuid} | Update tag
+*TemplatesApi* | [**createTemplate**](docs/TemplatesApi.md#createtemplate) | **POST** /{workspaceUuid}/templates | Create a template
+*TemplatesApi* | [**deleteTemplate**](docs/TemplatesApi.md#deletetemplate) | **DELETE** /{workspaceUuid}/templates/{templateId} | Delete a template
+*TemplatesApi* | [**getTemplate**](docs/TemplatesApi.md#gettemplate) | **GET** /{workspaceUuid}/templates/{templateId} | Get a template
+*TemplatesApi* | [**listTemplates**](docs/TemplatesApi.md#listtemplates) | **GET** /{workspaceUuid}/templates | List templates
+*TemplatesApi* | [**updateTemplate**](docs/TemplatesApi.md#updatetemplate) | **PUT** /{workspaceUuid}/templates/{templateId} | Update a template
 *UsersApi* | [**createUser**](docs/UsersApi.md#createuser) | **POST** /panel/users | Create user
 *UsersApi* | [**deleteUser**](docs/UsersApi.md#deleteuser) | **DELETE** /panel/users/{userId} | Delete user
 *UsersApi* | [**deleteUsersBulk**](docs/UsersApi.md#deleteusersbulk) | **DELETE** /panel/users | Delete users (bulk)
 *UsersApi* | [**getUser**](docs/UsersApi.md#getuser) | **GET** /panel/users/{userId} | Get user
 *UsersApi* | [**listUsers**](docs/UsersApi.md#listusers) | **GET** /panel/users | List users
 *UsersApi* | [**updateUser**](docs/UsersApi.md#updateuser) | **PUT** /panel/users/{userId} | Update user
+*WebhooksApi* | [**createWebhookSubscription**](docs/WebhooksApi.md#createwebhooksubscription) | **POST** /{workspaceUuid}/webhooks/subscriptions | Subscribe a webhook
+*WebhooksApi* | [**deleteWebhookSubscription**](docs/WebhooksApi.md#deletewebhooksubscription) | **DELETE** /{workspaceUuid}/webhooks/subscriptions/{subscriptionUuid} | Unsubscribe a webhook
+*WebhooksApi* | [**listWebhookSubscriptions**](docs/WebhooksApi.md#listwebhooksubscriptions) | **GET** /{workspaceUuid}/webhooks/subscriptions | List webhook subscriptions
 *WorkspacesApi* | [**addUserToWorkspace**](docs/WorkspacesApi.md#addusertoworkspace) | **POST** /panel/workspaces/{workspaceUuid}/users | Add user to workspace
+*WorkspacesApi* | [**createApiKey**](docs/WorkspacesApi.md#createapikey) | **POST** /{workspaceUuid}/api-keys | Create a scoped API key
+*WorkspacesApi* | [**createResellerClient**](docs/WorkspacesApi.md#createresellerclient) | **POST** /{workspaceUuid}/clients | Create a client workspace
 *WorkspacesApi* | [**createWorkspace**](docs/WorkspacesApi.md#createworkspace) | **POST** /panel/workspaces | Create workspace
+*WorkspacesApi* | [**deleteApiKey**](docs/WorkspacesApi.md#deleteapikey) | **DELETE** /{workspaceUuid}/api-keys/{apiKeyId} | Revoke a scoped API key
 *WorkspacesApi* | [**deleteWorkspace**](docs/WorkspacesApi.md#deleteworkspace) | **DELETE** /panel/workspaces/{workspaceUuid} | Delete workspace
 *WorkspacesApi* | [**deleteWorkspacesBulk**](docs/WorkspacesApi.md#deleteworkspacesbulk) | **DELETE** /panel/workspaces | Delete workspaces (bulk)
 *WorkspacesApi* | [**getWorkspace**](docs/WorkspacesApi.md#getworkspace) | **GET** /panel/workspaces/{workspaceUuid} | Get workspace
 *WorkspacesApi* | [**getWorkspaceAICredits**](docs/WorkspacesApi.md#getworkspaceaicredits) | **GET** /panel/workspaces/{workspaceUuid}/ai-credits | Get workspace AI credits
+*WorkspacesApi* | [**getXUsage**](docs/WorkspacesApi.md#getxusage) | **GET** /{workspaceUuid}/usage/x | X (Twitter) usage
+*WorkspacesApi* | [**listApiKeys**](docs/WorkspacesApi.md#listapikeys) | **GET** /{workspaceUuid}/api-keys | List scoped API keys
 *WorkspacesApi* | [**listMyWorkspaces**](docs/WorkspacesApi.md#listmyworkspaces) | **GET** /workspaces | List my workspaces
+*WorkspacesApi* | [**listResellerClients**](docs/WorkspacesApi.md#listresellerclients) | **GET** /{workspaceUuid}/clients | List client workspaces
 *WorkspacesApi* | [**listWorkspaces**](docs/WorkspacesApi.md#listworkspaces) | **GET** /panel/workspaces | List workspaces
 *WorkspacesApi* | [**removeUserFromWorkspace**](docs/WorkspacesApi.md#removeuserfromworkspace) | **DELETE** /panel/workspaces/{workspaceUuid}/users | Remove user from workspace
 *WorkspacesApi* | [**updateWorkspace**](docs/WorkspacesApi.md#updateworkspace) | **PUT** /panel/workspaces/{workspaceUuid} | Update workspace
 *WorkspacesApi* | [**updateWorkspaceUser**](docs/WorkspacesApi.md#updateworkspaceuser) | **PUT** /panel/workspaces/{workspaceUuid}/users | Update user role in workspace
+
+---
+
+## Links
+
+- Docs and quick start: https://postboost.co/docs/quickstart
+- API reference: https://postboost.co/docs/api
+- MCP server for AI agents: https://postboost.co/docs/mcp
+- All PostBoost open-source projects: https://github.com/postboost-co
+- Awesome PostBoost: https://github.com/postboost-co/awesome-postboost
+
+## Authentication
+
+Create an API token in PostBoost under **Settings → Access Tokens** and pass it as a Bearer token. Never commit tokens; read them from an environment variable such as `POSTBOOST_API_TOKEN`.
+
+## Contributing
+
+This Bash CLI is generated from the [PostBoost OpenAPI spec](https://postboost.co/docs/api). Bugs and feature requests: open an issue in [postboost-cli](https://github.com/postboost-co/postboost-cli/issues). Generated code is overwritten on every release, so fixes usually land in the spec or the generator templates; see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Security issues: see [SECURITY.md](SECURITY.md). Questions: hi@postboost.co.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
+
+---
+
+## Links
+
+- Docs and quick start: https://postboost.co/docs/quickstart
+- API reference: https://postboost.co/docs/api
+- MCP server for AI agents: https://postboost.co/docs/mcp
+- All PostBoost open-source projects: https://github.com/postboost-co
+- Awesome PostBoost: https://github.com/postboost-co/awesome-postboost
+
+## Authentication
+
+Create an API token in PostBoost under **Settings → Access Tokens** and pass it as a Bearer token. Never commit tokens; read them from an environment variable such as `POSTBOOST_API_TOKEN`.
+
+## Contributing
+
+This Bash CLI is generated from the [PostBoost OpenAPI spec](https://postboost.co/docs/api). Bugs and feature requests: open an issue in [postboost-cli](https://github.com/postboost-co/postboost-cli/issues). Generated code is overwritten on every release, so fixes usually land in the spec or the generator templates; see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Security issues: see [SECURITY.md](SECURITY.md). Questions: hi@postboost.co.
+
+## License
+
+MIT, see [LICENSE](LICENSE).

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **template** | **string** |  | [optional] [default to null]
 **style** | **string** |  | [optional] [default to null]
 **brandUnderscorevoice** | **string** |  | [optional] [default to null]
+**useUnderscorebrandUnderscorevoice** | **boolean** |  | [optional] [default to true]
 **customUnderscoreinstructions** | **string** |  | [optional] [default to null]
 **prompt** | **string** |  | [optional] [default to null]
 **aspectUnderscoreratio** | **string** |  | [optional] [default to 1:1]

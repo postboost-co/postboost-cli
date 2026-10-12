@@ -70,18 +70,69 @@ _postboost-cli()
     # It's modelled as an associative array for efficient key lookup
     declare -A operations
     operations["blogToSocial"]=1
+    operations["deleteBrandVoice"]=1
+    operations["getAIUsage"]=1
+    operations["getBrandVoice"]=1
     operations["imageAltText"]=1
     operations["imageEdit"]=1
     operations["imageGenerate"]=1
     operations["imagePrompt"]=1
     operations["imageVariations"]=1
+    operations["learnBrandVoice"]=1
+    operations["repurposeContent"]=1
+    operations["updateBrandVoice"]=1
+    operations["createAccountGroup"]=1
+    operations["deleteAccountGroup"]=1
+    operations["getAccountGroup"]=1
+    operations["listAccountGroups"]=1
+    operations["updateAccountGroup"]=1
+    operations["connectChannel"]=1
+    operations["createReconnectLink"]=1
     operations["getAccount"]=1
+    operations["getAccountHealth"]=1
     operations["listAccounts"]=1
+    operations["listApiActivity"]=1
+    operations["approveAgentProposal"]=1
+    operations["createAgent"]=1
+    operations["deleteAgent"]=1
+    operations["getAgentRun"]=1
+    operations["listAgentProposals"]=1
+    operations["listAgentRuns"]=1
+    operations["listAgents"]=1
+    operations["rejectAgentProposal"]=1
+    operations["runAgent"]=1
+    operations["updateAgent"]=1
+    operations["createReportExport"]=1
+    operations["downloadReportExport"]=1
     operations["getAccountAnalytics"]=1
     operations["getAnalyticsSummary"]=1
     operations["getBestPostingTimes"]=1
     operations["getPostAnalytics_0"]=1
     operations["getPostingTimes"]=1
+    operations["getReportBranding"]=1
+    operations["getReportExport"]=1
+    operations["listReportExports"]=1
+    operations["updateReportBranding"]=1
+    operations["uploadReportBrandingLogo"]=1
+    operations["addCompetitor"]=1
+    operations["deleteCompetitor"]=1
+    operations["getCompetitor"]=1
+    operations["listCompetitors"]=1
+    operations["createHashtagGroup"]=1
+    operations["deleteHashtagGroup"]=1
+    operations["getHashtagGroup"]=1
+    operations["listHashtagGroups"]=1
+    operations["updateHashtagGroup"]=1
+    operations["approveInboxReplyDraft"]=1
+    operations["createInboxReplyDraft"]=1
+    operations["deleteInboxReplyDraft"]=1
+    operations["getInboxConversation"]=1
+    operations["getInboxReplyDraft"]=1
+    operations["listInboxConversations"]=1
+    operations["listInboxReplyDrafts"]=1
+    operations["rejectInboxReplyDraft"]=1
+    operations["updateInboxConversation"]=1
+    operations["updateInboxReplyDraft"]=1
     operations["abortChunkedUpload"]=1
     operations["completeChunkedUpload"]=1
     operations["createMediaFolder"]=1
@@ -97,22 +148,42 @@ _postboost-cli()
     operations["updateMediaFolder"]=1
     operations["uploadChunk"]=1
     operations["uploadMedia"]=1
+    operations["uploadMediaBase64"]=1
     operations["createMention"]=1
     operations["deleteMention"]=1
     operations["getMention"]=1
     operations["listMentions"]=1
     operations["updateMention"]=1
+    operations["getPostingSchedule"]=1
+    operations["getRecommendedPostingTimes"]=1
+    operations["listQueueSlots"]=1
+    operations["resetAccountPostingSchedule"]=1
+    operations["updatePostingSchedule"]=1
     operations["addPostToQueue"]=1
     operations["approvePost"]=1
     operations["createPost"]=1
+    operations["createRecyclingRule"]=1
+    operations["createRssFeed"]=1
     operations["deletePost"]=1
     operations["deletePostsBulk"]=1
+    operations["deleteRecyclingRule"]=1
+    operations["deleteRssFeed"]=1
     operations["getPost"]=1
     operations["getPostAnalytics"]=1
+    operations["getRecyclingRule"]=1
+    operations["getRssFeed"]=1
     operations["listPosts"]=1
+    operations["listRecyclingRules"]=1
+    operations["listRecyclingRuns"]=1
+    operations["listRssFeeds"]=1
+    operations["pollRssFeed"]=1
+    operations["recyclePost"]=1
     operations["retryPostAccount"]=1
     operations["schedulePost"]=1
     operations["updatePost"]=1
+    operations["updateRecyclingRule"]=1
+    operations["updateRssFeed"]=1
+    operations["validatePost"]=1
     operations["createReceipt"]=1
     operations["deleteReceipt"]=1
     operations["deleteReceiptsBulk"]=1
@@ -134,19 +205,33 @@ _postboost-cli()
     operations["getTag"]=1
     operations["listTags"]=1
     operations["updateTag"]=1
+    operations["createTemplate"]=1
+    operations["deleteTemplate"]=1
+    operations["getTemplate"]=1
+    operations["listTemplates"]=1
+    operations["updateTemplate"]=1
     operations["createUser"]=1
     operations["deleteUser"]=1
     operations["deleteUsersBulk"]=1
     operations["getUser"]=1
     operations["listUsers"]=1
     operations["updateUser"]=1
+    operations["createWebhookSubscription"]=1
+    operations["deleteWebhookSubscription"]=1
+    operations["listWebhookSubscriptions"]=1
     operations["addUserToWorkspace"]=1
+    operations["createApiKey"]=1
+    operations["createResellerClient"]=1
     operations["createWorkspace"]=1
+    operations["deleteApiKey"]=1
     operations["deleteWorkspace"]=1
     operations["deleteWorkspacesBulk"]=1
     operations["getWorkspace"]=1
     operations["getWorkspaceAICredits"]=1
+    operations["getXUsage"]=1
+    operations["listApiKeys"]=1
     operations["listMyWorkspaces"]=1
+    operations["listResellerClients"]=1
     operations["listWorkspaces"]=1
     operations["removeUserFromWorkspace"]=1
     operations["updateWorkspace"]=1
@@ -156,49 +241,120 @@ _postboost-cli()
     # Only include path, query and header parameters
     declare -A operation_parameters
     operation_parameters["blogToSocial"]="workspaceUuid= "
+    operation_parameters["deleteBrandVoice"]="workspaceUuid= "
+    operation_parameters["getAIUsage"]="workspaceUuid= "
+    operation_parameters["getBrandVoice"]="workspaceUuid= "
     operation_parameters["imageAltText"]="workspaceUuid= "
     operation_parameters["imageEdit"]="workspaceUuid= "
     operation_parameters["imageGenerate"]="workspaceUuid= "
     operation_parameters["imagePrompt"]="workspaceUuid= "
     operation_parameters["imageVariations"]="workspaceUuid= "
+    operation_parameters["learnBrandVoice"]="workspaceUuid= "
+    operation_parameters["repurposeContent"]="workspaceUuid= Idempotency-Key: "
+    operation_parameters["updateBrandVoice"]="workspaceUuid= "
+    operation_parameters["createAccountGroup"]="workspaceUuid= "
+    operation_parameters["deleteAccountGroup"]="workspaceUuid= accountGroupUuid= "
+    operation_parameters["getAccountGroup"]="workspaceUuid= accountGroupUuid= "
+    operation_parameters["listAccountGroups"]="workspaceUuid= page= per_page= "
+    operation_parameters["updateAccountGroup"]="workspaceUuid= accountGroupUuid= "
+    operation_parameters["connectChannel"]="workspaceUuid= provider= "
+    operation_parameters["createReconnectLink"]="workspaceUuid= accountUuid= "
     operation_parameters["getAccount"]="workspaceUuid= accountUuid= "
+    operation_parameters["getAccountHealth"]="workspaceUuid= "
     operation_parameters["listAccounts"]="workspaceUuid= keyword= group= providers[]= unauthorized= "
+    operation_parameters["listApiActivity"]="workspaceUuid= outcome= client= since= page= "
+    operation_parameters["approveAgentProposal"]="workspaceUuid= proposalUuid= "
+    operation_parameters["createAgent"]="workspaceUuid= "
+    operation_parameters["deleteAgent"]="workspaceUuid= agentUuid= "
+    operation_parameters["getAgentRun"]="workspaceUuid= runUuid= "
+    operation_parameters["listAgentProposals"]="workspaceUuid= status= per_page= page= "
+    operation_parameters["listAgentRuns"]="workspaceUuid= agentUuid= per_page= page= "
+    operation_parameters["listAgents"]="workspaceUuid= "
+    operation_parameters["rejectAgentProposal"]="workspaceUuid= proposalUuid= "
+    operation_parameters["runAgent"]="workspaceUuid= agentUuid= "
+    operation_parameters["updateAgent"]="workspaceUuid= agentUuid= "
+    operation_parameters["createReportExport"]="workspaceUuid= "
+    operation_parameters["downloadReportExport"]="workspaceUuid= exportUuid= "
     operation_parameters["getAccountAnalytics"]="workspaceUuid= accountUuid= period= date_from= date_to= type= page= per_page= sort_by= sort_dir= "
     operation_parameters["getAnalyticsSummary"]="workspaceUuid= period= date_from= date_to= "
     operation_parameters["getBestPostingTimes"]="workspaceUuid= accounts[]= from= timezone= "
     operation_parameters["getPostAnalytics_0"]="workspaceUuid= postUuid= "
     operation_parameters["getPostingTimes"]="workspaceUuid= accounts[]= timezone= "
+    operation_parameters["getReportBranding"]="workspaceUuid= "
+    operation_parameters["getReportExport"]="workspaceUuid= exportUuid= "
+    operation_parameters["listReportExports"]="workspaceUuid= "
+    operation_parameters["updateReportBranding"]="workspaceUuid= "
+    operation_parameters["uploadReportBrandingLogo"]="workspaceUuid= "
+    operation_parameters["addCompetitor"]="workspaceUuid= "
+    operation_parameters["deleteCompetitor"]="workspaceUuid= competitorId= "
+    operation_parameters["getCompetitor"]="workspaceUuid= competitorId= "
+    operation_parameters["listCompetitors"]="workspaceUuid= account_id= "
+    operation_parameters["createHashtagGroup"]="workspaceUuid= "
+    operation_parameters["deleteHashtagGroup"]="workspaceUuid= hashtagGroupId= "
+    operation_parameters["getHashtagGroup"]="workspaceUuid= hashtagGroupId= "
+    operation_parameters["listHashtagGroups"]="workspaceUuid= page= per_page= "
+    operation_parameters["updateHashtagGroup"]="workspaceUuid= hashtagGroupId= "
+    operation_parameters["approveInboxReplyDraft"]="workspaceUuid= draftId= "
+    operation_parameters["createInboxReplyDraft"]="workspaceUuid= conversationId= "
+    operation_parameters["deleteInboxReplyDraft"]="workspaceUuid= draftId= "
+    operation_parameters["getInboxConversation"]="workspaceUuid= conversationId= "
+    operation_parameters["getInboxReplyDraft"]="workspaceUuid= draftId= "
+    operation_parameters["listInboxConversations"]="workspaceUuid= status= account_id= provider= unread= sentiment= ai_label= since= page= "
+    operation_parameters["listInboxReplyDrafts"]="workspaceUuid= status= conversation_id= page= "
+    operation_parameters["rejectInboxReplyDraft"]="workspaceUuid= draftId= "
+    operation_parameters["updateInboxConversation"]="workspaceUuid= conversationId= "
+    operation_parameters["updateInboxReplyDraft"]="workspaceUuid= draftId= "
     operation_parameters["abortChunkedUpload"]="workspaceUuid= uploadUuid= "
     operation_parameters["completeChunkedUpload"]="workspaceUuid= uploadUuid= "
-    operation_parameters["createMediaFolder"]="workspaceUuid= "
+    operation_parameters["createMediaFolder"]="workspaceUuid= Idempotency-Key: "
     operation_parameters["deleteMediaBulk"]="workspaceUuid= "
     operation_parameters["deleteMediaFolder"]="workspaceUuid= folderUuid= "
     operation_parameters["getMedia"]="workspaceUuid= mediaUuid= "
     operation_parameters["getRemoteUploadStatus"]="workspaceUuid= downloadId= "
-    operation_parameters["initiateChunkedUpload"]="workspaceUuid= "
-    operation_parameters["initiateRemoteUpload"]="workspaceUuid= "
+    operation_parameters["initiateChunkedUpload"]="workspaceUuid= Idempotency-Key: "
+    operation_parameters["initiateRemoteUpload"]="workspaceUuid= Idempotency-Key: "
     operation_parameters["listMedia"]="workspaceUuid= page= limit= folder= mime_types[]= type= keyword= usage= favorite= sort= "
     operation_parameters["listMediaFolders"]="workspaceUuid= "
     operation_parameters["updateMedia"]="workspaceUuid= mediaUuid= "
     operation_parameters["updateMediaFolder"]="workspaceUuid= folderUuid= "
     operation_parameters["uploadChunk"]="workspaceUuid= uploadUuid= "
-    operation_parameters["uploadMedia"]="workspaceUuid= "
-    operation_parameters["createMention"]="workspaceUuid= "
+    operation_parameters["uploadMedia"]="workspaceUuid= Idempotency-Key: "
+    operation_parameters["uploadMediaBase64"]="workspaceUuid= Idempotency-Key: "
+    operation_parameters["createMention"]="workspaceUuid= Idempotency-Key: "
     operation_parameters["deleteMention"]="workspaceUuid= mentionId= "
     operation_parameters["getMention"]="workspaceUuid= mentionId= "
     operation_parameters["listMentions"]="workspaceUuid= q= per_page= page= "
     operation_parameters["updateMention"]="workspaceUuid= mentionId= "
-    operation_parameters["addPostToQueue"]="workspaceUuid= postUuid= "
-    operation_parameters["approvePost"]="workspaceUuid= postUuid= "
-    operation_parameters["createPost"]="workspaceUuid= "
+    operation_parameters["getPostingSchedule"]="workspaceUuid= account_id= "
+    operation_parameters["getRecommendedPostingTimes"]="workspaceUuid= account_id= slots_per_day= "
+    operation_parameters["listQueueSlots"]="workspaceUuid= account_id= after= "
+    operation_parameters["resetAccountPostingSchedule"]="workspaceUuid= accountId= "
+    operation_parameters["updatePostingSchedule"]="workspaceUuid= "
+    operation_parameters["addPostToQueue"]="workspaceUuid= postUuid= Idempotency-Key: "
+    operation_parameters["approvePost"]="workspaceUuid= postUuid= Idempotency-Key: "
+    operation_parameters["createPost"]="workspaceUuid= Idempotency-Key: "
+    operation_parameters["createRecyclingRule"]="workspaceUuid= "
+    operation_parameters["createRssFeed"]="workspaceUuid= "
     operation_parameters["deletePost"]="workspaceUuid= postUuid= "
     operation_parameters["deletePostsBulk"]="workspaceUuid= "
+    operation_parameters["deleteRecyclingRule"]="workspaceUuid= ruleUuid= "
+    operation_parameters["deleteRssFeed"]="workspaceUuid= feedUuid= "
     operation_parameters["getPost"]="workspaceUuid= postUuid= "
     operation_parameters["getPostAnalytics"]="workspaceUuid= postUuid= "
+    operation_parameters["getRecyclingRule"]="workspaceUuid= ruleUuid= "
+    operation_parameters["getRssFeed"]="workspaceUuid= feedUuid= "
     operation_parameters["listPosts"]="workspaceUuid= page= "
-    operation_parameters["retryPostAccount"]="workspaceUuid= postUuid= accountUuid= "
-    operation_parameters["schedulePost"]="workspaceUuid= postUuid= "
+    operation_parameters["listRecyclingRules"]="workspaceUuid= "
+    operation_parameters["listRecyclingRuns"]="workspaceUuid= ruleUuid= "
+    operation_parameters["listRssFeeds"]="workspaceUuid= "
+    operation_parameters["pollRssFeed"]="workspaceUuid= feedUuid= "
+    operation_parameters["recyclePost"]="workspaceUuid= postUuid= "
+    operation_parameters["retryPostAccount"]="workspaceUuid= postUuid= accountUuid= Idempotency-Key: "
+    operation_parameters["schedulePost"]="workspaceUuid= postUuid= Idempotency-Key: "
     operation_parameters["updatePost"]="workspaceUuid= postUuid= "
+    operation_parameters["updateRecyclingRule"]="workspaceUuid= ruleUuid= "
+    operation_parameters["updateRssFeed"]="workspaceUuid= feedUuid= "
+    operation_parameters["validatePost"]="workspaceUuid= "
     operation_parameters["createReceipt"]=""
     operation_parameters["deleteReceipt"]="receiptUuid= "
     operation_parameters["deleteReceiptsBulk"]=""
@@ -215,24 +371,38 @@ _postboost-cli()
     operation_parameters["removeGenericSubscription"]="workspaceUuid= "
     operation_parameters["resumeSubscription"]="workspaceUuid= "
     operation_parameters["updateSubscription"]="workspaceUuid= "
-    operation_parameters["createTag"]="workspaceUuid= "
+    operation_parameters["createTag"]="workspaceUuid= Idempotency-Key: "
     operation_parameters["deleteTag"]="workspaceUuid= tagUuid= "
     operation_parameters["getTag"]="workspaceUuid= tagUuid= "
     operation_parameters["listTags"]="workspaceUuid= "
     operation_parameters["updateTag"]="workspaceUuid= tagUuid= "
+    operation_parameters["createTemplate"]="workspaceUuid= "
+    operation_parameters["deleteTemplate"]="workspaceUuid= templateId= "
+    operation_parameters["getTemplate"]="workspaceUuid= templateId= "
+    operation_parameters["listTemplates"]="workspaceUuid= page= per_page= "
+    operation_parameters["updateTemplate"]="workspaceUuid= templateId= "
     operation_parameters["createUser"]=""
     operation_parameters["deleteUser"]="userId= "
     operation_parameters["deleteUsersBulk"]=""
     operation_parameters["getUser"]="userId= "
     operation_parameters["listUsers"]="keyword= page= "
     operation_parameters["updateUser"]="userId= "
+    operation_parameters["createWebhookSubscription"]="workspaceUuid= "
+    operation_parameters["deleteWebhookSubscription"]="workspaceUuid= subscriptionUuid= "
+    operation_parameters["listWebhookSubscriptions"]="workspaceUuid= "
     operation_parameters["addUserToWorkspace"]="workspaceUuid= "
+    operation_parameters["createApiKey"]="workspaceUuid= "
+    operation_parameters["createResellerClient"]="workspaceUuid= "
     operation_parameters["createWorkspace"]=""
+    operation_parameters["deleteApiKey"]="workspaceUuid= apiKeyId= "
     operation_parameters["deleteWorkspace"]="workspaceUuid= "
     operation_parameters["deleteWorkspacesBulk"]=""
     operation_parameters["getWorkspace"]="workspaceUuid= "
     operation_parameters["getWorkspaceAICredits"]="workspaceUuid= "
+    operation_parameters["getXUsage"]="workspaceUuid= "
+    operation_parameters["listApiKeys"]="workspaceUuid= "
     operation_parameters["listMyWorkspaces"]=""
+    operation_parameters["listResellerClients"]="workspaceUuid= "
     operation_parameters["listWorkspaces"]="keyword= subscription_status= access_status= page= "
     operation_parameters["removeUserFromWorkspace"]="workspaceUuid= "
     operation_parameters["updateWorkspace"]="workspaceUuid= "
@@ -240,11 +410,23 @@ _postboost-cli()
 
     # An associative array of possible values for enum parameters
     declare -A operation_parameters_enum_values
+    operation_parameters_enum_values["connectChannel::provider"]=""
+    operation_parameters_enum_values["connectChannel::provider"]=""
+    operation_parameters_enum_values["connectChannel::provider"]=""
     operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
     operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
     operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
     operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
     operation_parameters_enum_values["listAccounts::unauthorized"]="true false"
+    operation_parameters_enum_values["listInboxConversations::unread"]="true false"
+    operation_parameters_enum_values["listInboxConversations::unread"]="true false"
+    operation_parameters_enum_values["listInboxConversations::unread"]="true false"
+    operation_parameters_enum_values["listInboxConversations::unread"]="true false"
+    operation_parameters_enum_values["listInboxConversations::unread"]="true false"
+    operation_parameters_enum_values["listInboxConversations::unread"]="true false"
+    operation_parameters_enum_values["listInboxConversations::unread"]="true false"
+    operation_parameters_enum_values["listInboxConversations::unread"]="true false"
+    operation_parameters_enum_values["listInboxConversations::unread"]="true false"
     operation_parameters_enum_values["listMedia::favorite"]="true false"
     operation_parameters_enum_values["listMedia::favorite"]="true false"
     operation_parameters_enum_values["listMedia::favorite"]="true false"

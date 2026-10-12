@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **language** | **string** |  | [optional] [default to auto]
 **customUnderscoreinstructions** | **string** |  | [optional] [default to null]
 **createUnderscorepost** | **boolean** |  | [optional] [default to false]
+**useUnderscorebrandUnderscorevoice** | **boolean** |  | [optional] [default to true]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

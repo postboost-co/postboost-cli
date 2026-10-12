@@ -19,6 +19,7 @@ Method | HTTP request | Description
 [**updateMediaFolder**](MediaApi.md#updateMediaFolder) | **PUT** /{workspaceUuid}/media/folders/{folderUuid} | Update media folder
 [**uploadChunk**](MediaApi.md#uploadChunk) | **POST** /{workspaceUuid}/media/chunked/{uploadUuid}/upload | Upload a chunk
 [**uploadMedia**](MediaApi.md#uploadMedia) | **POST** /{workspaceUuid}/media | Upload media (binary)
+[**uploadMediaBase64**](MediaApi.md#uploadMediaBase64) | **POST** /{workspaceUuid}/media/base64 | Upload media (base64 JSON)
 
 
 
@@ -104,7 +105,7 @@ Creates a folder at the top level or under 'parent'. The name must be unique amo
 ### Example
 
 ```bash
-postboost-cli createMediaFolder workspaceUuid=value
+postboost-cli createMediaFolder workspaceUuid=value Idempotency-Key:value
 ```
 
 ### Parameters
@@ -114,6 +115,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
  **createMediaFolderRequest** | [**CreateMediaFolderRequest**](CreateMediaFolderRequest.md) |  |
+ **idempotencyKey** | **string** | Unique key (for example a UUID) that makes the request safe to retry. A repeat with the same key and
+body within 24 hours returns the stored response with 'Idempotent-Replayed: true' and has no further
+effect. Keys are scoped to your user, the workspace, the method and the path. | [optional] [default to null]
 
 ### Return type
 
@@ -286,7 +290,7 @@ Start a chunked upload session for large files. Returns an 'upload_uuid',
 ### Example
 
 ```bash
-postboost-cli initiateChunkedUpload workspaceUuid=value
+postboost-cli initiateChunkedUpload workspaceUuid=value Idempotency-Key:value
 ```
 
 ### Parameters
@@ -296,6 +300,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
  **initiateChunkedUploadRequest** | [**InitiateChunkedUploadRequest**](InitiateChunkedUploadRequest.md) |  |
+ **idempotencyKey** | **string** | Unique key (for example a UUID) that makes the request safe to retry. A repeat with the same key and
+body within 24 hours returns the stored response with 'Idempotent-Replayed: true' and has no further
+effect. Keys are scoped to your user, the workspace, the method and the path. | [optional] [default to null]
 
 ### Return type
 
@@ -324,7 +331,7 @@ For large files a 'download_id' is returned — poll the status endpoint.
 ### Example
 
 ```bash
-postboost-cli initiateRemoteUpload workspaceUuid=value
+postboost-cli initiateRemoteUpload workspaceUuid=value Idempotency-Key:value
 ```
 
 ### Parameters
@@ -334,6 +341,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
  **initiateRemoteUploadRequest** | [**InitiateRemoteUploadRequest**](InitiateRemoteUploadRequest.md) |  |
+ **idempotencyKey** | **string** | Unique key (for example a UUID) that makes the request safe to retry. A repeat with the same key and
+body within 24 hours returns the stored response with 'Idempotent-Replayed: true' and has no further
+effect. Keys are scoped to your user, the workspace, the method and the path. | [optional] [default to null]
 
 ### Return type
 
@@ -550,12 +560,14 @@ Name | Type | Description  | Notes
 
 Upload media (binary)
 
-Upload a file directly as multipart form data.
+Upload a file directly as multipart form data. Images and videos, plus a PDF (up to 100 MB)
+for LinkedIn document posts: a post that attaches a PDF must have it as the only media item
+and may only go to LinkedIn profiles and pages.
 
 ### Example
 
 ```bash
-postboost-cli uploadMedia workspaceUuid=value
+postboost-cli uploadMedia workspaceUuid=value Idempotency-Key:value
 ```
 
 ### Parameters
@@ -565,6 +577,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
  **file** | **binary** | The file to upload. | [default to null]
+ **idempotencyKey** | **string** | Unique key (for example a UUID) that makes the request safe to retry. A repeat with the same key and
+body within 24 hours returns the stored response with 'Idempotent-Replayed: true' and has no further
+effect. Keys are scoped to your user, the workspace, the method and the path. | [optional] [default to null]
  **altText** | **string** | Alternative text for accessibility. | [optional] [default to null]
  **folder** | **string** | UUID of the media folder to file the upload in. Omit or null for the library root. | [optional] [default to null]
 
@@ -579,6 +594,48 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: multipart/form-data
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## uploadMediaBase64
+
+Upload media (base64 JSON)
+
+Upload a file as base64 inside a JSON body, for agents and tools that cannot send multipart
+form data. The decoded file is checked exactly like 'POST media' (allowed types and size
+limits; a PDF is accepted for LinkedIn document posts). Decoded size is capped at 20 MB; for
+larger files use remote upload by URL or chunked upload.
+
+### Example
+
+```bash
+postboost-cli uploadMediaBase64 workspaceUuid=value Idempotency-Key:value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **mediaBase64Input** | [**MediaBase64Input**](MediaBase64Input.md) |  |
+ **idempotencyKey** | **string** | Unique key (for example a UUID) that makes the request safe to retry. A repeat with the same key and
+body within 24 hours returns the stored response with 'Idempotent-Replayed: true' and has no further
+effect. Keys are scoped to your user, the workspace, the method and the path. | [optional] [default to null]
+
+### Return type
+
+[**Media**](Media.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

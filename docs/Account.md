@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **profileUnderscoreurl** | **string** |  | [optional] [default to null]
 **publishUnderscorestatus** | **string** |  | [optional] [default to null]
 **publishedUnderscoreparts** | **integer** |  | [optional] [default to null]
+**externalUnderscoreurl** | **string** |  | [optional] [default to null]
+**errors** | [**array[AccountErrorsInner]**](AccountErrorsInner.md) |  | [optional] [default to null]
 **createdUnderscoreat** | **string** |  | [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **template** | **string** |  | [optional] [default to null]
 **style** | **string** |  | [optional] [default to null]
 **brandUnderscorevoice** | **string** |  | [optional] [default to null]
+**useUnderscorebrandUnderscorevoice** | **boolean** |  | [optional] [default to true]
 **customUnderscoreinstructions** | **string** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

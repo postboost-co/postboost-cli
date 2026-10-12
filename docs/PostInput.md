@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **schedule** | **boolean** |  | [optional] [default to null]
 **scheduleUnderscorenow** | **boolean** |  | [optional] [default to null]
 **queue** | **boolean** |  | [optional] [default to null]
+**aiUnderscoregenerated** | **boolean** |  | [optional] [default to null]
+**allowUnderscoreduplicate** | **boolean** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

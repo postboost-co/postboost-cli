@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **mediaUnderscoreuuid** | **string** |  | [default to null]
 **prompt** | **string** |  | [default to null]
 **maskUnderscoreuuid** | **string** |  | [optional] [default to null]
+**useUnderscorebrandUnderscorevoice** | **boolean** |  | [optional] [default to false]
 **aspectUnderscoreratio** | **string** |  | [optional] [default to 1:1]
 **count** | **integer** |  | [optional] [default to 1]
 **quality** | **string** |  | [optional] [default to standard]

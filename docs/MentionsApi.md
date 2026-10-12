@@ -23,7 +23,7 @@ belongs to a stored mention, that mention is reused and the identities are added
 ### Example
 
 ```bash
-postboost-cli createMention workspaceUuid=value
+postboost-cli createMention workspaceUuid=value Idempotency-Key:value
 ```
 
 ### Parameters
@@ -33,6 +33,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
  **mentionInput** | [**MentionInput**](MentionInput.md) |  |
+ **idempotencyKey** | **string** | Unique key (for example a UUID) that makes the request safe to retry. A repeat with the same key and
+body within 24 hours returns the stored response with 'Idempotent-Replayed: true' and has no further
+effect. Keys are scoped to your user, the workspace, the method and the path. | [optional] [default to null]
 
 ### Return type
 
