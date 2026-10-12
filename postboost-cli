@@ -1645,7 +1645,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.14.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.15.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1970,7 +1970,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.14.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.15.0)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2028,7 +2028,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.14.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.15.0)${OFF}"
     echo ""
 }
 

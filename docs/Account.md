@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **publishUnderscorestatus** | **string** |  | [optional] [default to null]
 **publishedUnderscoreparts** | **integer** |  | [optional] [default to null]
 **externalUnderscoreurl** | **string** |  | [optional] [default to null]
+**providerUnderscorepostUnderscoreid** | **string** |  | [optional] [default to null]
 **errors** | [**array[AccountErrorsInner]**](AccountErrorsInner.md) |  | [optional] [default to null]
 **createdUnderscoreat** | **string** |  | [default to null]
 
