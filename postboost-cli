@@ -4648,7 +4648,9 @@ print_addPostToQueue_help() {
     echo -e ""
     echo -e "Add an existing post to the smart publishing queue. Each account of the post gets its own
 next free queue slot. Returns '422' when the post has no accounts, the posting schedule has no
-available times, or provider requirements are not met." | paste -sd' ' | fold -sw 80
+available times, or provider requirements are not met. The guardrails check the saved post as
+publishing today (UTC), as on create: '409' duplicate (override with 'X-Allow-Duplicate: true'),
+'422' account cannot publish, '429' daily or X cap." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4668,8 +4670,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path. ${
     echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -5232,7 +5238,9 @@ print_schedulePost_help() {
     echo -e "Schedule an existing post. Optionally move it with 'date'/'time' (read in 'timezone') and give
 accounts their own times with 'accounts_schedule'. Set 'postNow: true' to publish immediately;
 publishing starts within the request and any per-account times are dropped.
-Provider requirements are validated and reported as '422'." | paste -sd' ' | fold -sw 80
+Provider requirements are validated and reported as '422'. The guardrails check the saved post at
+the time it would publish, as on create: '409' duplicate (override with 'X-Allow-Duplicate: true'),
+'422' account cannot publish, '429' daily or X cap." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5252,8 +5260,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path. ${
     echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=404
     echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=409
+    echo -e "${result_color_table[${code:0:1}]}  409;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
