@@ -176,7 +176,7 @@ effect. Keys are scoped to your user, the workspace, the method and the path. | 
 
 ### Return type
 
-[**Post**](Post.md)
+[**CreatePost201Response**](CreatePost201Response.md)
 
 ### Authorization
 
@@ -893,7 +893,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map**
+[**UpdatePost200Response**](UpdatePost200Response.md)
 
 ### Authorization
 
