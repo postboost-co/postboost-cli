@@ -1651,7 +1651,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.20.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.21.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1977,7 +1977,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.20.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.21.0)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2035,7 +2035,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.20.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.21.0)${OFF}"
     echo ""
 }
 
@@ -2813,8 +2813,12 @@ print_approveAgentProposal_help() {
     echo -e "${BOLD}${WHITE}approveAgentProposal - Approve and apply an agent proposal${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Applies the proposal at once: 'hold_post' moves the post back to draft, 'edit_caption'
-replaces the caption. When the post was edited, deleted or left the schedule since the
-proposal was made, nothing changes and the proposal becomes 'stale'. Admins and members only." | paste -sd' ' | fold -sw 80
+replaces the caption, 'retry_account' saves the shortened caption (if any) on that account's
+version and publishes that account again, 'reconnect_account' only records the decision.
+When the post was edited, deleted or left the schedule since the proposal was made (for
+'retry_account': the account is no longer failed, the post is publishing, or the plan does
+not allow scheduling), nothing changes and the proposal becomes 'stale'. Admins and members
+only." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2848,7 +2852,11 @@ print_createAgent_help() {
 proposes holding (back to draft) posts that would fail: disconnected accounts, network
 requirements, daily caps, the X allowance and links that answer an error. It proposes caption
 edits that drop 'banned_phrases'. With 'ai_review: true' it also asks AI to review up to
-'max_ai_reviews_per_run' posts per run (one AI credit each). Admins and members only." | paste -sd' ' | fold -sw 80
+'max_ai_reviews_per_run' posts per run (one AI credit each). **Failed-post fixer** looks at
+posts that failed on an account in the last 'lookback_hours' and proposes, per post and
+account, 'reconnect_account' (the account's token expired), or 'retry_account', with a
+caption trimmed to the network limit when the text is over it. One open proposal per post
+and account. It uses no AI. Admins and members only." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2983,7 +2991,7 @@ print_listAgents_help() {
     echo -e ""
     echo -e "Background agents switched on for the workspace. Agents run on a schedule, record every run
 and never change a post themselves: each change is a proposal that a workspace admin or
-member approves. Available type: 'pre_publish_checker'." | paste -sd' ' | fold -sw 80
+member approves. Available types: 'pre_publish_checker', 'failed_post_fixer'." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'

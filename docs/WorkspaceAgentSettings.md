@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **bannedUnderscorephrases** | **array[string]** |  | [optional] [default to []]
 **aiUnderscorereview** | **boolean** |  | [optional] [default to false]
 **maxUnderscoreaiUnderscorereviewsUnderscoreperUnderscorerun** | **integer** |  | [optional] [default to 10]
+**lookbackUnderscorehours** | **integer** |  | [optional] [default to 24]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
