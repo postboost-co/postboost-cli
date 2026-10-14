@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **theme** | [**RepurposeInputTheme**](RepurposeInputTheme.md) |  | [optional] [default to null]
 **createUnderscorepost** | **boolean** |  | [optional] [default to true]
 **useUnderscorebrandUnderscorevoice** | **boolean** |  | [optional] [default to true]
+**async** | **boolean** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

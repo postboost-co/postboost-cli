@@ -101,6 +101,8 @@ operation_parameters_minimum_occurrences["blogToSocial:::BlogToSocialInput"]=1
 operation_parameters_minimum_occurrences["deleteBrandVoice:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["getAIUsage:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["getBrandVoice:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getRepurposeRun:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["getRepurposeRun:::runId"]=1
 operation_parameters_minimum_occurrences["imageAltText:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["imageAltText:::ImageAltTextInput"]=1
 operation_parameters_minimum_occurrences["imageEdit:::workspaceUuid"]=1
@@ -502,6 +504,8 @@ operation_parameters_maximum_occurrences["blogToSocial:::BlogToSocialInput"]=0
 operation_parameters_maximum_occurrences["deleteBrandVoice:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["getAIUsage:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["getBrandVoice:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getRepurposeRun:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["getRepurposeRun:::runId"]=0
 operation_parameters_maximum_occurrences["imageAltText:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["imageAltText:::ImageAltTextInput"]=0
 operation_parameters_maximum_occurrences["imageEdit:::workspaceUuid"]=0
@@ -900,6 +904,8 @@ operation_parameters_collection_type["blogToSocial:::BlogToSocialInput"]=""
 operation_parameters_collection_type["deleteBrandVoice:::workspaceUuid"]=""
 operation_parameters_collection_type["getAIUsage:::workspaceUuid"]=""
 operation_parameters_collection_type["getBrandVoice:::workspaceUuid"]=""
+operation_parameters_collection_type["getRepurposeRun:::workspaceUuid"]=""
+operation_parameters_collection_type["getRepurposeRun:::runId"]=""
 operation_parameters_collection_type["imageAltText:::workspaceUuid"]=""
 operation_parameters_collection_type["imageAltText:::ImageAltTextInput"]=""
 operation_parameters_collection_type["imageEdit:::workspaceUuid"]=""
@@ -1645,7 +1651,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.18.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.19.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1683,6 +1689,7 @@ read -r -d '' ops <<EOF
   ${CYAN}deleteBrandVoice${OFF};Delete the brand voice (AUTH)
   ${CYAN}getAIUsage${OFF};AI credit usage (AUTH)
   ${CYAN}getBrandVoice${OFF};Get the brand voice (AUTH)
+  ${CYAN}getRepurposeRun${OFF};Get a repurpose run (AUTH)
   ${CYAN}imageAltText${OFF};Generate alt text for a media image using AI (AUTH)
   ${CYAN}imageEdit${OFF};Edit an existing media image using AI (AUTH)
   ${CYAN}imageGenerate${OFF};Generate social media images from a caption (AUTH)
@@ -1970,7 +1977,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.18.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.19.0)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2028,7 +2035,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.18.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.19.0)${OFF}"
     echo ""
 }
 
@@ -2155,6 +2162,35 @@ to skip it on a call; responses report 'meta.brand_voice_applied'." | paste -sd'
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=403
     echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for getRepurposeRun operation
+#
+##############################################################################
+print_getRepurposeRun_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getRepurposeRun - Get a repurpose run${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Status of a run started by 'repurposeContent'. 'queued' and 'running' mean it is still
+going; poll again in a few seconds. A run that has not finished after 10 minutes reports
+'failed'. 'result' holds the same 'data' body a '200' from 'repurposeContent' returns, for
+one hour after the run ended with 'ok' or 'partial'; after that it is 'null' (the draft post
+stays). Limited to 60 calls per minute." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}runId${OFF} ${BLUE}[integer]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - The 'run_id' from 'repurposeContent'. ${YELLOW}Specify as: runId=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;Run status${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -2383,7 +2419,13 @@ thumbnail) is attached when available.
 **AI credits**: one per target account plus one for the carousel outline. Slides are drawn
 without AI and cost nothing. The workspace brand voice applies unless 'use_brand_voice' is
 'false'. Send an 'Idempotency-Key' so a retried call does not create a second draft.
-Limited to 10 calls per minute." | paste -sd' ' | fold -sw 80
+Limited to 10 calls per minute.
+
+**Long runs**: the run is queued. The call waits up to 20 seconds and answers '200' with the
+result when the run finished by then. Otherwise it answers '202' with a 'run_id'; poll
+'getRepurposeRun' ('status_url') every few seconds until the status is 'ok', 'partial' or
+'failed'. Send 'async: true' to get the '202' right away. Validation, account and credit
+errors are answered before anything is queued." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2396,6 +2438,8 @@ effect. Keys are scoped to your user, the workspace, the method and the path. ${
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;Draft post set created${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=202
+    echo -e "${result_color_table[${code:0:1}]}  202;The run is still going (or 'async' was set); poll 'status_url'.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=403
@@ -2404,6 +2448,8 @@ effect. Keys are scoped to your user, the workspace, the method and the path. ${
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
     echo -e "${result_color_table[${code:0:1}]}  429;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=500
+    echo -e "${result_color_table[${code:0:1}]}  500;The run failed while the call waited. 'getRepurposeRun' shows the error.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -6880,6 +6926,42 @@ call_getBrandVoice() {
     local path
 
     if ! path=$(build_request_path "/app/api/{workspaceUuid}/brand-voice" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getRepurposeRun operation
+#
+##############################################################################
+call_getRepurposeRun() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid runId)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/ai/repurpose/runs/{runId}" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -15989,6 +16071,9 @@ case $key in
     getBrandVoice)
     operation="getBrandVoice"
     ;;
+    getRepurposeRun)
+    operation="getRepurposeRun"
+    ;;
     imageAltText)
     operation="imageAltText"
     ;;
@@ -16576,6 +16661,9 @@ case $operation in
     ;;
     getBrandVoice)
     call_getBrandVoice
+    ;;
+    getRepurposeRun)
+    call_getRepurposeRun
     ;;
     imageAltText)
     call_imageAltText

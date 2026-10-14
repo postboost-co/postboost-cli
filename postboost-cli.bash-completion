@@ -73,6 +73,7 @@ _postboost-cli()
     operations["deleteBrandVoice"]=1
     operations["getAIUsage"]=1
     operations["getBrandVoice"]=1
+    operations["getRepurposeRun"]=1
     operations["imageAltText"]=1
     operations["imageEdit"]=1
     operations["imageGenerate"]=1
@@ -244,6 +245,7 @@ _postboost-cli()
     operation_parameters["deleteBrandVoice"]="workspaceUuid= "
     operation_parameters["getAIUsage"]="workspaceUuid= "
     operation_parameters["getBrandVoice"]="workspaceUuid= "
+    operation_parameters["getRepurposeRun"]="workspaceUuid= runId= "
     operation_parameters["imageAltText"]="workspaceUuid= "
     operation_parameters["imageEdit"]="workspaceUuid= "
     operation_parameters["imageGenerate"]="workspaceUuid= "

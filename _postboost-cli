@@ -301,6 +301,7 @@ case $state in
             "deleteBrandVoice[Delete the brand voice]" \
             "getAIUsage[AI credit usage]" \
             "getBrandVoice[Get the brand voice]" \
+            "getRepurposeRun[Get a repurpose run]" \
             "imageAltText[Generate alt text for a media image using AI]" \
             "imageEdit[Edit an existing media image using AI]" \
             "imageGenerate[Generate social media images from a caption]" \
@@ -477,6 +478,14 @@ case $state in
         local -a _op_arguments
         _op_arguments=(
           "workspaceUuid=:[PATH] UUID of the workspace."
+                    )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getRepurposeRun)
+        local -a _op_arguments
+        _op_arguments=(
+          "workspaceUuid=:[PATH] UUID of the workspace."
+"runId=:[PATH] The &#39;run_id&#39; from &#39;repurposeContent&#39;."
                     )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;

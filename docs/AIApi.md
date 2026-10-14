@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**deleteBrandVoice**](AIApi.md#deleteBrandVoice) | **DELETE** /{workspaceUuid}/brand-voice | Delete the brand voice
 [**getAIUsage**](AIApi.md#getAIUsage) | **GET** /{workspaceUuid}/usage/ai | AI credit usage
 [**getBrandVoice**](AIApi.md#getBrandVoice) | **GET** /{workspaceUuid}/brand-voice | Get the brand voice
+[**getRepurposeRun**](AIApi.md#getRepurposeRun) | **GET** /{workspaceUuid}/ai/repurpose/runs/{runId} | Get a repurpose run
 [**imageAltText**](AIApi.md#imageAltText) | **POST** /{workspaceUuid}/ai/image-alt-text | Generate alt text for a media image using AI
 [**imageEdit**](AIApi.md#imageEdit) | **POST** /{workspaceUuid}/ai/image-edit | Edit an existing media image using AI
 [**imageGenerate**](AIApi.md#imageGenerate) | **POST** /{workspaceUuid}/ai/image-generate | Generate social media images from a caption
@@ -177,6 +178,46 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetBrandVoice200Response**](GetBrandVoice200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## getRepurposeRun
+
+Get a repurpose run
+
+Status of a run started by 'repurposeContent'. 'queued' and 'running' mean it is still
+going; poll again in a few seconds. A run that has not finished after 10 minutes reports
+'failed'. 'result' holds the same 'data' body a '200' from 'repurposeContent' returns, for
+one hour after the run ended with 'ok' or 'partial'; after that it is 'null' (the draft post
+stays). Limited to 60 calls per minute.
+
+### Example
+
+```bash
+postboost-cli getRepurposeRun workspaceUuid=value runId=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **runId** | **integer** | The 'run_id' from 'repurposeContent'. | [default to null]
+
+### Return type
+
+[**GetRepurposeRun200Response**](GetRepurposeRun200Response.md)
 
 ### Authorization
 
@@ -459,6 +500,12 @@ thumbnail) is attached when available.
 without AI and cost nothing. The workspace brand voice applies unless 'use_brand_voice' is
 'false'. Send an 'Idempotency-Key' so a retried call does not create a second draft.
 Limited to 10 calls per minute.
+
+**Long runs**: the run is queued. The call waits up to 20 seconds and answers '200' with the
+result when the run finished by then. Otherwise it answers '202' with a 'run_id'; poll
+'getRepurposeRun' ('status_url') every few seconds until the status is 'ok', 'partial' or
+'failed'. Send 'async: true' to get the '202' right away. Validation, account and credit
+errors are answered before anything is queued.
 
 ### Example
 
