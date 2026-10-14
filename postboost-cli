@@ -1669,7 +1669,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.22.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.23.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -2007,7 +2007,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.22.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.23.0)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2065,7 +2065,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.22.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.23.0)${OFF}"
     echo ""
 }
 
@@ -3574,6 +3574,9 @@ print_buildUtmUrl_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=413
@@ -3581,7 +3584,11 @@ print_buildUtmUrl_help() {
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
-    echo -e "${result_color_table[${code:0:1}]}  429;Too many requests from this IP (30 per minute).${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3601,6 +3608,9 @@ print_calculateEngagementRate_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=413
@@ -3608,7 +3618,11 @@ print_calculateEngagementRate_help() {
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
-    echo -e "${result_color_table[${code:0:1}]}  429;Too many requests from this IP (30 per minute).${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3628,6 +3642,9 @@ print_countCharacters_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=413
@@ -3635,7 +3652,11 @@ print_countCharacters_help() {
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
-    echo -e "${result_color_table[${code:0:1}]}  429;Too many requests from this IP (30 per minute).${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3655,6 +3676,9 @@ print_formatLinkedInPost_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=413
@@ -3662,7 +3686,11 @@ print_formatLinkedInPost_help() {
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
-    echo -e "${result_color_table[${code:0:1}]}  429;Too many requests from this IP (30 per minute).${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3682,6 +3710,9 @@ print_generateFancyText_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=413
@@ -3689,7 +3720,11 @@ print_generateFancyText_help() {
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
-    echo -e "${result_color_table[${code:0:1}]}  429;Too many requests from this IP (30 per minute).${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3706,10 +3741,17 @@ print_listFreeTools_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;The free tools.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
-    echo -e "${result_color_table[${code:0:1}]}  429;Too many requests from this IP (30 per minute).${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -3729,6 +3771,9 @@ print_splitThread_help() {
     echo -e "${BOLD}${WHITE}Responses${OFF}"
     code=200
     echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=413
@@ -3736,7 +3781,11 @@ print_splitThread_help() {
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=429
-    echo -e "${result_color_table[${code:0:1}]}  429;Too many requests from this IP (30 per minute).${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
