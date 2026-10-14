@@ -239,7 +239,9 @@ Name | Type | Description  | Notes
 Add an RSS feed
 
 Checks the feed every 30 minutes and turns each item published after the feed was added into
-a post for 'account_ids': a draft ('mode: draft', default) or a queued post ('mode: queue').
+a post for 'account_ids': a draft ('mode: draft', default), a queued post ('mode: queue'), or a
+queued post awaiting approval ('mode: needs_approval': it gets the next free queue slot and
+publishes only after someone approves it).
 The text comes from 'template' with '{title}', '{link}' and '{summary}' placeholders. Each
 item becomes at most one post, at most 'max_items_per_run' per check and 20 per workspace per
 day. Posts pass the same guardrails as API-created posts. Only public http(s) URLs are
