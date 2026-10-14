@@ -1645,7 +1645,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.15.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.17.1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1970,7 +1970,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.15.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.17.1)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2028,7 +2028,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.15.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.17.1)${OFF}"
     echo ""
 }
 
@@ -4649,8 +4649,9 @@ print_addPostToQueue_help() {
     echo -e "Add an existing post to the smart publishing queue. Each account of the post gets its own
 next free queue slot. Returns '422' when the post has no accounts, the posting schedule has no
 available times, or provider requirements are not met. The guardrails check the saved post as
-publishing today (UTC), as on create: '409' duplicate (override with 'X-Allow-Duplicate: true'),
-'422' account cannot publish, '429' daily or X cap." | paste -sd' ' | fold -sw 80
+publishing at the queue slot it will get (the earliest next free slot of its accounts), as on
+create: '409' duplicate (override with 'X-Allow-Duplicate: true'), '422' account cannot publish,
+'429' daily cap on that slot's UTC day or X cap." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
