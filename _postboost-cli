@@ -340,7 +340,13 @@ case $state in
             "uploadReportBrandingLogo[Upload the report logo]"             "addCompetitor[Track a competitor]" \
             "deleteCompetitor[Stop tracking a competitor]" \
             "getCompetitor[Get a competitor]" \
-            "listCompetitors[List competitors]"             "createHashtagGroup[Create a hashtag group]" \
+            "listCompetitors[List competitors]"             "buildUtmUrl[Build a UTM-tagged campaign URL]" \
+            "calculateEngagementRate[Calculate an engagement rate]" \
+            "countCharacters[Count characters as each network counts them]" \
+            "formatLinkedInPost[Format a LinkedIn post with bold, italic and lists]" \
+            "generateFancyText[Convert text to fancy Unicode styles]" \
+            "listFreeTools[List the free tools]" \
+            "splitThread[Split long text into a thread]"             "createHashtagGroup[Create a hashtag group]" \
             "deleteHashtagGroup[Delete a hashtag group]" \
             "getHashtagGroup[Get a hashtag group]" \
             "listHashtagGroups[List hashtag groups]" \
@@ -857,6 +863,48 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
           "workspaceUuid=:[PATH] UUID of the workspace."
           "account_id=:[QUERY] Only competitors tracked from this Instagram account &#39;id&#39;."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      buildUtmUrl)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      calculateEngagementRate)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      countCharacters)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      formatLinkedInPost)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      generateFancyText)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      listFreeTools)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      splitThread)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       createHashtagGroup)

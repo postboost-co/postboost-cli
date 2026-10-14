@@ -119,6 +119,13 @@ _postboost-cli()
     operations["deleteCompetitor"]=1
     operations["getCompetitor"]=1
     operations["listCompetitors"]=1
+    operations["buildUtmUrl"]=1
+    operations["calculateEngagementRate"]=1
+    operations["countCharacters"]=1
+    operations["formatLinkedInPost"]=1
+    operations["generateFancyText"]=1
+    operations["listFreeTools"]=1
+    operations["splitThread"]=1
     operations["createHashtagGroup"]=1
     operations["deleteHashtagGroup"]=1
     operations["getHashtagGroup"]=1
@@ -291,6 +298,13 @@ _postboost-cli()
     operation_parameters["deleteCompetitor"]="workspaceUuid= competitorId= "
     operation_parameters["getCompetitor"]="workspaceUuid= competitorId= "
     operation_parameters["listCompetitors"]="workspaceUuid= account_id= "
+    operation_parameters["buildUtmUrl"]=""
+    operation_parameters["calculateEngagementRate"]=""
+    operation_parameters["countCharacters"]=""
+    operation_parameters["formatLinkedInPost"]=""
+    operation_parameters["generateFancyText"]=""
+    operation_parameters["listFreeTools"]=""
+    operation_parameters["splitThread"]=""
     operation_parameters["createHashtagGroup"]="workspaceUuid= "
     operation_parameters["deleteHashtagGroup"]="workspaceUuid= hashtagGroupId= "
     operation_parameters["getHashtagGroup"]="workspaceUuid= hashtagGroupId= "
