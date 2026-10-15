@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **string** |  | [default to null]
 **retryUnderscoreafter** | **integer** |  | [optional] [default to null]
+**code** | **string** |  | [optional] [default to null]
 **registerUnderscoreurl** | **string** |  | [optional] [default to null]
 **upgradeUnderscoreurl** | **string** |  | [optional] [default to null]
 

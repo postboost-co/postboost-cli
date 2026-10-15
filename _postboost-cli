@@ -347,7 +347,9 @@ case $state in
             "cleanText[Clean AI-written text: dashes, quotes, invisible characters, markdown]" \
             "countCharacters[Count characters as each network counts them]" \
             "formatLinkedInPost[Format a LinkedIn post with bold, italic and lists]" \
+            "generateCaption[Write three post captions for a topic with AI (needs a token, spends AI credits)]" \
             "generateFancyText[Convert text to fancy Unicode styles]" \
+            "generateHashtags[Generate hashtags for a post topic with AI (needs a token, spends AI credits)]" \
             "listFreeTools[List the free tools]" \
             "splitThread[Split long text into a thread]"             "createHashtagGroup[Create a hashtag group]" \
             "deleteHashtagGroup[Delete a hashtag group]" \
@@ -911,7 +913,19 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      generateCaption)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       generateFancyText)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      generateHashtags)
         local -a _op_arguments
         _op_arguments=(
                               )

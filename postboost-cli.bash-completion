@@ -126,7 +126,9 @@ _postboost-cli()
     operations["cleanText"]=1
     operations["countCharacters"]=1
     operations["formatLinkedInPost"]=1
+    operations["generateCaption"]=1
     operations["generateFancyText"]=1
+    operations["generateHashtags"]=1
     operations["listFreeTools"]=1
     operations["splitThread"]=1
     operations["createHashtagGroup"]=1
@@ -308,7 +310,9 @@ _postboost-cli()
     operation_parameters["cleanText"]=""
     operation_parameters["countCharacters"]=""
     operation_parameters["formatLinkedInPost"]=""
+    operation_parameters["generateCaption"]=""
     operation_parameters["generateFancyText"]=""
+    operation_parameters["generateHashtags"]=""
     operation_parameters["listFreeTools"]=""
     operation_parameters["splitThread"]=""
     operation_parameters["createHashtagGroup"]="workspaceUuid= "
