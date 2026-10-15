@@ -122,6 +122,7 @@ _postboost-cli()
     operations["listCompetitors"]=1
     operations["buildUtmUrl"]=1
     operations["calculateEngagementRate"]=1
+    operations["checkPost"]=1
     operations["cleanText"]=1
     operations["countCharacters"]=1
     operations["formatLinkedInPost"]=1
@@ -303,6 +304,7 @@ _postboost-cli()
     operation_parameters["listCompetitors"]="workspaceUuid= account_id= "
     operation_parameters["buildUtmUrl"]=""
     operation_parameters["calculateEngagementRate"]=""
+    operation_parameters["checkPost"]=""
     operation_parameters["cleanText"]=""
     operation_parameters["countCharacters"]=""
     operation_parameters["formatLinkedInPost"]=""
