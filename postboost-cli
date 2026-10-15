@@ -135,6 +135,8 @@ operation_parameters_minimum_occurrences["updateAccountGroup:::AccountGroupInput
 operation_parameters_minimum_occurrences["connectChannel:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["connectChannel:::provider"]=1
 operation_parameters_minimum_occurrences["connectChannel:::ConnectChannelInput"]=1
+operation_parameters_minimum_occurrences["createConnectLink:::workspaceUuid"]=1
+operation_parameters_minimum_occurrences["createConnectLink:::CreateConnectLinkRequest"]=1
 operation_parameters_minimum_occurrences["createReconnectLink:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["createReconnectLink:::accountUuid"]=1
 operation_parameters_minimum_occurrences["getAccount:::workspaceUuid"]=1
@@ -544,6 +546,8 @@ operation_parameters_maximum_occurrences["updateAccountGroup:::AccountGroupInput
 operation_parameters_maximum_occurrences["connectChannel:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["connectChannel:::provider"]=0
 operation_parameters_maximum_occurrences["connectChannel:::ConnectChannelInput"]=0
+operation_parameters_maximum_occurrences["createConnectLink:::workspaceUuid"]=0
+operation_parameters_maximum_occurrences["createConnectLink:::CreateConnectLinkRequest"]=0
 operation_parameters_maximum_occurrences["createReconnectLink:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["createReconnectLink:::accountUuid"]=0
 operation_parameters_maximum_occurrences["getAccount:::workspaceUuid"]=0
@@ -950,6 +954,8 @@ operation_parameters_collection_type["updateAccountGroup:::AccountGroupInput"]="
 operation_parameters_collection_type["connectChannel:::workspaceUuid"]=""
 operation_parameters_collection_type["connectChannel:::provider"]=""
 operation_parameters_collection_type["connectChannel:::ConnectChannelInput"]=""
+operation_parameters_collection_type["createConnectLink:::workspaceUuid"]=""
+operation_parameters_collection_type["createConnectLink:::CreateConnectLinkRequest"]=""
 operation_parameters_collection_type["createReconnectLink:::workspaceUuid"]=""
 operation_parameters_collection_type["createReconnectLink:::accountUuid"]=""
 operation_parameters_collection_type["getAccount:::workspaceUuid"]=""
@@ -1669,7 +1675,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.23.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.24.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1732,6 +1738,7 @@ echo "  $ops" | column -t -s ';'
     echo -e "${BOLD}${WHITE}[accounts]${OFF}"
 read -r -d '' ops <<EOF
   ${CYAN}connectChannel${OFF};Connect a Telegram, Discord or Slack channel (AUTH)
+  ${CYAN}createConnectLink${OFF};Create a connect link (AUTH)
   ${CYAN}createReconnectLink${OFF};Create a reconnect link (AUTH)
   ${CYAN}getAccount${OFF};Get account (AUTH)
   ${CYAN}getAccountHealth${OFF};Account health (AUTH)
@@ -2007,7 +2014,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.23.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.24.0)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2065,7 +2072,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.23.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.24.0)${OFF}"
     echo ""
 }
 
@@ -2685,6 +2692,40 @@ Webhook URLs on any other host are refused ('422') before any request is made." 
     echo -e "${result_color_table[${code:0:1}]}  404;Unknown provider, or the channel is switched off on this instance.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=422
     echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for createConnectLink operation
+#
+##############################################################################
+print_createConnectLink_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}createConnectLink - Create a connect link${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Creates a single-use link (valid 15 minutes) that lets the user connect a new account on an
+OAuth network to this workspace. Ask the user to open this link in their browser while logged
+in to PostBoost, wait until they confirm, then call 'list-accounts' to get the new account id.
+The link signs no one in: only the user who created it, while a workspace admin, can use it.
+Telegram, Discord and Slack need no browser: connect them with 'connectChannel'. Mastodon,
+Pixelfed and Bluesky ask for a server or handle first, so the user connects them in the app.
+Workspace admins only; at most 10 links per minute." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=201
+    echo -e "${result_color_table[${code:0:1}]}  201;Link created. The URL is shown only once.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Too many connect links in the last minute.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -8155,6 +8196,84 @@ call_connectChannel() {
     local path
 
     if ! path=$(build_request_path "/app/api/{workspaceUuid}/accounts/connect/{provider}" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call createConnectLink operation
+#
+##############################################################################
+call_createConnectLink() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=(workspaceUuid)
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/{workspaceUuid}/accounts/connect-links" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -16889,6 +17008,9 @@ case $key in
     connectChannel)
     operation="connectChannel"
     ;;
+    createConnectLink)
+    operation="createConnectLink"
+    ;;
     createReconnectLink)
     operation="createReconnectLink"
     ;;
@@ -17500,6 +17622,9 @@ case $operation in
     ;;
     connectChannel)
     call_connectChannel
+    ;;
+    createConnectLink)
+    call_createConnectLink
     ;;
     createReconnectLink)
     call_createReconnectLink

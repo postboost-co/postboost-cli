@@ -5,6 +5,7 @@ All URIs are relative to */app/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**connectChannel**](AccountsApi.md#connectChannel) | **POST** /{workspaceUuid}/accounts/connect/{provider} | Connect a Telegram, Discord or Slack channel
+[**createConnectLink**](AccountsApi.md#createConnectLink) | **POST** /{workspaceUuid}/accounts/connect-links | Create a connect link
 [**createReconnectLink**](AccountsApi.md#createReconnectLink) | **POST** /{workspaceUuid}/accounts/{accountUuid}/reconnect-links | Create a reconnect link
 [**getAccount**](AccountsApi.md#getAccount) | **GET** /{workspaceUuid}/accounts/{accountUuid} | Get account
 [**getAccountHealth**](AccountsApi.md#getAccountHealth) | **GET** /{workspaceUuid}/account-health | Account health
@@ -50,6 +51,48 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ChannelAccount**](ChannelAccount.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## createConnectLink
+
+Create a connect link
+
+Creates a single-use link (valid 15 minutes) that lets the user connect a new account on an
+OAuth network to this workspace. Ask the user to open this link in their browser while logged
+in to PostBoost, wait until they confirm, then call 'list-accounts' to get the new account id.
+The link signs no one in: only the user who created it, while a workspace admin, can use it.
+Telegram, Discord and Slack need no browser: connect them with 'connectChannel'. Mastodon,
+Pixelfed and Bluesky ask for a server or handle first, so the user connects them in the app.
+Workspace admins only; at most 10 links per minute.
+
+### Example
+
+```bash
+postboost-cli createConnectLink workspaceUuid=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **workspaceUuid** | **string** | UUID of the workspace. | [default to null]
+ **createConnectLinkRequest** | [**CreateConnectLinkRequest**](CreateConnectLinkRequest.md) |  |
+
+### Return type
+
+[**ConnectLink**](ConnectLink.md)
 
 ### Authorization
 

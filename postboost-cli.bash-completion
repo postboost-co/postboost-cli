@@ -88,6 +88,7 @@ _postboost-cli()
     operations["listAccountGroups"]=1
     operations["updateAccountGroup"]=1
     operations["connectChannel"]=1
+    operations["createConnectLink"]=1
     operations["createReconnectLink"]=1
     operations["getAccount"]=1
     operations["getAccountHealth"]=1
@@ -267,6 +268,7 @@ _postboost-cli()
     operation_parameters["listAccountGroups"]="workspaceUuid= page= per_page= "
     operation_parameters["updateAccountGroup"]="workspaceUuid= accountGroupUuid= "
     operation_parameters["connectChannel"]="workspaceUuid= provider= "
+    operation_parameters["createConnectLink"]="workspaceUuid= "
     operation_parameters["createReconnectLink"]="workspaceUuid= accountUuid= "
     operation_parameters["getAccount"]="workspaceUuid= accountUuid= "
     operation_parameters["getAccountHealth"]="workspaceUuid= "
