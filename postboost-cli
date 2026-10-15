@@ -1678,7 +1678,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.26.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.26.1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -2018,7 +2018,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.26.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.26.1)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2026,7 +2026,7 @@ print_about() {
 read -r -d '' appdescription <<EOF
 
 The PostBoost REST API lets you publish, schedule, and analyze social media posts
-across 12+ platforms from a single integration. No OAuth apps to maintain —
+on every supported network from a single integration. No OAuth apps to maintain —
 PostBoost handles platform authorization for you.
 
 ## Base URL
@@ -2076,7 +2076,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.26.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.26.1)${OFF}"
     echo ""
 }
 
@@ -2706,9 +2706,7 @@ print_createConnectLink_help() {
     echo ""
     echo -e "${BOLD}${WHITE}createConnectLink - Create a connect link${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Creates a single-use link (valid 15 minutes) that lets the user connect a new account on an
-OAuth network to this workspace. Ask the user to open this link in their browser while logged
-in to PostBoost, wait until they confirm, then call 'list-accounts' to get the new account id.
+    echo -e "Creates a single-use link (valid 15 minutes) to connect a new account on an OAuth network to this workspace: ask the user to open it in their browser while logged in to PostBoost, wait until they confirm, then call 'list-accounts' to get the new account id.
 The link signs no one in: only the user who created it, while a workspace admin, can use it.
 Telegram, Discord and Slack need no browser: connect them with 'connectChannel'. Mastodon,
 Pixelfed and Bluesky ask for a server or handle first, so the user connects them in the app.
