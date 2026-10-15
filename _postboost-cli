@@ -342,6 +342,7 @@ case $state in
             "deleteCompetitor[Stop tracking a competitor]" \
             "getCompetitor[Get a competitor]" \
             "listCompetitors[List competitors]"             "buildUtmUrl[Build a UTM-tagged campaign URL]" \
+            "calculateCrop[Calculate the crop box that fits an image to a social media size]" \
             "calculateEngagementRate[Calculate an engagement rate]" \
             "checkPost[Check a post against each network's publishing rules]" \
             "cleanText[Clean AI-written text: dashes, quotes, invisible characters, markdown]" \
@@ -350,6 +351,8 @@ case $state in
             "generateCaption[Write three post captions for a topic with AI (needs a token, spends AI credits)]" \
             "generateFancyText[Convert text to fancy Unicode styles]" \
             "generateHashtags[Generate hashtags for a post topic with AI (needs a token, spends AI credits)]" \
+            "getBestTimesToPost[Get the best times to post per network from published studies, with sources]" \
+            "getImageSizes[Get social media image sizes per network, each with its source]" \
             "listFreeTools[List the free tools]" \
             "splitThread[Split long text into a thread]"             "createHashtagGroup[Create a hashtag group]" \
             "deleteHashtagGroup[Delete a hashtag group]" \
@@ -883,6 +886,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      calculateCrop)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       calculateEngagementRate)
         local -a _op_arguments
         _op_arguments=(
@@ -929,6 +938,20 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         local -a _op_arguments
         _op_arguments=(
                               )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getBestTimesToPost)
+        local -a _op_arguments
+        _op_arguments=(
+                    "network=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getImageSizes)
+        local -a _op_arguments
+        _op_arguments=(
+                    "network=:[QUERY] "
+          )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       listFreeTools)
