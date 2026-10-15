@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **daysUnderscoreleft** | **integer** |  | [default to null]
 **refreshable** | **boolean** |  | [default to null]
 **note** | **string** |  | [default to null]
+**reconnectUnderscorereason** | [**AccountConnectionHealthReconnectReason**](AccountConnectionHealthReconnectReason.md) |  | [default to null]
 **lastUnderscoresuccessUnderscoreat** | **string** |  | [default to null]
 **lastUnderscoreerror** | **string** |  | [default to null]
 **reconnectUnderscoreurl** | **string** |  | [default to null]
