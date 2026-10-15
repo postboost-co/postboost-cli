@@ -343,6 +343,7 @@ case $state in
             "getCompetitor[Get a competitor]" \
             "listCompetitors[List competitors]"             "buildUtmUrl[Build a UTM-tagged campaign URL]" \
             "calculateEngagementRate[Calculate an engagement rate]" \
+            "cleanText[Clean AI-written text: dashes, quotes, invisible characters, markdown]" \
             "countCharacters[Count characters as each network counts them]" \
             "formatLinkedInPost[Format a LinkedIn post with bold, italic and lists]" \
             "generateFancyText[Convert text to fancy Unicode styles]" \
@@ -880,6 +881,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       calculateEngagementRate)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      cleanText)
         local -a _op_arguments
         _op_arguments=(
                               )
