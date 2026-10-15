@@ -1687,7 +1687,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.29.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.29.1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -2030,7 +2030,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.29.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.29.1)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2088,7 +2088,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.29.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.29.1)${OFF}"
     echo ""
 }
 
@@ -3853,7 +3853,7 @@ print_generateCaption_help() {
     code=502
     echo -e "${result_color_table[${code:0:1}]}  502;The AI provider failed or timed out. No credit was spent.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=503
-    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off or out of budget right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -3927,7 +3927,7 @@ print_generateHashtags_help() {
     code=502
     echo -e "${result_color_table[${code:0:1}]}  502;The AI provider failed or timed out. No credit was spent.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=503
-    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off or out of budget right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
