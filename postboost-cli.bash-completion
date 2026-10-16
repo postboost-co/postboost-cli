@@ -124,6 +124,7 @@ _postboost-cli()
     operations["calculateAspectRatio"]=1
     operations["calculateCrop"]=1
     operations["calculateEngagementRate"]=1
+    operations["checkLinkPreview"]=1
     operations["checkPost"]=1
     operations["cleanText"]=1
     operations["countCharacters"]=1
@@ -314,6 +315,7 @@ _postboost-cli()
     operation_parameters["calculateAspectRatio"]=""
     operation_parameters["calculateCrop"]=""
     operation_parameters["calculateEngagementRate"]=""
+    operation_parameters["checkLinkPreview"]=""
     operation_parameters["checkPost"]=""
     operation_parameters["cleanText"]=""
     operation_parameters["countCharacters"]=""
