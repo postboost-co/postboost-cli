@@ -275,7 +275,9 @@ Edit an existing media image using AI
 
 Edits an existing workspace media item using the source image and a text
 prompt. Optionally accepts a mask (transparent areas are replaced).
-Saves results to the media library. Credits: 'count × credit_weight'.
+Saves results to the media library.
+Credits: 1 image credit per image ('429 image_credits_exhausted' when the monthly pool is empty).
+If the image pool is switched off, 'count × credit_weight' text credits instead.
 
 ### Example
 
@@ -321,7 +323,8 @@ templates. No prompt engineering required.
 **Developer mode**: provide 'prompt' directly to bypass prompt building.
 If both 'caption' and 'prompt' are sent, standard mode runs.
 
-Credits: 'count x credit_weight' (default: 5 per image).
+Credits: 1 image credit per image ('429 image_credits_exhausted' when the monthly pool is empty).
+If the image pool is switched off, 'count × credit_weight' text credits instead.
 
 ### Example
 
@@ -400,7 +403,8 @@ Generate variations of an existing media image
 
 Creates one or more variations of an existing workspace media item.
 Saves results to the media library.
-Credits: 'count × credit_weight'.
+Credits: 1 image credit per image ('429 image_credits_exhausted' when the monthly pool is empty).
+If the image pool is switched off, 'count × credit_weight' text credits instead.
 
 ### Example
 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **integer** |  | [default to null]
+**id** | **string** |  | [default to null]
 **uuid** | **string** |  | [default to null]
 **name** | **string** |  | [default to null]
 **mimeUnderscoretype** | **string** |  | [default to null]

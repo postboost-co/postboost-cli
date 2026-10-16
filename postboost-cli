@@ -1708,7 +1708,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.36.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.37.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -2058,7 +2058,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.36.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.37.0)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2116,7 +2116,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.36.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.37.0)${OFF}"
     echo ""
 }
 
@@ -2314,7 +2314,9 @@ print_imageEdit_help() {
     echo -e ""
     echo -e "Edits an existing workspace media item using the source image and a text
 prompt. Optionally accepts a mask (transparent areas are replaced).
-Saves results to the media library. Credits: 'count × credit_weight'." | paste -sd' ' | fold -sw 80
+Saves results to the media library.
+Credits: 1 image credit per image ('429 image_credits_exhausted' when the monthly pool is empty).
+If the image pool is switched off, 'count × credit_weight' text credits instead." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2352,7 +2354,8 @@ templates. No prompt engineering required.
 **Developer mode**: provide 'prompt' directly to bypass prompt building.
 If both 'caption' and 'prompt' are sent, standard mode runs.
 
-Credits: 'count x credit_weight' (default: 5 per image)." | paste -sd' ' | fold -sw 80
+Credits: 1 image credit per image ('429 image_credits_exhausted' when the monthly pool is empty).
+If the image pool is switched off, 'count × credit_weight' text credits instead." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -2415,7 +2418,8 @@ print_imageVariations_help() {
     echo -e ""
     echo -e "Creates one or more variations of an existing workspace media item.
 Saves results to the media library.
-Credits: 'count × credit_weight'." | paste -sd' ' | fold -sw 80
+Credits: 1 image credit per image ('429 image_credits_exhausted' when the monthly pool is empty).
+If the image pool is switched off, 'count × credit_weight' text credits instead." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
