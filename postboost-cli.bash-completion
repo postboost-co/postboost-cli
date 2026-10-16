@@ -131,6 +131,7 @@ _postboost-cli()
     operations["generateCaption"]=1
     operations["generateFancyText"]=1
     operations["generateHashtags"]=1
+    operations["generateQrCode"]=1
     operations["getBestTimesToPost"]=1
     operations["getImageSizes"]=1
     operations["listFreeTools"]=1
@@ -320,6 +321,7 @@ _postboost-cli()
     operation_parameters["generateCaption"]=""
     operation_parameters["generateFancyText"]=""
     operation_parameters["generateHashtags"]=""
+    operation_parameters["generateQrCode"]=""
     operation_parameters["getBestTimesToPost"]="network= "
     operation_parameters["getImageSizes"]="network= "
     operation_parameters["listFreeTools"]=""

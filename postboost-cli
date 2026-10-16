@@ -232,6 +232,7 @@ operation_parameters_minimum_occurrences["formatLinkedInPost:::FreeToolFormatLin
 operation_parameters_minimum_occurrences["generateCaption:::FreeToolGenerateCaptionRequest"]=1
 operation_parameters_minimum_occurrences["generateFancyText:::FreeToolGenerateFancyTextRequest"]=1
 operation_parameters_minimum_occurrences["generateHashtags:::FreeToolGenerateHashtagsRequest"]=1
+operation_parameters_minimum_occurrences["generateQrCode:::FreeToolGenerateQrCodeRequest"]=1
 operation_parameters_minimum_occurrences["getBestTimesToPost:::network"]=0
 operation_parameters_minimum_occurrences["getImageSizes:::network"]=0
 operation_parameters_minimum_occurrences["previewPost:::FreeToolPreviewPostRequest"]=1
@@ -652,6 +653,7 @@ operation_parameters_maximum_occurrences["formatLinkedInPost:::FreeToolFormatLin
 operation_parameters_maximum_occurrences["generateCaption:::FreeToolGenerateCaptionRequest"]=0
 operation_parameters_maximum_occurrences["generateFancyText:::FreeToolGenerateFancyTextRequest"]=0
 operation_parameters_maximum_occurrences["generateHashtags:::FreeToolGenerateHashtagsRequest"]=0
+operation_parameters_maximum_occurrences["generateQrCode:::FreeToolGenerateQrCodeRequest"]=0
 operation_parameters_maximum_occurrences["getBestTimesToPost:::network"]=0
 operation_parameters_maximum_occurrences["getImageSizes:::network"]=0
 operation_parameters_maximum_occurrences["previewPost:::FreeToolPreviewPostRequest"]=0
@@ -1069,6 +1071,7 @@ operation_parameters_collection_type["formatLinkedInPost:::FreeToolFormatLinkedI
 operation_parameters_collection_type["generateCaption:::FreeToolGenerateCaptionRequest"]=""
 operation_parameters_collection_type["generateFancyText:::FreeToolGenerateFancyTextRequest"]=""
 operation_parameters_collection_type["generateHashtags:::FreeToolGenerateHashtagsRequest"]=""
+operation_parameters_collection_type["generateQrCode:::FreeToolGenerateQrCodeRequest"]=""
 operation_parameters_collection_type["getBestTimesToPost:::network"]=""
 operation_parameters_collection_type["getImageSizes:::network"]=""
 operation_parameters_collection_type["previewPost:::FreeToolPreviewPostRequest"]=""
@@ -1702,7 +1705,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.34.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.35.0)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1833,6 +1836,7 @@ read -r -d '' ops <<EOF
   ${CYAN}generateCaption${OFF};Write three post captions for a topic with AI (needs a token, spends AI credits) (AUTH)
   ${CYAN}generateFancyText${OFF};Convert text to fancy Unicode styles
   ${CYAN}generateHashtags${OFF};Generate hashtags for a post topic with AI (needs a token, spends AI credits) (AUTH)
+  ${CYAN}generateQrCode${OFF};Generate a QR code (SVG) for a link or text, with optional UTM tags
   ${CYAN}getBestTimesToPost${OFF};Get the best times to post per network from published studies, with sources
   ${CYAN}getImageSizes${OFF};Get social media image sizes per network, each with its source
   ${CYAN}listFreeTools${OFF};List the free tools
@@ -2050,7 +2054,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.34.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.35.0)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2108,7 +2112,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.34.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.35.0)${OFF}"
     echo ""
 }
 
@@ -4016,6 +4020,40 @@ print_generateHashtags_help() {
     echo -e "${result_color_table[${code:0:1}]}  502;The AI provider failed or timed out. No credit was spent.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=503
     echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for generateQrCode operation
+#
+##############################################################################
+print_generateQrCode_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateQrCode - Generate a QR code (SVG) for a link or text, with optional UTM tags${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Generate a QR code (SVG) for a link or text, with optional UTM tags. The same logic as the free web tool at https://postboost.co/tools/qr-code-generator. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
 }
 ##############################################################################
 #
@@ -10891,6 +10929,84 @@ call_generateHashtags() {
     local path
 
     if ! path=$(build_request_path "/app/api/tools/instagram-hashtag-generator" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call generateQrCode operation
+#
+##############################################################################
+call_generateQrCode() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/qr-code-generator" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -18103,6 +18219,9 @@ case $key in
     generateHashtags)
     operation="generateHashtags"
     ;;
+    generateQrCode)
+    operation="generateQrCode"
+    ;;
     getBestTimesToPost)
     operation="getBestTimesToPost"
     ;;
@@ -18744,6 +18863,9 @@ case $operation in
     ;;
     generateHashtags)
     call_generateHashtags
+    ;;
+    generateQrCode)
+    call_generateQrCode
     ;;
     getBestTimesToPost)
     call_getBestTimesToPost

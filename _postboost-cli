@@ -352,6 +352,7 @@ case $state in
             "generateCaption[Write three post captions for a topic with AI (needs a token, spends AI credits)]" \
             "generateFancyText[Convert text to fancy Unicode styles]" \
             "generateHashtags[Generate hashtags for a post topic with AI (needs a token, spends AI credits)]" \
+            "generateQrCode[Generate a QR code (SVG) for a link or text, with optional UTM tags]" \
             "getBestTimesToPost[Get the best times to post per network from published studies, with sources]" \
             "getImageSizes[Get social media image sizes per network, each with its source]" \
             "listFreeTools[List the free tools]" \
@@ -943,6 +944,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       generateHashtags)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      generateQrCode)
         local -a _op_arguments
         _op_arguments=(
                               )
