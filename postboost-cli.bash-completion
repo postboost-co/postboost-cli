@@ -129,6 +129,7 @@ _postboost-cli()
     operations["checkYoutubeThumbnail"]=1
     operations["cleanText"]=1
     operations["countCharacters"]=1
+    operations["formatInstagramCaption"]=1
     operations["formatLinkedInPost"]=1
     operations["generateCaption"]=1
     operations["generateFancyText"]=1
@@ -325,6 +326,7 @@ _postboost-cli()
     operation_parameters["checkYoutubeThumbnail"]=""
     operation_parameters["cleanText"]=""
     operation_parameters["countCharacters"]=""
+    operation_parameters["formatInstagramCaption"]=""
     operation_parameters["formatLinkedInPost"]=""
     operation_parameters["generateCaption"]=""
     operation_parameters["generateFancyText"]=""
