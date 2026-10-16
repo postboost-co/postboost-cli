@@ -135,6 +135,7 @@ _postboost-cli()
     operations["generateHashtags"]=1
     operations["generateHooks"]=1
     operations["generateQrCode"]=1
+    operations["generateSocialPostsFromBlog"]=1
     operations["getBestTimesToPost"]=1
     operations["getHookTemplates"]=1
     operations["getImageSizes"]=1
@@ -330,6 +331,7 @@ _postboost-cli()
     operation_parameters["generateHashtags"]=""
     operation_parameters["generateHooks"]=""
     operation_parameters["generateQrCode"]=""
+    operation_parameters["generateSocialPostsFromBlog"]=""
     operation_parameters["getBestTimesToPost"]="network= "
     operation_parameters["getHookTemplates"]="topic= category= network= search= "
     operation_parameters["getImageSizes"]="network= "
