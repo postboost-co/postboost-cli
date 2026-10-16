@@ -14,15 +14,17 @@ tar xzf postboost-cli.tar.gz
 | **Releases** | [github.com/postboost-co/postboost-cli/releases](https://github.com/postboost-co/postboost-cli/releases) |
 | **GitHub** | [postboost-co/postboost-cli](https://github.com/postboost-co/postboost-cli) |
 | **Docs** | [postboost.co/docs/api](https://postboost.co/docs/api) |
-| **Version** | v1.46.0 |
+| **Version** | v1.49.0 |
 
 ## Quick start
 
 ```bash
 export POSTBOOST_API_TOKEN="YOUR_API_TOKEN"
 
-# List posts
-./postboost-cli listPosts --workspaceUuid "YOUR_WORKSPACE_UUID"
+# List posts (the token goes in as an Authorization header argument)
+./postboost-cli --host https://postboost.co listPosts \
+  workspaceUuid="YOUR_WORKSPACE_UUID" \
+  "Authorization: Bearer $POSTBOOST_API_TOKEN"
 
 # Show all commands
 ./postboost-cli --help
@@ -92,8 +94,10 @@ Class | Method | HTTP request | Description
 *FreeToolsApi* | [**calculateCrop**](docs/FreeToolsApi.md#calculatecrop) | **POST** /tools/social-media-image-sizes/crop | Calculate the crop box that fits an image to a social media size
 *FreeToolsApi* | [**calculateEngagementRate**](docs/FreeToolsApi.md#calculateengagementrate) | **POST** /tools/engagement-rate-calculator | Calculate an engagement rate
 *FreeToolsApi* | [**calculateSocialRoi**](docs/FreeToolsApi.md#calculatesocialroi) | **POST** /tools/social-media-roi-calculator | Calculate social media ROI
+*FreeToolsApi* | [**calculateXApiCost**](docs/FreeToolsApi.md#calculatexapicost) | **POST** /tools/x-api-cost-calculator | Calculate the monthly X API cost
 *FreeToolsApi* | [**checkLinkPreview**](docs/FreeToolsApi.md#checklinkpreview) | **POST** /tools/link-preview-checker | Check how a link previews on X, LinkedIn, Facebook and chat apps (Open Graph and Twitter card tags)
 *FreeToolsApi* | [**checkPost**](docs/FreeToolsApi.md#checkpost) | **POST** /tools/social-media-post-checker | Check a post against each network&#39;s publishing rules
+*FreeToolsApi* | [**checkReadability**](docs/FreeToolsApi.md#checkreadability) | **POST** /tools/post-readability-checker | Check the readability of a post: Flesch scores, long sentences and passive hints
 *FreeToolsApi* | [**checkYoutubeThumbnail**](docs/FreeToolsApi.md#checkyoutubethumbnail) | **POST** /tools/youtube-thumbnail-size-checker | Check a YouTube thumbnail&#39;s ratio, width, file size and format against YouTube&#39;s requirements
 *FreeToolsApi* | [**cleanText**](docs/FreeToolsApi.md#cleantext) | **POST** /tools/ai-text-cleaner | Clean AI-written text: dashes, quotes, invisible characters, markdown
 *FreeToolsApi* | [**countCharacters**](docs/FreeToolsApi.md#countcharacters) | **POST** /tools/social-media-character-counter | Count characters as each network counts them
@@ -112,6 +116,7 @@ Class | Method | HTTP request | Description
 *FreeToolsApi* | [**listFreeTools**](docs/FreeToolsApi.md#listfreetools) | **GET** /tools | List the free tools
 *FreeToolsApi* | [**planContentCalendar**](docs/FreeToolsApi.md#plancontentcalendar) | **POST** /tools/social-media-content-calendar-generator | Plan a social media content calendar and get it as CSV and ICS
 *FreeToolsApi* | [**previewPost**](docs/FreeToolsApi.md#previewpost) | **POST** /tools/social-media-post-preview | Preview where a post folds and when its image is cropped on Instagram, X, LinkedIn and Facebook
+*FreeToolsApi* | [**searchEmoji**](docs/FreeToolsApi.md#searchemoji) | **POST** /tools/social-media-emoji-picker | Search emoji by name or keyword, to copy and paste into a post
 *FreeToolsApi* | [**splitThread**](docs/FreeToolsApi.md#splitthread) | **POST** /tools/x-thread-maker | Split long text into a thread
 *HashtagGroupsApi* | [**createHashtagGroup**](docs/HashtagGroupsApi.md#createhashtaggroup) | **POST** /{workspaceUuid}/hashtag-groups | Create a hashtag group
 *HashtagGroupsApi* | [**deleteHashtagGroup**](docs/HashtagGroupsApi.md#deletehashtaggroup) | **DELETE** /{workspaceUuid}/hashtag-groups/{hashtagGroupId} | Delete a hashtag group

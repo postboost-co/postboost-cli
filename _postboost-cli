@@ -346,8 +346,10 @@ case $state in
             "calculateCrop[Calculate the crop box that fits an image to a social media size]" \
             "calculateEngagementRate[Calculate an engagement rate]" \
             "calculateSocialRoi[Calculate social media ROI]" \
+            "calculateXApiCost[Calculate the monthly X API cost]" \
             "checkLinkPreview[Check how a link previews on X, LinkedIn, Facebook and chat apps (Open Graph and Twitter card tags)]" \
             "checkPost[Check a post against each network's publishing rules]" \
+            "checkReadability[Check the readability of a post: Flesch scores, long sentences and passive hints]" \
             "checkYoutubeThumbnail[Check a YouTube thumbnail's ratio, width, file size and format against YouTube's requirements]" \
             "cleanText[Clean AI-written text: dashes, quotes, invisible characters, markdown]" \
             "countCharacters[Count characters as each network counts them]" \
@@ -366,6 +368,7 @@ case $state in
             "listFreeTools[List the free tools]" \
             "planContentCalendar[Plan a social media content calendar and get it as CSV and ICS]" \
             "previewPost[Preview where a post folds and when its image is cropped on Instagram, X, LinkedIn and Facebook]" \
+            "searchEmoji[Search emoji by name or keyword, to copy and paste into a post]" \
             "splitThread[Split long text into a thread]"             "createHashtagGroup[Create a hashtag group]" \
             "deleteHashtagGroup[Delete a hashtag group]" \
             "getHashtagGroup[Get a hashtag group]" \
@@ -922,6 +925,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      calculateXApiCost)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       checkLinkPreview)
         local -a _op_arguments
         _op_arguments=(
@@ -929,6 +938,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       checkPost)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      checkReadability)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1044,6 +1059,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       previewPost)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      searchEmoji)
         local -a _op_arguments
         _op_arguments=(
                               )
