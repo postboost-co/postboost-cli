@@ -347,6 +347,7 @@ case $state in
             "calculateEngagementRate[Calculate an engagement rate]" \
             "checkLinkPreview[Check how a link previews on X, LinkedIn, Facebook and chat apps (Open Graph and Twitter card tags)]" \
             "checkPost[Check a post against each network's publishing rules]" \
+            "checkYoutubeThumbnail[Check a YouTube thumbnail's ratio, width, file size and format against YouTube's requirements]" \
             "cleanText[Clean AI-written text: dashes, quotes, invisible characters, markdown]" \
             "countCharacters[Count characters as each network counts them]" \
             "formatLinkedInPost[Format a LinkedIn post with bold, italic and lists]" \
@@ -358,6 +359,7 @@ case $state in
             "getBestTimesToPost[Get the best times to post per network from published studies, with sources]" \
             "getHookTemplates[Get free hook templates for social media posts, filtered by style and network]" \
             "getImageSizes[Get social media image sizes per network, each with its source]" \
+            "getVideoSpecs[Get social media video ratios, resolutions, lengths and file size limits per network, with sources]" \
             "listFreeTools[List the free tools]" \
             "previewPost[Preview where a post folds and when its image is cropped on Instagram, X, LinkedIn and Facebook]" \
             "splitThread[Split long text into a thread]"             "createHashtagGroup[Create a hashtag group]" \
@@ -922,6 +924,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      checkYoutubeThumbnail)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       cleanText)
         local -a _op_arguments
         _op_arguments=(
@@ -988,6 +996,13 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       getImageSizes)
+        local -a _op_arguments
+        _op_arguments=(
+                    "network=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getVideoSpecs)
         local -a _op_arguments
         _op_arguments=(
                     "network=:[QUERY] "
