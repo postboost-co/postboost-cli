@@ -142,6 +142,7 @@ _postboost-cli()
     operations["getImageSizes"]=1
     operations["getVideoSpecs"]=1
     operations["listFreeTools"]=1
+    operations["planContentCalendar"]=1
     operations["previewPost"]=1
     operations["splitThread"]=1
     operations["createHashtagGroup"]=1
@@ -339,6 +340,7 @@ _postboost-cli()
     operation_parameters["getImageSizes"]="network= "
     operation_parameters["getVideoSpecs"]="network= "
     operation_parameters["listFreeTools"]=""
+    operation_parameters["planContentCalendar"]=""
     operation_parameters["previewPost"]=""
     operation_parameters["splitThread"]=""
     operation_parameters["createHashtagGroup"]="workspaceUuid= "
