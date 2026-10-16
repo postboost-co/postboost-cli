@@ -121,6 +121,7 @@ _postboost-cli()
     operations["getCompetitor"]=1
     operations["listCompetitors"]=1
     operations["buildUtmUrl"]=1
+    operations["calculateAspectRatio"]=1
     operations["calculateCrop"]=1
     operations["calculateEngagementRate"]=1
     operations["checkPost"]=1
@@ -309,6 +310,7 @@ _postboost-cli()
     operation_parameters["getCompetitor"]="workspaceUuid= competitorId= "
     operation_parameters["listCompetitors"]="workspaceUuid= account_id= "
     operation_parameters["buildUtmUrl"]=""
+    operation_parameters["calculateAspectRatio"]=""
     operation_parameters["calculateCrop"]=""
     operation_parameters["calculateEngagementRate"]=""
     operation_parameters["checkPost"]=""
