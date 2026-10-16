@@ -14,7 +14,7 @@ tar xzf postboost-cli.tar.gz
 | **Releases** | [github.com/postboost-co/postboost-cli/releases](https://github.com/postboost-co/postboost-cli/releases) |
 | **GitHub** | [postboost-co/postboost-cli](https://github.com/postboost-co/postboost-cli) |
 | **Docs** | [postboost.co/docs/api](https://postboost.co/docs/api) |
-| **Version** | v1.45.0 |
+| **Version** | v1.46.0 |
 
 ## Quick start
 
@@ -91,6 +91,7 @@ Class | Method | HTTP request | Description
 *FreeToolsApi* | [**calculateAspectRatio**](docs/FreeToolsApi.md#calculateaspectratio) | **POST** /tools/aspect-ratio-calculator | Calculate an aspect ratio, or the missing side of an image at a given ratio
 *FreeToolsApi* | [**calculateCrop**](docs/FreeToolsApi.md#calculatecrop) | **POST** /tools/social-media-image-sizes/crop | Calculate the crop box that fits an image to a social media size
 *FreeToolsApi* | [**calculateEngagementRate**](docs/FreeToolsApi.md#calculateengagementrate) | **POST** /tools/engagement-rate-calculator | Calculate an engagement rate
+*FreeToolsApi* | [**calculateSocialRoi**](docs/FreeToolsApi.md#calculatesocialroi) | **POST** /tools/social-media-roi-calculator | Calculate social media ROI
 *FreeToolsApi* | [**checkLinkPreview**](docs/FreeToolsApi.md#checklinkpreview) | **POST** /tools/link-preview-checker | Check how a link previews on X, LinkedIn, Facebook and chat apps (Open Graph and Twitter card tags)
 *FreeToolsApi* | [**checkPost**](docs/FreeToolsApi.md#checkpost) | **POST** /tools/social-media-post-checker | Check a post against each network&#39;s publishing rules
 *FreeToolsApi* | [**checkYoutubeThumbnail**](docs/FreeToolsApi.md#checkyoutubethumbnail) | **POST** /tools/youtube-thumbnail-size-checker | Check a YouTube thumbnail&#39;s ratio, width, file size and format against YouTube&#39;s requirements

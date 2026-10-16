@@ -345,6 +345,7 @@ case $state in
             "calculateAspectRatio[Calculate an aspect ratio, or the missing side of an image at a given ratio]" \
             "calculateCrop[Calculate the crop box that fits an image to a social media size]" \
             "calculateEngagementRate[Calculate an engagement rate]" \
+            "calculateSocialRoi[Calculate social media ROI]" \
             "checkLinkPreview[Check how a link previews on X, LinkedIn, Facebook and chat apps (Open Graph and Twitter card tags)]" \
             "checkPost[Check a post against each network's publishing rules]" \
             "checkYoutubeThumbnail[Check a YouTube thumbnail's ratio, width, file size and format against YouTube's requirements]" \
@@ -910,6 +911,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       calculateEngagementRate)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      calculateSocialRoi)
         local -a _op_arguments
         _op_arguments=(
                               )
