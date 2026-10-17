@@ -368,10 +368,12 @@ case $state in
             "getImageSizes[Get social media image sizes per network, each with its source]" \
             "getSafeZones[Get the TikTok, Instagram Reels or YouTube Shorts safe zones for a vertical frame]" \
             "getVideoSpecs[Get social media video ratios, resolutions, lengths and file size limits per network, with sources]" \
+            "listAwarenessDays[List public holidays, awareness days and social media days by date, country, type and topic, with sources]" \
             "listFreeTools[List the free tools]" \
             "planContentCalendar[Plan a social media content calendar and get it as CSV and ICS]" \
             "planPostingFrequency[Plan how often to post on each network]" \
             "previewPost[Preview where a post folds and when its image is cropped on Instagram, X, LinkedIn and Facebook]" \
+            "scoreSocialAudit[Score a social media audit checklist and get the top fixes]" \
             "searchEmoji[Search emoji by name or keyword, to copy and paste into a post]" \
             "splitThread[Split long text into a thread]"             "createHashtagGroup[Create a hashtag group]" \
             "deleteHashtagGroup[Delete a hashtag group]" \
@@ -1068,6 +1070,17 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      listAwarenessDays)
+        local -a _op_arguments
+        _op_arguments=(
+                    "from=:[QUERY] "
+"to=:[QUERY] "
+"country=:[QUERY] "
+"type=:[QUERY] "
+"topic=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       listFreeTools)
         local -a _op_arguments
         _op_arguments=(
@@ -1087,6 +1100,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       previewPost)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      scoreSocialAudit)
         local -a _op_arguments
         _op_arguments=(
                               )

@@ -147,10 +147,12 @@ _postboost-cli()
     operations["getImageSizes"]=1
     operations["getSafeZones"]=1
     operations["getVideoSpecs"]=1
+    operations["listAwarenessDays"]=1
     operations["listFreeTools"]=1
     operations["planContentCalendar"]=1
     operations["planPostingFrequency"]=1
     operations["previewPost"]=1
+    operations["scoreSocialAudit"]=1
     operations["searchEmoji"]=1
     operations["splitThread"]=1
     operations["createHashtagGroup"]=1
@@ -353,10 +355,12 @@ _postboost-cli()
     operation_parameters["getImageSizes"]="network= "
     operation_parameters["getSafeZones"]=""
     operation_parameters["getVideoSpecs"]="network= "
+    operation_parameters["listAwarenessDays"]="from= to= country= type= topic= "
     operation_parameters["listFreeTools"]=""
     operation_parameters["planContentCalendar"]=""
     operation_parameters["planPostingFrequency"]=""
     operation_parameters["previewPost"]=""
+    operation_parameters["scoreSocialAudit"]=""
     operation_parameters["searchEmoji"]=""
     operation_parameters["splitThread"]=""
     operation_parameters["createHashtagGroup"]="workspaceUuid= "

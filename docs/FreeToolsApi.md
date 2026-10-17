@@ -31,10 +31,12 @@ Method | HTTP request | Description
 [**getImageSizes**](FreeToolsApi.md#getImageSizes) | **GET** /tools/social-media-image-sizes | Get social media image sizes per network, each with its source
 [**getSafeZones**](FreeToolsApi.md#getSafeZones) | **POST** /tools/safe-zone-checker | Get the TikTok, Instagram Reels or YouTube Shorts safe zones for a vertical frame
 [**getVideoSpecs**](FreeToolsApi.md#getVideoSpecs) | **GET** /tools/social-media-video-specs | Get social media video ratios, resolutions, lengths and file size limits per network, with sources
+[**listAwarenessDays**](FreeToolsApi.md#listAwarenessDays) | **GET** /tools/social-media-holiday-calendar | List public holidays, awareness days and social media days by date, country, type and topic, with sources
 [**listFreeTools**](FreeToolsApi.md#listFreeTools) | **GET** /tools | List the free tools
 [**planContentCalendar**](FreeToolsApi.md#planContentCalendar) | **POST** /tools/social-media-content-calendar-generator | Plan a social media content calendar and get it as CSV and ICS
 [**planPostingFrequency**](FreeToolsApi.md#planPostingFrequency) | **POST** /tools/posting-frequency-planner | Plan how often to post on each network
 [**previewPost**](FreeToolsApi.md#previewPost) | **POST** /tools/social-media-post-preview | Preview where a post folds and when its image is cropped on Instagram, X, LinkedIn and Facebook
+[**scoreSocialAudit**](FreeToolsApi.md#scoreSocialAudit) | **POST** /tools/social-media-audit-template | Score a social media audit checklist and get the top fixes
 [**searchEmoji**](FreeToolsApi.md#searchEmoji) | **POST** /tools/social-media-emoji-picker | Search emoji by name or keyword, to copy and paste into a post
 [**splitThread**](FreeToolsApi.md#splitThread) | **POST** /tools/x-thread-maker | Split long text into a thread
 
@@ -988,6 +990,45 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## listAwarenessDays
+
+List public holidays, awareness days and social media days by date, country, type and topic, with sources
+
+List public holidays, awareness days and social media days by date, country, type and topic, with sources. The same logic as the free web tool at https://postboost.co/tools/social-media-holiday-calendar. No account needed: call it without a token, or with any API token.
+
+### Example
+
+```bash
+postboost-cli listAwarenessDays  from=value  to=value  country=value  type=value  topic=value
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from** | **string** |  | [optional] [default to null]
+ **to** | **string** |  | [optional] [default to null]
+ **country** | **string** |  | [optional] [default to null]
+ **type** | **string** |  | [optional] [default to null]
+ **topic** | **string** |  | [optional] [default to null]
+
+### Return type
+
+[**FreeToolListAwarenessDaysResponse**](FreeToolListAwarenessDaysResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## listFreeTools
 
 List the free tools
@@ -1112,6 +1153,41 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FreeToolPreviewPostResponse**](FreeToolPreviewPostResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## scoreSocialAudit
+
+Score a social media audit checklist and get the top fixes
+
+Score a social media audit checklist and get the top fixes. The same logic as the free web tool at https://postboost.co/tools/social-media-audit-template. No account needed: call it without a token, or with any API token.
+
+### Example
+
+```bash
+postboost-cli scoreSocialAudit
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **freeToolScoreSocialAuditRequest** | [**FreeToolScoreSocialAuditRequest**](FreeToolScoreSocialAuditRequest.md) |  |
+
+### Return type
+
+[**FreeToolScoreSocialAuditResponse**](FreeToolScoreSocialAuditResponse.md)
 
 ### Authorization
 
