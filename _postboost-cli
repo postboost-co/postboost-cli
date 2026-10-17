@@ -343,8 +343,10 @@ case $state in
             "getCompetitor[Get a competitor]" \
             "listCompetitors[List competitors]"             "buildUtmUrl[Build a UTM-tagged campaign URL]" \
             "calculateAspectRatio[Calculate an aspect ratio, or the missing side of an image at a given ratio]" \
+            "calculateCarouselSlices[Split a wide image into seamless Instagram carousel slides]" \
             "calculateCrop[Calculate the crop box that fits an image to a social media size]" \
             "calculateEngagementRate[Calculate an engagement rate]" \
+            "calculateInfluencerRate[Estimate an influencer's rate for one sponsored deliverable]" \
             "calculateSocialRoi[Calculate social media ROI]" \
             "calculateXApiCost[Calculate the monthly X API cost]" \
             "checkLinkPreview[Check how a link previews on X, LinkedIn, Facebook and chat apps (Open Graph and Twitter card tags)]" \
@@ -364,9 +366,11 @@ case $state in
             "getBestTimesToPost[Get the best times to post per network from published studies, with sources]" \
             "getHookTemplates[Get free hook templates for social media posts, filtered by style and network]" \
             "getImageSizes[Get social media image sizes per network, each with its source]" \
+            "getSafeZones[Get the TikTok, Instagram Reels or YouTube Shorts safe zones for a vertical frame]" \
             "getVideoSpecs[Get social media video ratios, resolutions, lengths and file size limits per network, with sources]" \
             "listFreeTools[List the free tools]" \
             "planContentCalendar[Plan a social media content calendar and get it as CSV and ICS]" \
+            "planPostingFrequency[Plan how often to post on each network]" \
             "previewPost[Preview where a post folds and when its image is cropped on Instagram, X, LinkedIn and Facebook]" \
             "searchEmoji[Search emoji by name or keyword, to copy and paste into a post]" \
             "splitThread[Split long text into a thread]"             "createHashtagGroup[Create a hashtag group]" \
@@ -907,6 +911,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      calculateCarouselSlices)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       calculateCrop)
         local -a _op_arguments
         _op_arguments=(
@@ -914,6 +924,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       calculateEngagementRate)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      calculateInfluencerRate)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1039,6 +1055,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      getSafeZones)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getVideoSpecs)
         local -a _op_arguments
         _op_arguments=(
@@ -1053,6 +1075,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       planContentCalendar)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      planPostingFrequency)
         local -a _op_arguments
         _op_arguments=(
                               )

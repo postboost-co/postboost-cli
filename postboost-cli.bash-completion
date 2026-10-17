@@ -122,8 +122,10 @@ _postboost-cli()
     operations["listCompetitors"]=1
     operations["buildUtmUrl"]=1
     operations["calculateAspectRatio"]=1
+    operations["calculateCarouselSlices"]=1
     operations["calculateCrop"]=1
     operations["calculateEngagementRate"]=1
+    operations["calculateInfluencerRate"]=1
     operations["calculateSocialRoi"]=1
     operations["calculateXApiCost"]=1
     operations["checkLinkPreview"]=1
@@ -143,9 +145,11 @@ _postboost-cli()
     operations["getBestTimesToPost"]=1
     operations["getHookTemplates"]=1
     operations["getImageSizes"]=1
+    operations["getSafeZones"]=1
     operations["getVideoSpecs"]=1
     operations["listFreeTools"]=1
     operations["planContentCalendar"]=1
+    operations["planPostingFrequency"]=1
     operations["previewPost"]=1
     operations["searchEmoji"]=1
     operations["splitThread"]=1
@@ -324,8 +328,10 @@ _postboost-cli()
     operation_parameters["listCompetitors"]="workspaceUuid= account_id= "
     operation_parameters["buildUtmUrl"]=""
     operation_parameters["calculateAspectRatio"]=""
+    operation_parameters["calculateCarouselSlices"]=""
     operation_parameters["calculateCrop"]=""
     operation_parameters["calculateEngagementRate"]=""
+    operation_parameters["calculateInfluencerRate"]=""
     operation_parameters["calculateSocialRoi"]=""
     operation_parameters["calculateXApiCost"]=""
     operation_parameters["checkLinkPreview"]=""
@@ -345,9 +351,11 @@ _postboost-cli()
     operation_parameters["getBestTimesToPost"]="network= "
     operation_parameters["getHookTemplates"]="topic= category= network= search= "
     operation_parameters["getImageSizes"]="network= "
+    operation_parameters["getSafeZones"]=""
     operation_parameters["getVideoSpecs"]="network= "
     operation_parameters["listFreeTools"]=""
     operation_parameters["planContentCalendar"]=""
+    operation_parameters["planPostingFrequency"]=""
     operation_parameters["previewPost"]=""
     operation_parameters["searchEmoji"]=""
     operation_parameters["splitThread"]=""
