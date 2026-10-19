@@ -120,12 +120,14 @@ _postboost-cli()
     operations["deleteCompetitor"]=1
     operations["getCompetitor"]=1
     operations["listCompetitors"]=1
+    operations["buildHashtagGroups"]=1
     operations["buildUtmUrl"]=1
     operations["calculateAspectRatio"]=1
     operations["calculateCarouselSlices"]=1
     operations["calculateCrop"]=1
     operations["calculateEngagementRate"]=1
     operations["calculateInfluencerRate"]=1
+    operations["calculateSmmPricing"]=1
     operations["calculateSocialRoi"]=1
     operations["calculateXApiCost"]=1
     operations["checkLinkPreview"]=1
@@ -134,27 +136,38 @@ _postboost-cli()
     operations["checkYoutubeThumbnail"]=1
     operations["cleanText"]=1
     operations["countCharacters"]=1
+    operations["findAutomationRecipes"]=1
     operations["formatInstagramCaption"]=1
     operations["formatLinkedInPost"]=1
+    operations["generateAltText"]=1
+    operations["generateBio"]=1
     operations["generateCaption"]=1
     operations["generateFancyText"]=1
     operations["generateHashtags"]=1
     operations["generateHooks"]=1
+    operations["generateLinkedInHeadline"]=1
     operations["generateQrCode"]=1
     operations["generateSocialPostsFromBlog"]=1
+    operations["generateUsernames"]=1
+    operations["generateYoutubeDescription"]=1
+    operations["generateYoutubeTitles"]=1
     operations["getBestTimesToPost"]=1
+    operations["getGlossary"]=1
     operations["getHookTemplates"]=1
     operations["getImageSizes"]=1
     operations["getSafeZones"]=1
     operations["getVideoSpecs"]=1
     operations["listAwarenessDays"]=1
     operations["listFreeTools"]=1
+    operations["pickSocialMediaTool"]=1
     operations["planContentCalendar"]=1
     operations["planPostingFrequency"]=1
     operations["previewPost"]=1
     operations["scoreSocialAudit"]=1
     operations["searchEmoji"]=1
     operations["splitThread"]=1
+    operations["summarizeReport"]=1
+    operations["verifyWebhookSignature"]=1
     operations["createHashtagGroup"]=1
     operations["deleteHashtagGroup"]=1
     operations["getHashtagGroup"]=1
@@ -328,12 +341,14 @@ _postboost-cli()
     operation_parameters["deleteCompetitor"]="workspaceUuid= competitorId= "
     operation_parameters["getCompetitor"]="workspaceUuid= competitorId= "
     operation_parameters["listCompetitors"]="workspaceUuid= account_id= "
+    operation_parameters["buildHashtagGroups"]=""
     operation_parameters["buildUtmUrl"]=""
     operation_parameters["calculateAspectRatio"]=""
     operation_parameters["calculateCarouselSlices"]=""
     operation_parameters["calculateCrop"]=""
     operation_parameters["calculateEngagementRate"]=""
     operation_parameters["calculateInfluencerRate"]=""
+    operation_parameters["calculateSmmPricing"]=""
     operation_parameters["calculateSocialRoi"]=""
     operation_parameters["calculateXApiCost"]=""
     operation_parameters["checkLinkPreview"]=""
@@ -342,27 +357,38 @@ _postboost-cli()
     operation_parameters["checkYoutubeThumbnail"]=""
     operation_parameters["cleanText"]=""
     operation_parameters["countCharacters"]=""
+    operation_parameters["findAutomationRecipes"]="platform= trigger= q= "
     operation_parameters["formatInstagramCaption"]=""
     operation_parameters["formatLinkedInPost"]=""
+    operation_parameters["generateAltText"]=""
+    operation_parameters["generateBio"]=""
     operation_parameters["generateCaption"]=""
     operation_parameters["generateFancyText"]=""
     operation_parameters["generateHashtags"]=""
     operation_parameters["generateHooks"]=""
+    operation_parameters["generateLinkedInHeadline"]=""
     operation_parameters["generateQrCode"]=""
     operation_parameters["generateSocialPostsFromBlog"]=""
+    operation_parameters["generateUsernames"]=""
+    operation_parameters["generateYoutubeDescription"]=""
+    operation_parameters["generateYoutubeTitles"]=""
     operation_parameters["getBestTimesToPost"]="network= "
+    operation_parameters["getGlossary"]="q= category= "
     operation_parameters["getHookTemplates"]="topic= category= network= search= "
     operation_parameters["getImageSizes"]="network= "
     operation_parameters["getSafeZones"]=""
     operation_parameters["getVideoSpecs"]="network= "
     operation_parameters["listAwarenessDays"]="from= to= country= type= topic= "
     operation_parameters["listFreeTools"]=""
+    operation_parameters["pickSocialMediaTool"]=""
     operation_parameters["planContentCalendar"]=""
     operation_parameters["planPostingFrequency"]=""
     operation_parameters["previewPost"]=""
     operation_parameters["scoreSocialAudit"]=""
     operation_parameters["searchEmoji"]=""
     operation_parameters["splitThread"]=""
+    operation_parameters["summarizeReport"]=""
+    operation_parameters["verifyWebhookSignature"]=""
     operation_parameters["createHashtagGroup"]="workspaceUuid= "
     operation_parameters["deleteHashtagGroup"]="workspaceUuid= hashtagGroupId= "
     operation_parameters["getHashtagGroup"]="workspaceUuid= hashtagGroupId= "

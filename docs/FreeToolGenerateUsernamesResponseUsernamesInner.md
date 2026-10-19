@@ -1,9 +1,10 @@
-# initiateRemoteUpload_201_response_oneOf
+# FreeToolGenerateUsernamesResponse_usernames_inner
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**downloadUnderscoreid** | **string** |  | [optional] [default to null]
+**username** | **string** |  | [optional] [default to null]
+**profileUnderscoreurl** | **string** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -341,12 +341,14 @@ case $state in
             "uploadReportBrandingLogo[Upload the report logo]"             "addCompetitor[Track a competitor]" \
             "deleteCompetitor[Stop tracking a competitor]" \
             "getCompetitor[Get a competitor]" \
-            "listCompetitors[List competitors]"             "buildUtmUrl[Build a UTM-tagged campaign URL]" \
+            "listCompetitors[List competitors]"             "buildHashtagGroups[Clean, dedupe and split hashtags into groups that fit a network's hashtag cap]" \
+            "buildUtmUrl[Build a UTM-tagged campaign URL]" \
             "calculateAspectRatio[Calculate an aspect ratio, or the missing side of an image at a given ratio]" \
             "calculateCarouselSlices[Split a wide image into seamless Instagram carousel slides]" \
             "calculateCrop[Calculate the crop box that fits an image to a social media size]" \
             "calculateEngagementRate[Calculate an engagement rate]" \
             "calculateInfluencerRate[Estimate an influencer's rate for one sponsored deliverable]" \
+            "calculateSmmPricing[Estimate social media manager pricing]" \
             "calculateSocialRoi[Calculate social media ROI]" \
             "calculateXApiCost[Calculate the monthly X API cost]" \
             "checkLinkPreview[Check how a link previews on X, LinkedIn, Facebook and chat apps (Open Graph and Twitter card tags)]" \
@@ -355,27 +357,38 @@ case $state in
             "checkYoutubeThumbnail[Check a YouTube thumbnail's ratio, width, file size and format against YouTube's requirements]" \
             "cleanText[Clean AI-written text: dashes, quotes, invisible characters, markdown]" \
             "countCharacters[Count characters as each network counts them]" \
+            "findAutomationRecipes[Find n8n, Zapier and Make recipes that automate social media posting through the PostBoost API]" \
             "formatInstagramCaption[Keep blank lines in an Instagram caption with spacer lines, and count it]" \
             "formatLinkedInPost[Format a LinkedIn post with bold, italic and lists]" \
+            "generateAltText[Write alt text for an image with AI (needs a token, spends AI credits)]" \
+            "generateBio[Write five profile bios with AI (needs a token, spends AI credits)]" \
             "generateCaption[Write three post captions for a topic with AI (needs a token, spends AI credits)]" \
             "generateFancyText[Convert text to fancy Unicode styles]" \
             "generateHashtags[Generate hashtags for a post topic with AI (needs a token, spends AI credits)]" \
             "generateHooks[Generate hooks (opening lines) for a social media post with AI (needs a token, spends AI credits)]" \
+            "generateLinkedInHeadline[Write five LinkedIn profile headlines with AI (needs a token, spends AI credits)]" \
             "generateQrCode[Generate a QR code (SVG) for a link or text, with optional UTM tags]" \
             "generateSocialPostsFromBlog[Turn a blog post (URL or text) into one social post per network with AI (needs a token, spends AI credits)]" \
+            "generateUsernames[Generate social media usernames]" \
+            "generateYoutubeDescription[Write three YouTube video descriptions with AI (needs a token, spends AI credits)]" \
+            "generateYoutubeTitles[Write five YouTube video titles with AI (needs a token, spends AI credits)]" \
             "getBestTimesToPost[Get the best times to post per network from published studies, with sources]" \
+            "getGlossary[Look up social media terms: plain-language definitions by category, with sources and related terms]" \
             "getHookTemplates[Get free hook templates for social media posts, filtered by style and network]" \
             "getImageSizes[Get social media image sizes per network, each with its source]" \
             "getSafeZones[Get the TikTok, Instagram Reels or YouTube Shorts safe zones for a vertical frame]" \
             "getVideoSpecs[Get social media video ratios, resolutions, lengths and file size limits per network, with sources]" \
             "listAwarenessDays[List public holidays, awareness days and social media days by date, country, type and topic, with sources]" \
             "listFreeTools[List the free tools]" \
+            "pickSocialMediaTool[Match your needs against social media management tools and see what each one misses]" \
             "planContentCalendar[Plan a social media content calendar and get it as CSV and ICS]" \
             "planPostingFrequency[Plan how often to post on each network]" \
             "previewPost[Preview where a post folds and when its image is cropped on Instagram, X, LinkedIn and Facebook]" \
             "scoreSocialAudit[Score a social media audit checklist and get the top fixes]" \
             "searchEmoji[Search emoji by name or keyword, to copy and paste into a post]" \
-            "splitThread[Split long text into a thread]"             "createHashtagGroup[Create a hashtag group]" \
+            "splitThread[Split long text into a thread]" \
+            "summarizeReport[Summarize social media post metrics into a report]" \
+            "verifyWebhookSignature[Verify an HMAC webhook signature]"             "createHashtagGroup[Create a hashtag group]" \
             "deleteHashtagGroup[Delete a hashtag group]" \
             "getHashtagGroup[Get a hashtag group]" \
             "listHashtagGroups[List hashtag groups]" \
@@ -901,6 +914,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      buildHashtagGroups)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       buildUtmUrl)
         local -a _op_arguments
         _op_arguments=(
@@ -932,6 +951,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       calculateInfluencerRate)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      calculateSmmPricing)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -985,6 +1010,15 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      findAutomationRecipes)
+        local -a _op_arguments
+        _op_arguments=(
+                    "platform=:[QUERY] "
+"trigger=:[QUERY] "
+"q=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       formatInstagramCaption)
         local -a _op_arguments
         _op_arguments=(
@@ -992,6 +1026,18 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       formatLinkedInPost)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      generateAltText)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      generateBio)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1021,6 +1067,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      generateLinkedInHeadline)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       generateQrCode)
         local -a _op_arguments
         _op_arguments=(
@@ -1033,10 +1085,36 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      generateUsernames)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      generateYoutubeDescription)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      generateYoutubeTitles)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       getBestTimesToPost)
         local -a _op_arguments
         _op_arguments=(
                     "network=:[QUERY] "
+          )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      getGlossary)
+        local -a _op_arguments
+        _op_arguments=(
+                    "q=:[QUERY] "
+"category=:[QUERY] "
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
@@ -1087,6 +1165,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      pickSocialMediaTool)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       planContentCalendar)
         local -a _op_arguments
         _op_arguments=(
@@ -1118,6 +1202,18 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       splitThread)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      summarizeReport)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      verifyWebhookSignature)
         local -a _op_arguments
         _op_arguments=(
                               )

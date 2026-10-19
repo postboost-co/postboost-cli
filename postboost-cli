@@ -221,12 +221,14 @@ operation_parameters_minimum_occurrences["getCompetitor:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["getCompetitor:::competitorId"]=1
 operation_parameters_minimum_occurrences["listCompetitors:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["listCompetitors:::account_id"]=0
+operation_parameters_minimum_occurrences["buildHashtagGroups:::FreeToolBuildHashtagGroupsRequest"]=1
 operation_parameters_minimum_occurrences["buildUtmUrl:::FreeToolBuildUtmUrlRequest"]=1
 operation_parameters_minimum_occurrences["calculateAspectRatio:::FreeToolCalculateAspectRatioRequest"]=1
 operation_parameters_minimum_occurrences["calculateCarouselSlices:::FreeToolCalculateCarouselSlicesRequest"]=1
 operation_parameters_minimum_occurrences["calculateCrop:::FreeToolCalculateCropRequest"]=1
 operation_parameters_minimum_occurrences["calculateEngagementRate:::FreeToolCalculateEngagementRateRequest"]=1
 operation_parameters_minimum_occurrences["calculateInfluencerRate:::FreeToolCalculateInfluencerRateRequest"]=1
+operation_parameters_minimum_occurrences["calculateSmmPricing:::FreeToolCalculateSmmPricingRequest"]=1
 operation_parameters_minimum_occurrences["calculateSocialRoi:::FreeToolCalculateSocialRoiRequest"]=1
 operation_parameters_minimum_occurrences["calculateXApiCost:::FreeToolCalculateXApiCostRequest"]=1
 operation_parameters_minimum_occurrences["checkLinkPreview:::FreeToolCheckLinkPreviewRequest"]=1
@@ -235,15 +237,26 @@ operation_parameters_minimum_occurrences["checkReadability:::FreeToolCheckReadab
 operation_parameters_minimum_occurrences["checkYoutubeThumbnail:::FreeToolCheckYoutubeThumbnailRequest"]=1
 operation_parameters_minimum_occurrences["cleanText:::FreeToolCleanTextRequest"]=1
 operation_parameters_minimum_occurrences["countCharacters:::FreeToolCountCharactersRequest"]=1
+operation_parameters_minimum_occurrences["findAutomationRecipes:::platform"]=0
+operation_parameters_minimum_occurrences["findAutomationRecipes:::trigger"]=0
+operation_parameters_minimum_occurrences["findAutomationRecipes:::q"]=0
 operation_parameters_minimum_occurrences["formatInstagramCaption:::FreeToolFormatInstagramCaptionRequest"]=1
 operation_parameters_minimum_occurrences["formatLinkedInPost:::FreeToolFormatLinkedInPostRequest"]=1
+operation_parameters_minimum_occurrences["generateAltText:::FreeToolGenerateAltTextRequest"]=1
+operation_parameters_minimum_occurrences["generateBio:::FreeToolGenerateBioRequest"]=1
 operation_parameters_minimum_occurrences["generateCaption:::FreeToolGenerateCaptionRequest"]=1
 operation_parameters_minimum_occurrences["generateFancyText:::FreeToolGenerateFancyTextRequest"]=1
 operation_parameters_minimum_occurrences["generateHashtags:::FreeToolGenerateHashtagsRequest"]=1
 operation_parameters_minimum_occurrences["generateHooks:::FreeToolGenerateHooksRequest"]=1
+operation_parameters_minimum_occurrences["generateLinkedInHeadline:::FreeToolGenerateLinkedInHeadlineRequest"]=1
 operation_parameters_minimum_occurrences["generateQrCode:::FreeToolGenerateQrCodeRequest"]=1
 operation_parameters_minimum_occurrences["generateSocialPostsFromBlog:::FreeToolGenerateSocialPostsFromBlogRequest"]=1
+operation_parameters_minimum_occurrences["generateUsernames:::FreeToolGenerateUsernamesRequest"]=1
+operation_parameters_minimum_occurrences["generateYoutubeDescription:::FreeToolGenerateYoutubeDescriptionRequest"]=1
+operation_parameters_minimum_occurrences["generateYoutubeTitles:::FreeToolGenerateYoutubeTitlesRequest"]=1
 operation_parameters_minimum_occurrences["getBestTimesToPost:::network"]=0
+operation_parameters_minimum_occurrences["getGlossary:::q"]=0
+operation_parameters_minimum_occurrences["getGlossary:::category"]=0
 operation_parameters_minimum_occurrences["getHookTemplates:::topic"]=0
 operation_parameters_minimum_occurrences["getHookTemplates:::category"]=0
 operation_parameters_minimum_occurrences["getHookTemplates:::network"]=0
@@ -256,12 +269,15 @@ operation_parameters_minimum_occurrences["listAwarenessDays:::to"]=0
 operation_parameters_minimum_occurrences["listAwarenessDays:::country"]=0
 operation_parameters_minimum_occurrences["listAwarenessDays:::type"]=0
 operation_parameters_minimum_occurrences["listAwarenessDays:::topic"]=0
+operation_parameters_minimum_occurrences["pickSocialMediaTool:::FreeToolPickSocialMediaToolRequest"]=1
 operation_parameters_minimum_occurrences["planContentCalendar:::FreeToolPlanContentCalendarRequest"]=1
 operation_parameters_minimum_occurrences["planPostingFrequency:::FreeToolPlanPostingFrequencyRequest"]=1
 operation_parameters_minimum_occurrences["previewPost:::FreeToolPreviewPostRequest"]=1
 operation_parameters_minimum_occurrences["scoreSocialAudit:::FreeToolScoreSocialAuditRequest"]=1
 operation_parameters_minimum_occurrences["searchEmoji:::FreeToolSearchEmojiRequest"]=1
 operation_parameters_minimum_occurrences["splitThread:::FreeToolSplitThreadRequest"]=1
+operation_parameters_minimum_occurrences["summarizeReport:::FreeToolSummarizeReportRequest"]=1
+operation_parameters_minimum_occurrences["verifyWebhookSignature:::FreeToolVerifyWebhookSignatureRequest"]=1
 operation_parameters_minimum_occurrences["createHashtagGroup:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["createHashtagGroup:::HashtagGroupInput"]=1
 operation_parameters_minimum_occurrences["deleteHashtagGroup:::workspaceUuid"]=1
@@ -667,12 +683,14 @@ operation_parameters_maximum_occurrences["getCompetitor:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["getCompetitor:::competitorId"]=0
 operation_parameters_maximum_occurrences["listCompetitors:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["listCompetitors:::account_id"]=0
+operation_parameters_maximum_occurrences["buildHashtagGroups:::FreeToolBuildHashtagGroupsRequest"]=0
 operation_parameters_maximum_occurrences["buildUtmUrl:::FreeToolBuildUtmUrlRequest"]=0
 operation_parameters_maximum_occurrences["calculateAspectRatio:::FreeToolCalculateAspectRatioRequest"]=0
 operation_parameters_maximum_occurrences["calculateCarouselSlices:::FreeToolCalculateCarouselSlicesRequest"]=0
 operation_parameters_maximum_occurrences["calculateCrop:::FreeToolCalculateCropRequest"]=0
 operation_parameters_maximum_occurrences["calculateEngagementRate:::FreeToolCalculateEngagementRateRequest"]=0
 operation_parameters_maximum_occurrences["calculateInfluencerRate:::FreeToolCalculateInfluencerRateRequest"]=0
+operation_parameters_maximum_occurrences["calculateSmmPricing:::FreeToolCalculateSmmPricingRequest"]=0
 operation_parameters_maximum_occurrences["calculateSocialRoi:::FreeToolCalculateSocialRoiRequest"]=0
 operation_parameters_maximum_occurrences["calculateXApiCost:::FreeToolCalculateXApiCostRequest"]=0
 operation_parameters_maximum_occurrences["checkLinkPreview:::FreeToolCheckLinkPreviewRequest"]=0
@@ -681,15 +699,26 @@ operation_parameters_maximum_occurrences["checkReadability:::FreeToolCheckReadab
 operation_parameters_maximum_occurrences["checkYoutubeThumbnail:::FreeToolCheckYoutubeThumbnailRequest"]=0
 operation_parameters_maximum_occurrences["cleanText:::FreeToolCleanTextRequest"]=0
 operation_parameters_maximum_occurrences["countCharacters:::FreeToolCountCharactersRequest"]=0
+operation_parameters_maximum_occurrences["findAutomationRecipes:::platform"]=0
+operation_parameters_maximum_occurrences["findAutomationRecipes:::trigger"]=0
+operation_parameters_maximum_occurrences["findAutomationRecipes:::q"]=0
 operation_parameters_maximum_occurrences["formatInstagramCaption:::FreeToolFormatInstagramCaptionRequest"]=0
 operation_parameters_maximum_occurrences["formatLinkedInPost:::FreeToolFormatLinkedInPostRequest"]=0
+operation_parameters_maximum_occurrences["generateAltText:::FreeToolGenerateAltTextRequest"]=0
+operation_parameters_maximum_occurrences["generateBio:::FreeToolGenerateBioRequest"]=0
 operation_parameters_maximum_occurrences["generateCaption:::FreeToolGenerateCaptionRequest"]=0
 operation_parameters_maximum_occurrences["generateFancyText:::FreeToolGenerateFancyTextRequest"]=0
 operation_parameters_maximum_occurrences["generateHashtags:::FreeToolGenerateHashtagsRequest"]=0
 operation_parameters_maximum_occurrences["generateHooks:::FreeToolGenerateHooksRequest"]=0
+operation_parameters_maximum_occurrences["generateLinkedInHeadline:::FreeToolGenerateLinkedInHeadlineRequest"]=0
 operation_parameters_maximum_occurrences["generateQrCode:::FreeToolGenerateQrCodeRequest"]=0
 operation_parameters_maximum_occurrences["generateSocialPostsFromBlog:::FreeToolGenerateSocialPostsFromBlogRequest"]=0
+operation_parameters_maximum_occurrences["generateUsernames:::FreeToolGenerateUsernamesRequest"]=0
+operation_parameters_maximum_occurrences["generateYoutubeDescription:::FreeToolGenerateYoutubeDescriptionRequest"]=0
+operation_parameters_maximum_occurrences["generateYoutubeTitles:::FreeToolGenerateYoutubeTitlesRequest"]=0
 operation_parameters_maximum_occurrences["getBestTimesToPost:::network"]=0
+operation_parameters_maximum_occurrences["getGlossary:::q"]=0
+operation_parameters_maximum_occurrences["getGlossary:::category"]=0
 operation_parameters_maximum_occurrences["getHookTemplates:::topic"]=0
 operation_parameters_maximum_occurrences["getHookTemplates:::category"]=0
 operation_parameters_maximum_occurrences["getHookTemplates:::network"]=0
@@ -702,12 +731,15 @@ operation_parameters_maximum_occurrences["listAwarenessDays:::to"]=0
 operation_parameters_maximum_occurrences["listAwarenessDays:::country"]=0
 operation_parameters_maximum_occurrences["listAwarenessDays:::type"]=0
 operation_parameters_maximum_occurrences["listAwarenessDays:::topic"]=0
+operation_parameters_maximum_occurrences["pickSocialMediaTool:::FreeToolPickSocialMediaToolRequest"]=0
 operation_parameters_maximum_occurrences["planContentCalendar:::FreeToolPlanContentCalendarRequest"]=0
 operation_parameters_maximum_occurrences["planPostingFrequency:::FreeToolPlanPostingFrequencyRequest"]=0
 operation_parameters_maximum_occurrences["previewPost:::FreeToolPreviewPostRequest"]=0
 operation_parameters_maximum_occurrences["scoreSocialAudit:::FreeToolScoreSocialAuditRequest"]=0
 operation_parameters_maximum_occurrences["searchEmoji:::FreeToolSearchEmojiRequest"]=0
 operation_parameters_maximum_occurrences["splitThread:::FreeToolSplitThreadRequest"]=0
+operation_parameters_maximum_occurrences["summarizeReport:::FreeToolSummarizeReportRequest"]=0
+operation_parameters_maximum_occurrences["verifyWebhookSignature:::FreeToolVerifyWebhookSignatureRequest"]=0
 operation_parameters_maximum_occurrences["createHashtagGroup:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["createHashtagGroup:::HashtagGroupInput"]=0
 operation_parameters_maximum_occurrences["deleteHashtagGroup:::workspaceUuid"]=0
@@ -1110,12 +1142,14 @@ operation_parameters_collection_type["getCompetitor:::workspaceUuid"]=""
 operation_parameters_collection_type["getCompetitor:::competitorId"]=""
 operation_parameters_collection_type["listCompetitors:::workspaceUuid"]=""
 operation_parameters_collection_type["listCompetitors:::account_id"]=""
+operation_parameters_collection_type["buildHashtagGroups:::FreeToolBuildHashtagGroupsRequest"]=""
 operation_parameters_collection_type["buildUtmUrl:::FreeToolBuildUtmUrlRequest"]=""
 operation_parameters_collection_type["calculateAspectRatio:::FreeToolCalculateAspectRatioRequest"]=""
 operation_parameters_collection_type["calculateCarouselSlices:::FreeToolCalculateCarouselSlicesRequest"]=""
 operation_parameters_collection_type["calculateCrop:::FreeToolCalculateCropRequest"]=""
 operation_parameters_collection_type["calculateEngagementRate:::FreeToolCalculateEngagementRateRequest"]=""
 operation_parameters_collection_type["calculateInfluencerRate:::FreeToolCalculateInfluencerRateRequest"]=""
+operation_parameters_collection_type["calculateSmmPricing:::FreeToolCalculateSmmPricingRequest"]=""
 operation_parameters_collection_type["calculateSocialRoi:::FreeToolCalculateSocialRoiRequest"]=""
 operation_parameters_collection_type["calculateXApiCost:::FreeToolCalculateXApiCostRequest"]=""
 operation_parameters_collection_type["checkLinkPreview:::FreeToolCheckLinkPreviewRequest"]=""
@@ -1124,15 +1158,26 @@ operation_parameters_collection_type["checkReadability:::FreeToolCheckReadabilit
 operation_parameters_collection_type["checkYoutubeThumbnail:::FreeToolCheckYoutubeThumbnailRequest"]=""
 operation_parameters_collection_type["cleanText:::FreeToolCleanTextRequest"]=""
 operation_parameters_collection_type["countCharacters:::FreeToolCountCharactersRequest"]=""
+operation_parameters_collection_type["findAutomationRecipes:::platform"]=""
+operation_parameters_collection_type["findAutomationRecipes:::trigger"]=""
+operation_parameters_collection_type["findAutomationRecipes:::q"]=""
 operation_parameters_collection_type["formatInstagramCaption:::FreeToolFormatInstagramCaptionRequest"]=""
 operation_parameters_collection_type["formatLinkedInPost:::FreeToolFormatLinkedInPostRequest"]=""
+operation_parameters_collection_type["generateAltText:::FreeToolGenerateAltTextRequest"]=""
+operation_parameters_collection_type["generateBio:::FreeToolGenerateBioRequest"]=""
 operation_parameters_collection_type["generateCaption:::FreeToolGenerateCaptionRequest"]=""
 operation_parameters_collection_type["generateFancyText:::FreeToolGenerateFancyTextRequest"]=""
 operation_parameters_collection_type["generateHashtags:::FreeToolGenerateHashtagsRequest"]=""
 operation_parameters_collection_type["generateHooks:::FreeToolGenerateHooksRequest"]=""
+operation_parameters_collection_type["generateLinkedInHeadline:::FreeToolGenerateLinkedInHeadlineRequest"]=""
 operation_parameters_collection_type["generateQrCode:::FreeToolGenerateQrCodeRequest"]=""
 operation_parameters_collection_type["generateSocialPostsFromBlog:::FreeToolGenerateSocialPostsFromBlogRequest"]=""
+operation_parameters_collection_type["generateUsernames:::FreeToolGenerateUsernamesRequest"]=""
+operation_parameters_collection_type["generateYoutubeDescription:::FreeToolGenerateYoutubeDescriptionRequest"]=""
+operation_parameters_collection_type["generateYoutubeTitles:::FreeToolGenerateYoutubeTitlesRequest"]=""
 operation_parameters_collection_type["getBestTimesToPost:::network"]=""
+operation_parameters_collection_type["getGlossary:::q"]=""
+operation_parameters_collection_type["getGlossary:::category"]=""
 operation_parameters_collection_type["getHookTemplates:::topic"]=""
 operation_parameters_collection_type["getHookTemplates:::category"]=""
 operation_parameters_collection_type["getHookTemplates:::network"]=""
@@ -1145,12 +1190,15 @@ operation_parameters_collection_type["listAwarenessDays:::to"]=""
 operation_parameters_collection_type["listAwarenessDays:::country"]=""
 operation_parameters_collection_type["listAwarenessDays:::type"]=""
 operation_parameters_collection_type["listAwarenessDays:::topic"]=""
+operation_parameters_collection_type["pickSocialMediaTool:::FreeToolPickSocialMediaToolRequest"]=""
 operation_parameters_collection_type["planContentCalendar:::FreeToolPlanContentCalendarRequest"]=""
 operation_parameters_collection_type["planPostingFrequency:::FreeToolPlanPostingFrequencyRequest"]=""
 operation_parameters_collection_type["previewPost:::FreeToolPreviewPostRequest"]=""
 operation_parameters_collection_type["scoreSocialAudit:::FreeToolScoreSocialAuditRequest"]=""
 operation_parameters_collection_type["searchEmoji:::FreeToolSearchEmojiRequest"]=""
 operation_parameters_collection_type["splitThread:::FreeToolSplitThreadRequest"]=""
+operation_parameters_collection_type["summarizeReport:::FreeToolSummarizeReportRequest"]=""
+operation_parameters_collection_type["verifyWebhookSignature:::FreeToolVerifyWebhookSignatureRequest"]=""
 operation_parameters_collection_type["createHashtagGroup:::workspaceUuid"]=""
 operation_parameters_collection_type["createHashtagGroup:::HashtagGroupInput"]=""
 operation_parameters_collection_type["deleteHashtagGroup:::workspaceUuid"]=""
@@ -1780,7 +1828,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.56.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.57.1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1900,12 +1948,14 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[freeTools]${OFF}"
 read -r -d '' ops <<EOF
+  ${CYAN}buildHashtagGroups${OFF};Clean, dedupe and split hashtags into groups that fit a network's hashtag cap
   ${CYAN}buildUtmUrl${OFF};Build a UTM-tagged campaign URL
   ${CYAN}calculateAspectRatio${OFF};Calculate an aspect ratio, or the missing side of an image at a given ratio
   ${CYAN}calculateCarouselSlices${OFF};Split a wide image into seamless Instagram carousel slides
   ${CYAN}calculateCrop${OFF};Calculate the crop box that fits an image to a social media size
   ${CYAN}calculateEngagementRate${OFF};Calculate an engagement rate
   ${CYAN}calculateInfluencerRate${OFF};Estimate an influencer's rate for one sponsored deliverable
+  ${CYAN}calculateSmmPricing${OFF};Estimate social media manager pricing
   ${CYAN}calculateSocialRoi${OFF};Calculate social media ROI
   ${CYAN}calculateXApiCost${OFF};Calculate the monthly X API cost
   ${CYAN}checkLinkPreview${OFF};Check how a link previews on X, LinkedIn, Facebook and chat apps (Open Graph and Twitter card tags)
@@ -1914,27 +1964,38 @@ read -r -d '' ops <<EOF
   ${CYAN}checkYoutubeThumbnail${OFF};Check a YouTube thumbnail's ratio, width, file size and format against YouTube's requirements
   ${CYAN}cleanText${OFF};Clean AI-written text: dashes, quotes, invisible characters, markdown
   ${CYAN}countCharacters${OFF};Count characters as each network counts them
+  ${CYAN}findAutomationRecipes${OFF};Find n8n, Zapier and Make recipes that automate social media posting through the PostBoost API
   ${CYAN}formatInstagramCaption${OFF};Keep blank lines in an Instagram caption with spacer lines, and count it
   ${CYAN}formatLinkedInPost${OFF};Format a LinkedIn post with bold, italic and lists
+  ${CYAN}generateAltText${OFF};Write alt text for an image with AI (needs a token, spends AI credits) (AUTH)
+  ${CYAN}generateBio${OFF};Write five profile bios with AI (needs a token, spends AI credits) (AUTH)
   ${CYAN}generateCaption${OFF};Write three post captions for a topic with AI (needs a token, spends AI credits) (AUTH)
   ${CYAN}generateFancyText${OFF};Convert text to fancy Unicode styles
   ${CYAN}generateHashtags${OFF};Generate hashtags for a post topic with AI (needs a token, spends AI credits) (AUTH)
   ${CYAN}generateHooks${OFF};Generate hooks (opening lines) for a social media post with AI (needs a token, spends AI credits) (AUTH)
+  ${CYAN}generateLinkedInHeadline${OFF};Write five LinkedIn profile headlines with AI (needs a token, spends AI credits) (AUTH)
   ${CYAN}generateQrCode${OFF};Generate a QR code (SVG) for a link or text, with optional UTM tags
   ${CYAN}generateSocialPostsFromBlog${OFF};Turn a blog post (URL or text) into one social post per network with AI (needs a token, spends AI credits) (AUTH)
+  ${CYAN}generateUsernames${OFF};Generate social media usernames
+  ${CYAN}generateYoutubeDescription${OFF};Write three YouTube video descriptions with AI (needs a token, spends AI credits) (AUTH)
+  ${CYAN}generateYoutubeTitles${OFF};Write five YouTube video titles with AI (needs a token, spends AI credits) (AUTH)
   ${CYAN}getBestTimesToPost${OFF};Get the best times to post per network from published studies, with sources
+  ${CYAN}getGlossary${OFF};Look up social media terms: plain-language definitions by category, with sources and related terms
   ${CYAN}getHookTemplates${OFF};Get free hook templates for social media posts, filtered by style and network
   ${CYAN}getImageSizes${OFF};Get social media image sizes per network, each with its source
   ${CYAN}getSafeZones${OFF};Get the TikTok, Instagram Reels or YouTube Shorts safe zones for a vertical frame
   ${CYAN}getVideoSpecs${OFF};Get social media video ratios, resolutions, lengths and file size limits per network, with sources
   ${CYAN}listAwarenessDays${OFF};List public holidays, awareness days and social media days by date, country, type and topic, with sources
   ${CYAN}listFreeTools${OFF};List the free tools
+  ${CYAN}pickSocialMediaTool${OFF};Match your needs against social media management tools and see what each one misses
   ${CYAN}planContentCalendar${OFF};Plan a social media content calendar and get it as CSV and ICS
   ${CYAN}planPostingFrequency${OFF};Plan how often to post on each network
   ${CYAN}previewPost${OFF};Preview where a post folds and when its image is cropped on Instagram, X, LinkedIn and Facebook
   ${CYAN}scoreSocialAudit${OFF};Score a social media audit checklist and get the top fixes
   ${CYAN}searchEmoji${OFF};Search emoji by name or keyword, to copy and paste into a post
   ${CYAN}splitThread${OFF};Split long text into a thread
+  ${CYAN}summarizeReport${OFF};Summarize social media post metrics into a report
+  ${CYAN}verifyWebhookSignature${OFF};Verify an HMAC webhook signature
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -2147,7 +2208,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.56.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.57.1)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2205,7 +2266,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.56.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.57.1)${OFF}"
     echo ""
 }
 
@@ -3734,6 +3795,40 @@ print_listCompetitors_help() {
 }
 ##############################################################################
 #
+# Print help for buildHashtagGroups operation
+#
+##############################################################################
+print_buildHashtagGroups_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}buildHashtagGroups - Clean, dedupe and split hashtags into groups that fit a network's hashtag cap${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Clean, dedupe and split hashtags into groups that fit a network's hashtag cap. The same logic as the free web tool at https://postboost.co/tools/hashtag-group-builder. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
 # Print help for buildUtmUrl operation
 #
 ##############################################################################
@@ -3912,6 +4007,40 @@ print_calculateInfluencerRate_help() {
     echo -e "${BOLD}${WHITE}calculateInfluencerRate - Estimate an influencer's rate for one sponsored deliverable${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Estimate an influencer's rate for one sponsored deliverable. The same logic as the free web tool at https://postboost.co/tools/influencer-rate-calculator. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for calculateSmmPricing operation
+#
+##############################################################################
+print_calculateSmmPricing_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}calculateSmmPricing - Estimate social media manager pricing${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Estimate social media manager pricing. The same logic as the free web tool at https://postboost.co/tools/social-media-manager-pricing-calculator. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -4212,6 +4341,42 @@ print_countCharacters_help() {
 }
 ##############################################################################
 #
+# Print help for findAutomationRecipes operation
+#
+##############################################################################
+print_findAutomationRecipes_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}findAutomationRecipes - Find n8n, Zapier and Make recipes that automate social media posting through the PostBoost API${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Find n8n, Zapier and Make recipes that automate social media posting through the PostBoost API. The same logic as the free web tool at https://postboost.co/tools/social-media-automation-recipes. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}platform${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: platform=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}trigger${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: trigger=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}q${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: q=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
 # Print help for formatInstagramCaption operation
 #
 ##############################################################################
@@ -4277,6 +4442,86 @@ print_formatLinkedInPost_help() {
         echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
         echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for generateAltText operation
+#
+##############################################################################
+print_generateAltText_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateAltText - Write alt text for an image with AI (needs a token, spends AI credits)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Write alt text for an image with AI (needs a token, spends AI credits). The same logic as the free web tool at https://postboost.co/tools/alt-text-generator. Needs an API token (a scoped key needs the 'ai' ability and pays with its own workspace). A new generation spends 1 AI credit of the workspace you name (or your active workspace); a repeated identical request is answered from the cache for free." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json,multipart/form-data]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;No API token, or an invalid one. The body has 'register_url' to create a free account.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;'workspace' is not a workspace you belong to, or your account has no workspace, or a scoped API key lacks the 'ai' ability or is bound to another workspace ('code: insufficient_scope').${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 7 MB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;The workspace has no AI credits left this billing cycle ('code: ai_credits_exhausted', 'upgrade_url'), or the per-minute limit was reached. Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=502
+    echo -e "${result_color_table[${code:0:1}]}  502;The AI provider failed or timed out. No credit was spent.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=503
+    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for generateBio operation
+#
+##############################################################################
+print_generateBio_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateBio - Write five profile bios with AI (needs a token, spends AI credits)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Write five profile bios with AI (needs a token, spends AI credits). The same logic as the free web tool at https://postboost.co/tools/instagram-bio-generator. Needs an API token (a scoped key needs the 'ai' ability and pays with its own workspace). A new generation spends 1 AI credit of the workspace you name (or your active workspace); a repeated identical request is answered from the cache for free." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;No API token, or an invalid one. The body has 'register_url' to create a free account.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;'workspace' is not a workspace you belong to, or your account has no workspace, or a scoped API key lacks the 'ai' ability or is bound to another workspace ('code: insufficient_scope').${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;The workspace has no AI credits left this billing cycle ('code: ai_credits_exhausted', 'upgrade_url'), or the per-minute limit was reached. Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=502
+    echo -e "${result_color_table[${code:0:1}]}  502;The AI provider failed or timed out. No credit was spent.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=503
+    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -4434,6 +4679,46 @@ print_generateHooks_help() {
 }
 ##############################################################################
 #
+# Print help for generateLinkedInHeadline operation
+#
+##############################################################################
+print_generateLinkedInHeadline_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateLinkedInHeadline - Write five LinkedIn profile headlines with AI (needs a token, spends AI credits)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Write five LinkedIn profile headlines with AI (needs a token, spends AI credits). The same logic as the free web tool at https://postboost.co/tools/linkedin-headline-generator. Needs an API token (a scoped key needs the 'ai' ability and pays with its own workspace). A new generation spends 1 AI credit of the workspace you name (or your active workspace); a repeated identical request is answered from the cache for free." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;No API token, or an invalid one. The body has 'register_url' to create a free account.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;'workspace' is not a workspace you belong to, or your account has no workspace, or a scoped API key lacks the 'ai' ability or is bound to another workspace ('code: insufficient_scope').${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;The workspace has no AI credits left this billing cycle ('code: ai_credits_exhausted', 'upgrade_url'), or the per-minute limit was reached. Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=502
+    echo -e "${result_color_table[${code:0:1}]}  502;The AI provider failed or timed out. No credit was spent.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=503
+    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for generateQrCode operation
 #
 ##############################################################################
@@ -4508,6 +4793,120 @@ print_generateSocialPostsFromBlog_help() {
 }
 ##############################################################################
 #
+# Print help for generateUsernames operation
+#
+##############################################################################
+print_generateUsernames_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateUsernames - Generate social media usernames${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Generate social media usernames. The same logic as the free web tool at https://postboost.co/tools/social-media-username-generator. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for generateYoutubeDescription operation
+#
+##############################################################################
+print_generateYoutubeDescription_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateYoutubeDescription - Write three YouTube video descriptions with AI (needs a token, spends AI credits)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Write three YouTube video descriptions with AI (needs a token, spends AI credits). The same logic as the free web tool at https://postboost.co/tools/youtube-description-generator. Needs an API token (a scoped key needs the 'ai' ability and pays with its own workspace). A new generation spends 1 AI credit of the workspace you name (or your active workspace); a repeated identical request is answered from the cache for free." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;No API token, or an invalid one. The body has 'register_url' to create a free account.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;'workspace' is not a workspace you belong to, or your account has no workspace, or a scoped API key lacks the 'ai' ability or is bound to another workspace ('code: insufficient_scope').${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;The workspace has no AI credits left this billing cycle ('code: ai_credits_exhausted', 'upgrade_url'), or the per-minute limit was reached. Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=502
+    echo -e "${result_color_table[${code:0:1}]}  502;The AI provider failed or timed out. No credit was spent.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=503
+    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for generateYoutubeTitles operation
+#
+##############################################################################
+print_generateYoutubeTitles_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateYoutubeTitles - Write five YouTube video titles with AI (needs a token, spends AI credits)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Write five YouTube video titles with AI (needs a token, spends AI credits). The same logic as the free web tool at https://postboost.co/tools/youtube-title-generator. Needs an API token (a scoped key needs the 'ai' ability and pays with its own workspace). A new generation spends 1 AI credit of the workspace you name (or your active workspace); a repeated identical request is answered from the cache for free." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;No API token, or an invalid one. The body has 'register_url' to create a free account.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;'workspace' is not a workspace you belong to, or your account has no workspace, or a scoped API key lacks the 'ai' ability or is bound to another workspace ('code: insufficient_scope').${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;The workspace has no AI credits left this billing cycle ('code: ai_credits_exhausted', 'upgrade_url'), or the per-minute limit was reached. Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=502
+    echo -e "${result_color_table[${code:0:1}]}  502;The AI provider failed or timed out. No credit was spent.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=503
+    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
 # Print help for getBestTimesToPost operation
 #
 ##############################################################################
@@ -4519,6 +4918,40 @@ print_getBestTimesToPost_help() {
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}network${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: network=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for getGlossary operation
+#
+##############################################################################
+print_getGlossary_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}getGlossary - Look up social media terms: plain-language definitions by category, with sources and related terms${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Look up social media terms: plain-language definitions by category, with sources and related terms. The same logic as the free web tool at https://postboost.co/tools/social-media-glossary. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}q${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: q=value${OFF}" \
+        | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "  * ${GREEN}category${OFF} ${BLUE}[string]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: category=value${OFF}" \
         | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4743,6 +5176,40 @@ print_listFreeTools_help() {
 }
 ##############################################################################
 #
+# Print help for pickSocialMediaTool operation
+#
+##############################################################################
+print_pickSocialMediaTool_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}pickSocialMediaTool - Match your needs against social media management tools and see what each one misses${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Match your needs against social media management tools and see what each one misses. The same logic as the free web tool at https://postboost.co/tools/social-media-tool-picker. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
 # Print help for planContentCalendar operation
 #
 ##############################################################################
@@ -4921,6 +5388,74 @@ print_splitThread_help() {
     echo -e "${BOLD}${WHITE}splitThread - Split long text into a thread${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Split long text into a thread. The same logic as the free web tool at https://postboost.co/tools/x-thread-maker. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for summarizeReport operation
+#
+##############################################################################
+print_summarizeReport_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}summarizeReport - Summarize social media post metrics into a report${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Summarize social media post metrics into a report. The same logic as the free web tool at https://postboost.co/tools/social-media-report-generator. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 2 MB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
+# Print help for verifyWebhookSignature operation
+#
+##############################################################################
+print_verifyWebhookSignature_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}verifyWebhookSignature - Verify an HMAC webhook signature${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Verify an HMAC webhook signature. The same logic as the free web tool at https://postboost.co/tools/webhook-signature-verifier. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5551,7 +6086,10 @@ print_getRemoteUploadStatus_help() {
     echo ""
     echo -e "${BOLD}${WHITE}getRemoteUploadStatus - Get remote upload status${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Poll the status of an in-progress remote media download." | paste -sd' ' | fold -sw 80
+    echo -e "Poll a background download started by 'initiateRemoteUpload' until 'status' is 'completed' or 'failed'.
+'status' moves from 'pending' to 'downloading' and 'processing', and ends as 'completed' (with 'media')
+or 'failed' (with 'error'). The final result is returned once: after a 'completed' or 'failed' response the download id is
+forgotten and later polls return '404', as do ids older than one hour." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5564,6 +6102,8 @@ print_getRemoteUploadStatus_help() {
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=403
     echo -e "${result_color_table[${code:0:1}]}  403;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=404
+    echo -e "${result_color_table[${code:0:1}]}  404;Unknown download id, one from another workspace, one older than an hour, or one whose final result was already returned${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
 }
 ##############################################################################
 #
@@ -5605,8 +6145,10 @@ print_initiateRemoteUpload_help() {
     echo -e "${BOLD}${WHITE}initiateRemoteUpload - Initiate remote upload${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Download a file from a remote URL into the media library.
-For small files the media object is returned immediately.
-For large files a 'download_id' is returned — poll the status endpoint." | paste -sd' ' | fold -sw 80
+A file under 10 MB (or one whose server does not send its size) is downloaded during the request:
+the response has 'status: completed' and the 'media' object, or 'status: failed' and an 'error'.
+A larger file downloads in the background: the response has 'status: pending' and a 'download_id';
+poll 'getRemoteUploadStatus' with it until 'status' is 'completed' or 'failed'." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -5617,8 +6159,8 @@ effect. Keys are scoped to your user, the workspace, the method and the path. ${
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
-    code=201
-    echo -e "${result_color_table[${code:0:1}]}  201;Media object or download job${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The imported media, the download failure, or a background download to poll${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=401
     echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
     code=403
@@ -10870,6 +11412,84 @@ call_listCompetitors() {
 
 ##############################################################################
 #
+# Call buildHashtagGroups operation
+#
+##############################################################################
+call_buildHashtagGroups() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/hashtag-group-builder" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call buildUtmUrl operation
 #
 ##############################################################################
@@ -11273,6 +11893,84 @@ call_calculateInfluencerRate() {
     local path
 
     if ! path=$(build_request_path "/app/api/tools/influencer-rate-calculator" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call calculateSmmPricing operation
+#
+##############################################################################
+call_calculateSmmPricing() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/social-media-manager-pricing-calculator" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -11962,6 +12660,42 @@ call_countCharacters() {
 
 ##############################################################################
 #
+# Call findAutomationRecipes operation
+#
+##############################################################################
+call_findAutomationRecipes() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(platform trigger q)
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/social-media-automation-recipes" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
 # Call formatInstagramCaption operation
 #
 ##############################################################################
@@ -12053,6 +12787,160 @@ call_formatLinkedInPost() {
     local path
 
     if ! path=$(build_request_path "/app/api/tools/linkedin-post-formatter" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call generateAltText operation
+#
+##############################################################################
+call_generateAltText() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/alt-text-generator" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo -e "\\t- multipart/form-data"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call generateBio operation
+#
+##############################################################################
+call_generateBio() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/instagram-bio-generator" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12430,6 +13318,84 @@ call_generateHooks() {
 
 ##############################################################################
 #
+# Call generateLinkedInHeadline operation
+#
+##############################################################################
+call_generateLinkedInHeadline() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/linkedin-headline-generator" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call generateQrCode operation
 #
 ##############################################################################
@@ -12586,6 +13552,240 @@ call_generateSocialPostsFromBlog() {
 
 ##############################################################################
 #
+# Call generateUsernames operation
+#
+##############################################################################
+call_generateUsernames() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/social-media-username-generator" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call generateYoutubeDescription operation
+#
+##############################################################################
+call_generateYoutubeDescription() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/youtube-description-generator" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call generateYoutubeTitles operation
+#
+##############################################################################
+call_generateYoutubeTitles() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/youtube-title-generator" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call getBestTimesToPost operation
 #
 ##############################################################################
@@ -12599,6 +13799,42 @@ call_getBestTimesToPost() {
     local path
 
     if ! path=$(build_request_path "/app/api/tools/best-time-to-post" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="GET"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    if [[ "$print_curl" = true ]]; then
+        echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    else
+        eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call getGlossary operation
+#
+##############################################################################
+call_getGlossary() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(q category)
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/social-media-glossary" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12875,6 +14111,84 @@ call_listFreeTools() {
         echo "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
     else
         eval "curl -d '' ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\""
+    fi
+}
+
+##############################################################################
+#
+# Call pickSocialMediaTool operation
+#
+##############################################################################
+call_pickSocialMediaTool() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/social-media-tool-picker" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
     fi
 }
 
@@ -13283,6 +14597,162 @@ call_splitThread() {
     local path
 
     if ! path=$(build_request_path "/app/api/tools/x-thread-maker" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call summarizeReport operation
+#
+##############################################################################
+call_summarizeReport() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/social-media-report-generator" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call verifyWebhookSignature operation
+#
+##############################################################################
+call_verifyWebhookSignature() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/webhook-signature-verifier" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -20198,6 +21668,9 @@ case $key in
     listCompetitors)
     operation="listCompetitors"
     ;;
+    buildHashtagGroups)
+    operation="buildHashtagGroups"
+    ;;
     buildUtmUrl)
     operation="buildUtmUrl"
     ;;
@@ -20215,6 +21688,9 @@ case $key in
     ;;
     calculateInfluencerRate)
     operation="calculateInfluencerRate"
+    ;;
+    calculateSmmPricing)
+    operation="calculateSmmPricing"
     ;;
     calculateSocialRoi)
     operation="calculateSocialRoi"
@@ -20240,11 +21716,20 @@ case $key in
     countCharacters)
     operation="countCharacters"
     ;;
+    findAutomationRecipes)
+    operation="findAutomationRecipes"
+    ;;
     formatInstagramCaption)
     operation="formatInstagramCaption"
     ;;
     formatLinkedInPost)
     operation="formatLinkedInPost"
+    ;;
+    generateAltText)
+    operation="generateAltText"
+    ;;
+    generateBio)
+    operation="generateBio"
     ;;
     generateCaption)
     operation="generateCaption"
@@ -20258,14 +21743,29 @@ case $key in
     generateHooks)
     operation="generateHooks"
     ;;
+    generateLinkedInHeadline)
+    operation="generateLinkedInHeadline"
+    ;;
     generateQrCode)
     operation="generateQrCode"
     ;;
     generateSocialPostsFromBlog)
     operation="generateSocialPostsFromBlog"
     ;;
+    generateUsernames)
+    operation="generateUsernames"
+    ;;
+    generateYoutubeDescription)
+    operation="generateYoutubeDescription"
+    ;;
+    generateYoutubeTitles)
+    operation="generateYoutubeTitles"
+    ;;
     getBestTimesToPost)
     operation="getBestTimesToPost"
+    ;;
+    getGlossary)
+    operation="getGlossary"
     ;;
     getHookTemplates)
     operation="getHookTemplates"
@@ -20285,6 +21785,9 @@ case $key in
     listFreeTools)
     operation="listFreeTools"
     ;;
+    pickSocialMediaTool)
+    operation="pickSocialMediaTool"
+    ;;
     planContentCalendar)
     operation="planContentCalendar"
     ;;
@@ -20302,6 +21805,12 @@ case $key in
     ;;
     splitThread)
     operation="splitThread"
+    ;;
+    summarizeReport)
+    operation="summarizeReport"
+    ;;
+    verifyWebhookSignature)
+    operation="verifyWebhookSignature"
     ;;
     createHashtagGroup)
     operation="createHashtagGroup"
@@ -20897,6 +22406,9 @@ case $operation in
     listCompetitors)
     call_listCompetitors
     ;;
+    buildHashtagGroups)
+    call_buildHashtagGroups
+    ;;
     buildUtmUrl)
     call_buildUtmUrl
     ;;
@@ -20914,6 +22426,9 @@ case $operation in
     ;;
     calculateInfluencerRate)
     call_calculateInfluencerRate
+    ;;
+    calculateSmmPricing)
+    call_calculateSmmPricing
     ;;
     calculateSocialRoi)
     call_calculateSocialRoi
@@ -20939,11 +22454,20 @@ case $operation in
     countCharacters)
     call_countCharacters
     ;;
+    findAutomationRecipes)
+    call_findAutomationRecipes
+    ;;
     formatInstagramCaption)
     call_formatInstagramCaption
     ;;
     formatLinkedInPost)
     call_formatLinkedInPost
+    ;;
+    generateAltText)
+    call_generateAltText
+    ;;
+    generateBio)
+    call_generateBio
     ;;
     generateCaption)
     call_generateCaption
@@ -20957,14 +22481,29 @@ case $operation in
     generateHooks)
     call_generateHooks
     ;;
+    generateLinkedInHeadline)
+    call_generateLinkedInHeadline
+    ;;
     generateQrCode)
     call_generateQrCode
     ;;
     generateSocialPostsFromBlog)
     call_generateSocialPostsFromBlog
     ;;
+    generateUsernames)
+    call_generateUsernames
+    ;;
+    generateYoutubeDescription)
+    call_generateYoutubeDescription
+    ;;
+    generateYoutubeTitles)
+    call_generateYoutubeTitles
+    ;;
     getBestTimesToPost)
     call_getBestTimesToPost
+    ;;
+    getGlossary)
+    call_getGlossary
     ;;
     getHookTemplates)
     call_getHookTemplates
@@ -20984,6 +22523,9 @@ case $operation in
     listFreeTools)
     call_listFreeTools
     ;;
+    pickSocialMediaTool)
+    call_pickSocialMediaTool
+    ;;
     planContentCalendar)
     call_planContentCalendar
     ;;
@@ -21001,6 +22543,12 @@ case $operation in
     ;;
     splitThread)
     call_splitThread
+    ;;
+    summarizeReport)
+    call_summarizeReport
+    ;;
+    verifyWebhookSignature)
+    call_verifyWebhookSignature
     ;;
     createHashtagGroup)
     call_createHashtagGroup

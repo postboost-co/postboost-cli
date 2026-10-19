@@ -3,8 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **string** |  | [optional] [default to null]
+**status** | **string** |  | [default to null]
+**progress** | **integer** |  | [default to null]
 **media** | [**Media**](Media.md) |  | [optional] [default to null]
+**error** | **string** |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
