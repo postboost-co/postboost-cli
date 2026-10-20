@@ -1828,7 +1828,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.57.6)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.57.7)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -2208,7 +2208,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.57.6)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.57.7)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2266,7 +2266,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.57.6)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.57.7)${OFF}"
     echo ""
 }
 
@@ -8543,10 +8543,11 @@ print_getXUsage_help() {
     echo -e "${BOLD}${WHITE}getXUsage - X (Twitter) usage${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "The workspace's X posts this calendar month (UTC) against its monthly X allowance. Every thread
-part is one X post; a part with a link also counts as a link post. When the allowance is used
-up, scheduling to X is refused ('429', 'code: x_monthly_cap_reached') and X posts that come due
-fail with \"Monthly X allowance reached\". Other networks are not affected. See the X policy in
-the developer docs." | paste -sd' ' | fold -sw 80
+part is one X post; a part with a link also counts as a link post. Once enforcement is switched
+on ('enforced: true'), scheduling to X is refused when the allowance is used up ('429',
+'code: x_monthly_cap_reached') and X posts that come due fail with \"Monthly X allowance
+reached\". Until then usage is tracked only. Other networks are not affected. See the X policy
+in the developer docs." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
