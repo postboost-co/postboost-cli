@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**cleanText**](FreeToolsApi.md#cleanText) | **POST** /tools/ai-text-cleaner | Clean AI-written text: dashes, quotes, invisible characters, markdown
 [**countCharacters**](FreeToolsApi.md#countCharacters) | **POST** /tools/social-media-character-counter | Count characters as each network counts them
 [**findAutomationRecipes**](FreeToolsApi.md#findAutomationRecipes) | **GET** /tools/social-media-automation-recipes | Find n8n, Zapier and Make recipes that automate social media posting through the PostBoost API
+[**formatCrossPost**](FreeToolsApi.md#formatCrossPost) | **POST** /tools/cross-post-formatter | Format one post for X, Threads, Bluesky, Mastodon and LinkedIn
 [**formatInstagramCaption**](FreeToolsApi.md#formatInstagramCaption) | **POST** /tools/instagram-line-break-generator | Keep blank lines in an Instagram caption with spacer lines, and count it
 [**formatLinkedInPost**](FreeToolsApi.md#formatLinkedInPost) | **POST** /tools/linkedin-post-formatter | Format a LinkedIn post with bold, italic and lists
 [**generateAltText**](FreeToolsApi.md#generateAltText) | **POST** /tools/alt-text-generator | Write alt text for an image with AI (needs a token, spends AI credits)
@@ -43,6 +44,7 @@ Method | HTTP request | Description
 [**getVideoSpecs**](FreeToolsApi.md#getVideoSpecs) | **GET** /tools/social-media-video-specs | Get social media video ratios, resolutions, lengths and file size limits per network, with sources
 [**listAwarenessDays**](FreeToolsApi.md#listAwarenessDays) | **GET** /tools/social-media-holiday-calendar | List public holidays, awareness days and social media days by date, country, type and topic, with sources
 [**listFreeTools**](FreeToolsApi.md#listFreeTools) | **GET** /tools | List the free tools
+[**pickGiveawayWinners**](FreeToolsApi.md#pickGiveawayWinners) | **POST** /tools/giveaway-comment-picker | Pick giveaway winners with a draw anyone can verify
 [**pickSocialMediaTool**](FreeToolsApi.md#pickSocialMediaTool) | **POST** /tools/social-media-tool-picker | Match your needs against social media management tools and see what each one misses
 [**planContentCalendar**](FreeToolsApi.md#planContentCalendar) | **POST** /tools/social-media-content-calendar-generator | Plan a social media content calendar and get it as CSV and ICS
 [**planPostingFrequency**](FreeToolsApi.md#planPostingFrequency) | **POST** /tools/posting-frequency-planner | Plan how often to post on each network
@@ -647,6 +649,41 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## formatCrossPost
+
+Format one post for X, Threads, Bluesky, Mastodon and LinkedIn
+
+Format one post for X, Threads, Bluesky, Mastodon and LinkedIn. The same logic as the free web tool at https://postboost.co/tools/cross-post-formatter. No account needed: call it without a token, or with any API token.
+
+### Example
+
+```bash
+postboost-cli formatCrossPost
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **freeToolFormatCrossPostRequest** | [**FreeToolFormatCrossPostRequest**](FreeToolFormatCrossPostRequest.md) |  |
+
+### Return type
+
+[**FreeToolFormatCrossPostResponse**](FreeToolFormatCrossPostResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1422,6 +1459,41 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not Applicable
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## pickGiveawayWinners
+
+Pick giveaway winners with a draw anyone can verify
+
+Pick giveaway winners with a draw anyone can verify. The same logic as the free web tool at https://postboost.co/tools/giveaway-comment-picker. No account needed: call it without a token, or with any API token.
+
+### Example
+
+```bash
+postboost-cli pickGiveawayWinners
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **freeToolPickGiveawayWinnersRequest** | [**FreeToolPickGiveawayWinnersRequest**](FreeToolPickGiveawayWinnersRequest.md) |  |
+
+### Return type
+
+[**FreeToolPickGiveawayWinnersResponse**](FreeToolPickGiveawayWinnersResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

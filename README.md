@@ -14,7 +14,7 @@ tar xzf postboost-cli.tar.gz
 | **Releases** | [github.com/postboost-co/postboost-cli/releases](https://github.com/postboost-co/postboost-cli/releases) |
 | **GitHub** | [postboost-co/postboost-cli](https://github.com/postboost-co/postboost-cli) |
 | **Docs** | [postboost.co/docs/api](https://postboost.co/docs/api) |
-| **Version** | v1.57.8 |
+| **Version** | v1.61.0 |
 
 ## Quick start
 
@@ -106,6 +106,7 @@ Class | Method | HTTP request | Description
 *FreeToolsApi* | [**cleanText**](docs/FreeToolsApi.md#cleantext) | **POST** /tools/ai-text-cleaner | Clean AI-written text: dashes, quotes, invisible characters, markdown
 *FreeToolsApi* | [**countCharacters**](docs/FreeToolsApi.md#countcharacters) | **POST** /tools/social-media-character-counter | Count characters as each network counts them
 *FreeToolsApi* | [**findAutomationRecipes**](docs/FreeToolsApi.md#findautomationrecipes) | **GET** /tools/social-media-automation-recipes | Find n8n, Zapier and Make recipes that automate social media posting through the PostBoost API
+*FreeToolsApi* | [**formatCrossPost**](docs/FreeToolsApi.md#formatcrosspost) | **POST** /tools/cross-post-formatter | Format one post for X, Threads, Bluesky, Mastodon and LinkedIn
 *FreeToolsApi* | [**formatInstagramCaption**](docs/FreeToolsApi.md#formatinstagramcaption) | **POST** /tools/instagram-line-break-generator | Keep blank lines in an Instagram caption with spacer lines, and count it
 *FreeToolsApi* | [**formatLinkedInPost**](docs/FreeToolsApi.md#formatlinkedinpost) | **POST** /tools/linkedin-post-formatter | Format a LinkedIn post with bold, italic and lists
 *FreeToolsApi* | [**generateAltText**](docs/FreeToolsApi.md#generatealttext) | **POST** /tools/alt-text-generator | Write alt text for an image with AI (needs a token, spends AI credits)
@@ -128,6 +129,7 @@ Class | Method | HTTP request | Description
 *FreeToolsApi* | [**getVideoSpecs**](docs/FreeToolsApi.md#getvideospecs) | **GET** /tools/social-media-video-specs | Get social media video ratios, resolutions, lengths and file size limits per network, with sources
 *FreeToolsApi* | [**listAwarenessDays**](docs/FreeToolsApi.md#listawarenessdays) | **GET** /tools/social-media-holiday-calendar | List public holidays, awareness days and social media days by date, country, type and topic, with sources
 *FreeToolsApi* | [**listFreeTools**](docs/FreeToolsApi.md#listfreetools) | **GET** /tools | List the free tools
+*FreeToolsApi* | [**pickGiveawayWinners**](docs/FreeToolsApi.md#pickgiveawaywinners) | **POST** /tools/giveaway-comment-picker | Pick giveaway winners with a draw anyone can verify
 *FreeToolsApi* | [**pickSocialMediaTool**](docs/FreeToolsApi.md#picksocialmediatool) | **POST** /tools/social-media-tool-picker | Match your needs against social media management tools and see what each one misses
 *FreeToolsApi* | [**planContentCalendar**](docs/FreeToolsApi.md#plancontentcalendar) | **POST** /tools/social-media-content-calendar-generator | Plan a social media content calendar and get it as CSV and ICS
 *FreeToolsApi* | [**planPostingFrequency**](docs/FreeToolsApi.md#planpostingfrequency) | **POST** /tools/posting-frequency-planner | Plan how often to post on each network

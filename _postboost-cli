@@ -358,6 +358,7 @@ case $state in
             "cleanText[Clean AI-written text: dashes, quotes, invisible characters, markdown]" \
             "countCharacters[Count characters as each network counts them]" \
             "findAutomationRecipes[Find n8n, Zapier and Make recipes that automate social media posting through the PostBoost API]" \
+            "formatCrossPost[Format one post for X, Threads, Bluesky, Mastodon and LinkedIn]" \
             "formatInstagramCaption[Keep blank lines in an Instagram caption with spacer lines, and count it]" \
             "formatLinkedInPost[Format a LinkedIn post with bold, italic and lists]" \
             "generateAltText[Write alt text for an image with AI (needs a token, spends AI credits)]" \
@@ -380,6 +381,7 @@ case $state in
             "getVideoSpecs[Get social media video ratios, resolutions, lengths and file size limits per network, with sources]" \
             "listAwarenessDays[List public holidays, awareness days and social media days by date, country, type and topic, with sources]" \
             "listFreeTools[List the free tools]" \
+            "pickGiveawayWinners[Pick giveaway winners with a draw anyone can verify]" \
             "pickSocialMediaTool[Match your needs against social media management tools and see what each one misses]" \
             "planContentCalendar[Plan a social media content calendar and get it as CSV and ICS]" \
             "planPostingFrequency[Plan how often to post on each network]" \
@@ -1019,6 +1021,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      formatCrossPost)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       formatInstagramCaption)
         local -a _op_arguments
         _op_arguments=(
@@ -1160,6 +1168,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       listFreeTools)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      pickGiveawayWinners)
         local -a _op_arguments
         _op_arguments=(
                               )

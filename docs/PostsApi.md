@@ -155,7 +155,10 @@ LinkedIn, or to continue a thread on X, Threads, Bluesky, Mastodon and Pixelfed:
 '''
 
 The comment is posted right after the post goes live. If the comment fails, the post
-stays published and the account's entry on the post reports the error.
+stays published and the account's entry on the post reports the error. LinkedIn posts
+the comment only when first comments are enabled for LinkedIn on this server; otherwise
+only item 0 is published and the response carries a 'linkedin_first_comment_unavailable'
+warning.
 
 ### Example
 
@@ -992,9 +995,9 @@ network requirements (text length, media count and type, links) for every given 
 whether or not the post is scheduled, and the guardrails (duplicate content, daily caps,
 account health). Always answers '200'; read 'valid'. 'warnings' lists what create-post
 would return as warnings: what the network will reject or ignore at publish (for example
-a Threads post over 500 characters as Threads counts them). 'valid' stays true for them;
-fix them before scheduling. Any workspace member, including viewers, may call it.
-Recommended agent loop: account health, validate, then create.
+a Threads post over 500 characters as Threads counts them, or with more than 5 links).
+'valid' stays true for them; fix them before scheduling. Any workspace member, including
+viewers, may call it. Recommended agent loop: account health, validate, then create.
 
 ### Example
 

@@ -137,6 +137,7 @@ _postboost-cli()
     operations["cleanText"]=1
     operations["countCharacters"]=1
     operations["findAutomationRecipes"]=1
+    operations["formatCrossPost"]=1
     operations["formatInstagramCaption"]=1
     operations["formatLinkedInPost"]=1
     operations["generateAltText"]=1
@@ -159,6 +160,7 @@ _postboost-cli()
     operations["getVideoSpecs"]=1
     operations["listAwarenessDays"]=1
     operations["listFreeTools"]=1
+    operations["pickGiveawayWinners"]=1
     operations["pickSocialMediaTool"]=1
     operations["planContentCalendar"]=1
     operations["planPostingFrequency"]=1
@@ -358,6 +360,7 @@ _postboost-cli()
     operation_parameters["cleanText"]=""
     operation_parameters["countCharacters"]=""
     operation_parameters["findAutomationRecipes"]="platform= trigger= q= "
+    operation_parameters["formatCrossPost"]=""
     operation_parameters["formatInstagramCaption"]=""
     operation_parameters["formatLinkedInPost"]=""
     operation_parameters["generateAltText"]=""
@@ -380,6 +383,7 @@ _postboost-cli()
     operation_parameters["getVideoSpecs"]="network= "
     operation_parameters["listAwarenessDays"]="from= to= country= type= topic= "
     operation_parameters["listFreeTools"]=""
+    operation_parameters["pickGiveawayWinners"]=""
     operation_parameters["pickSocialMediaTool"]=""
     operation_parameters["planContentCalendar"]=""
     operation_parameters["planPostingFrequency"]=""
