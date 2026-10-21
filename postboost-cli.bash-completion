@@ -120,6 +120,7 @@ _postboost-cli()
     operations["deleteCompetitor"]=1
     operations["getCompetitor"]=1
     operations["listCompetitors"]=1
+    operations["buildAgentSkill"]=1
     operations["buildHashtagGroups"]=1
     operations["buildUtmUrl"]=1
     operations["calculateAspectRatio"]=1
@@ -343,6 +344,7 @@ _postboost-cli()
     operation_parameters["deleteCompetitor"]="workspaceUuid= competitorId= "
     operation_parameters["getCompetitor"]="workspaceUuid= competitorId= "
     operation_parameters["listCompetitors"]="workspaceUuid= account_id= "
+    operation_parameters["buildAgentSkill"]=""
     operation_parameters["buildHashtagGroups"]=""
     operation_parameters["buildUtmUrl"]=""
     operation_parameters["calculateAspectRatio"]=""

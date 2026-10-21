@@ -4,6 +4,7 @@ All URIs are relative to */app/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**buildAgentSkill**](FreeToolsApi.md#buildAgentSkill) | **POST** /tools/social-media-agent-skill-builder | Build a SKILL.md, AGENTS.md or system prompt for a social media agent
 [**buildHashtagGroups**](FreeToolsApi.md#buildHashtagGroups) | **POST** /tools/hashtag-group-builder | Clean, dedupe and split hashtags into groups that fit a network&#39;s hashtag cap
 [**buildUtmUrl**](FreeToolsApi.md#buildUtmUrl) | **POST** /tools/utm-builder | Build a UTM-tagged campaign URL
 [**calculateAspectRatio**](FreeToolsApi.md#calculateAspectRatio) | **POST** /tools/aspect-ratio-calculator | Calculate an aspect ratio, or the missing side of an image at a given ratio
@@ -55,6 +56,41 @@ Method | HTTP request | Description
 [**summarizeReport**](FreeToolsApi.md#summarizeReport) | **POST** /tools/social-media-report-generator | Summarize social media post metrics into a report
 [**verifyWebhookSignature**](FreeToolsApi.md#verifyWebhookSignature) | **POST** /tools/webhook-signature-verifier | Verify an HMAC webhook signature
 
+
+
+## buildAgentSkill
+
+Build a SKILL.md, AGENTS.md or system prompt for a social media agent
+
+Build a SKILL.md, AGENTS.md or system prompt for a social media agent. The same logic as the free web tool at https://postboost.co/tools/social-media-agent-skill-builder. No account needed: call it without a token, or with any API token.
+
+### Example
+
+```bash
+postboost-cli buildAgentSkill
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **freeToolBuildAgentSkillRequest** | [**FreeToolBuildAgentSkillRequest**](FreeToolBuildAgentSkillRequest.md) |  |
+
+### Return type
+
+[**FreeToolBuildAgentSkillResponse**](FreeToolBuildAgentSkillResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
 ## buildHashtagGroups

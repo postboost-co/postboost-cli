@@ -341,7 +341,8 @@ case $state in
             "uploadReportBrandingLogo[Upload the report logo]"             "addCompetitor[Track a competitor]" \
             "deleteCompetitor[Stop tracking a competitor]" \
             "getCompetitor[Get a competitor]" \
-            "listCompetitors[List competitors]"             "buildHashtagGroups[Clean, dedupe and split hashtags into groups that fit a network's hashtag cap]" \
+            "listCompetitors[List competitors]"             "buildAgentSkill[Build a SKILL.md, AGENTS.md or system prompt for a social media agent]" \
+            "buildHashtagGroups[Clean, dedupe and split hashtags into groups that fit a network's hashtag cap]" \
             "buildUtmUrl[Build a UTM-tagged campaign URL]" \
             "calculateAspectRatio[Calculate an aspect ratio, or the missing side of an image at a given ratio]" \
             "calculateCarouselSlices[Split a wide image into seamless Instagram carousel slides]" \
@@ -914,6 +915,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
           "workspaceUuid=:[PATH] UUID of the workspace."
           "account_id=:[QUERY] Only competitors tracked from this Instagram account &#39;id&#39;."
           )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      buildAgentSkill)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       buildHashtagGroups)
