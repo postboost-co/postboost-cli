@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**buildAgentSkill**](FreeToolsApi.md#buildAgentSkill) | **POST** /tools/social-media-agent-skill-builder | Build a SKILL.md, AGENTS.md or system prompt for a social media agent
 [**buildHashtagGroups**](FreeToolsApi.md#buildHashtagGroups) | **POST** /tools/hashtag-group-builder | Clean, dedupe and split hashtags into groups that fit a network&#39;s hashtag cap
+[**buildLinkedinCarousel**](FreeToolsApi.md#buildLinkedinCarousel) | **POST** /tools/linkedin-carousel-maker | Turn text into LinkedIn carousel (PDF document) slides
 [**buildUtmUrl**](FreeToolsApi.md#buildUtmUrl) | **POST** /tools/utm-builder | Build a UTM-tagged campaign URL
 [**calculateAspectRatio**](FreeToolsApi.md#calculateAspectRatio) | **POST** /tools/aspect-ratio-calculator | Calculate an aspect ratio, or the missing side of an image at a given ratio
 [**calculateCarouselSlices**](FreeToolsApi.md#calculateCarouselSlices) | **POST** /tools/instagram-carousel-splitter | Split a wide image into seamless Instagram carousel slides
@@ -34,6 +35,7 @@ Method | HTTP request | Description
 [**generateLinkedInHeadline**](FreeToolsApi.md#generateLinkedInHeadline) | **POST** /tools/linkedin-headline-generator | Write five LinkedIn profile headlines with AI (needs a token, spends AI credits)
 [**generateQrCode**](FreeToolsApi.md#generateQrCode) | **POST** /tools/qr-code-generator | Generate a QR code (SVG) for a link or text, with optional UTM tags
 [**generateSocialPostsFromBlog**](FreeToolsApi.md#generateSocialPostsFromBlog) | **POST** /tools/blog-to-social-media | Turn a blog post (URL or text) into one social post per network with AI (needs a token, spends AI credits)
+[**generateSocialPostsFromVideo**](FreeToolsApi.md#generateSocialPostsFromVideo) | **POST** /tools/youtube-to-social-posts | Turn a YouTube video&#39;s captions into an X thread and social captions with AI (needs a token, spends AI credits)
 [**generateUsernames**](FreeToolsApi.md#generateUsernames) | **POST** /tools/social-media-username-generator | Generate social media usernames
 [**generateYoutubeDescription**](FreeToolsApi.md#generateYoutubeDescription) | **POST** /tools/youtube-description-generator | Write three YouTube video descriptions with AI (needs a token, spends AI credits)
 [**generateYoutubeTitles**](FreeToolsApi.md#generateYoutubeTitles) | **POST** /tools/youtube-title-generator | Write five YouTube video titles with AI (needs a token, spends AI credits)
@@ -115,6 +117,41 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FreeToolBuildHashtagGroupsResponse**](FreeToolBuildHashtagGroupsResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## buildLinkedinCarousel
+
+Turn text into LinkedIn carousel (PDF document) slides
+
+Turn text into LinkedIn carousel (PDF document) slides. The same logic as the free web tool at https://postboost.co/tools/linkedin-carousel-maker. No account needed: call it without a token, or with any API token.
+
+### Example
+
+```bash
+postboost-cli buildLinkedinCarousel
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **freeToolBuildLinkedinCarouselRequest** | [**FreeToolBuildLinkedinCarouselRequest**](FreeToolBuildLinkedinCarouselRequest.md) |  |
+
+### Return type
+
+[**FreeToolBuildLinkedinCarouselResponse**](FreeToolBuildLinkedinCarouselResponse.md)
 
 ### Authorization
 
@@ -1097,6 +1134,41 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FreeToolGenerateSocialPostsFromBlogResponse**](FreeToolGenerateSocialPostsFromBlogResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## generateSocialPostsFromVideo
+
+Turn a YouTube video's captions into an X thread and social captions with AI (needs a token, spends AI credits)
+
+Turn a YouTube video's captions into an X thread and social captions with AI (needs a token, spends AI credits). The same logic as the free web tool at https://postboost.co/tools/youtube-to-social-posts. Needs an API token (a scoped key needs the 'ai' ability and pays with its own workspace). A new generation spends 1 AI credit of the workspace you name (or your active workspace); a repeated identical request is answered from the cache for free.
+
+### Example
+
+```bash
+postboost-cli generateSocialPostsFromVideo
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **freeToolGenerateSocialPostsFromVideoRequest** | [**FreeToolGenerateSocialPostsFromVideoRequest**](FreeToolGenerateSocialPostsFromVideoRequest.md) |  |
+
+### Return type
+
+[**FreeToolGenerateSocialPostsFromVideoResponse**](FreeToolGenerateSocialPostsFromVideoResponse.md)
 
 ### Authorization
 

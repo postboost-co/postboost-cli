@@ -223,6 +223,7 @@ operation_parameters_minimum_occurrences["listCompetitors:::workspaceUuid"]=1
 operation_parameters_minimum_occurrences["listCompetitors:::account_id"]=0
 operation_parameters_minimum_occurrences["buildAgentSkill:::FreeToolBuildAgentSkillRequest"]=1
 operation_parameters_minimum_occurrences["buildHashtagGroups:::FreeToolBuildHashtagGroupsRequest"]=1
+operation_parameters_minimum_occurrences["buildLinkedinCarousel:::FreeToolBuildLinkedinCarouselRequest"]=1
 operation_parameters_minimum_occurrences["buildUtmUrl:::FreeToolBuildUtmUrlRequest"]=1
 operation_parameters_minimum_occurrences["calculateAspectRatio:::FreeToolCalculateAspectRatioRequest"]=1
 operation_parameters_minimum_occurrences["calculateCarouselSlices:::FreeToolCalculateCarouselSlicesRequest"]=1
@@ -253,6 +254,7 @@ operation_parameters_minimum_occurrences["generateHooks:::FreeToolGenerateHooksR
 operation_parameters_minimum_occurrences["generateLinkedInHeadline:::FreeToolGenerateLinkedInHeadlineRequest"]=1
 operation_parameters_minimum_occurrences["generateQrCode:::FreeToolGenerateQrCodeRequest"]=1
 operation_parameters_minimum_occurrences["generateSocialPostsFromBlog:::FreeToolGenerateSocialPostsFromBlogRequest"]=1
+operation_parameters_minimum_occurrences["generateSocialPostsFromVideo:::FreeToolGenerateSocialPostsFromVideoRequest"]=1
 operation_parameters_minimum_occurrences["generateUsernames:::FreeToolGenerateUsernamesRequest"]=1
 operation_parameters_minimum_occurrences["generateYoutubeDescription:::FreeToolGenerateYoutubeDescriptionRequest"]=1
 operation_parameters_minimum_occurrences["generateYoutubeTitles:::FreeToolGenerateYoutubeTitlesRequest"]=1
@@ -688,6 +690,7 @@ operation_parameters_maximum_occurrences["listCompetitors:::workspaceUuid"]=0
 operation_parameters_maximum_occurrences["listCompetitors:::account_id"]=0
 operation_parameters_maximum_occurrences["buildAgentSkill:::FreeToolBuildAgentSkillRequest"]=0
 operation_parameters_maximum_occurrences["buildHashtagGroups:::FreeToolBuildHashtagGroupsRequest"]=0
+operation_parameters_maximum_occurrences["buildLinkedinCarousel:::FreeToolBuildLinkedinCarouselRequest"]=0
 operation_parameters_maximum_occurrences["buildUtmUrl:::FreeToolBuildUtmUrlRequest"]=0
 operation_parameters_maximum_occurrences["calculateAspectRatio:::FreeToolCalculateAspectRatioRequest"]=0
 operation_parameters_maximum_occurrences["calculateCarouselSlices:::FreeToolCalculateCarouselSlicesRequest"]=0
@@ -718,6 +721,7 @@ operation_parameters_maximum_occurrences["generateHooks:::FreeToolGenerateHooksR
 operation_parameters_maximum_occurrences["generateLinkedInHeadline:::FreeToolGenerateLinkedInHeadlineRequest"]=0
 operation_parameters_maximum_occurrences["generateQrCode:::FreeToolGenerateQrCodeRequest"]=0
 operation_parameters_maximum_occurrences["generateSocialPostsFromBlog:::FreeToolGenerateSocialPostsFromBlogRequest"]=0
+operation_parameters_maximum_occurrences["generateSocialPostsFromVideo:::FreeToolGenerateSocialPostsFromVideoRequest"]=0
 operation_parameters_maximum_occurrences["generateUsernames:::FreeToolGenerateUsernamesRequest"]=0
 operation_parameters_maximum_occurrences["generateYoutubeDescription:::FreeToolGenerateYoutubeDescriptionRequest"]=0
 operation_parameters_maximum_occurrences["generateYoutubeTitles:::FreeToolGenerateYoutubeTitlesRequest"]=0
@@ -1150,6 +1154,7 @@ operation_parameters_collection_type["listCompetitors:::workspaceUuid"]=""
 operation_parameters_collection_type["listCompetitors:::account_id"]=""
 operation_parameters_collection_type["buildAgentSkill:::FreeToolBuildAgentSkillRequest"]=""
 operation_parameters_collection_type["buildHashtagGroups:::FreeToolBuildHashtagGroupsRequest"]=""
+operation_parameters_collection_type["buildLinkedinCarousel:::FreeToolBuildLinkedinCarouselRequest"]=""
 operation_parameters_collection_type["buildUtmUrl:::FreeToolBuildUtmUrlRequest"]=""
 operation_parameters_collection_type["calculateAspectRatio:::FreeToolCalculateAspectRatioRequest"]=""
 operation_parameters_collection_type["calculateCarouselSlices:::FreeToolCalculateCarouselSlicesRequest"]=""
@@ -1180,6 +1185,7 @@ operation_parameters_collection_type["generateHooks:::FreeToolGenerateHooksReque
 operation_parameters_collection_type["generateLinkedInHeadline:::FreeToolGenerateLinkedInHeadlineRequest"]=""
 operation_parameters_collection_type["generateQrCode:::FreeToolGenerateQrCodeRequest"]=""
 operation_parameters_collection_type["generateSocialPostsFromBlog:::FreeToolGenerateSocialPostsFromBlogRequest"]=""
+operation_parameters_collection_type["generateSocialPostsFromVideo:::FreeToolGenerateSocialPostsFromVideoRequest"]=""
 operation_parameters_collection_type["generateUsernames:::FreeToolGenerateUsernamesRequest"]=""
 operation_parameters_collection_type["generateYoutubeDescription:::FreeToolGenerateYoutubeDescriptionRequest"]=""
 operation_parameters_collection_type["generateYoutubeTitles:::FreeToolGenerateYoutubeTitlesRequest"]=""
@@ -1837,7 +1843,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.62.0)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.64.1)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -1959,6 +1965,7 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}buildAgentSkill${OFF};Build a SKILL.md, AGENTS.md or system prompt for a social media agent
   ${CYAN}buildHashtagGroups${OFF};Clean, dedupe and split hashtags into groups that fit a network's hashtag cap
+  ${CYAN}buildLinkedinCarousel${OFF};Turn text into LinkedIn carousel (PDF document) slides
   ${CYAN}buildUtmUrl${OFF};Build a UTM-tagged campaign URL
   ${CYAN}calculateAspectRatio${OFF};Calculate an aspect ratio, or the missing side of an image at a given ratio
   ${CYAN}calculateCarouselSlices${OFF};Split a wide image into seamless Instagram carousel slides
@@ -1987,6 +1994,7 @@ read -r -d '' ops <<EOF
   ${CYAN}generateLinkedInHeadline${OFF};Write five LinkedIn profile headlines with AI (needs a token, spends AI credits) (AUTH)
   ${CYAN}generateQrCode${OFF};Generate a QR code (SVG) for a link or text, with optional UTM tags
   ${CYAN}generateSocialPostsFromBlog${OFF};Turn a blog post (URL or text) into one social post per network with AI (needs a token, spends AI credits) (AUTH)
+  ${CYAN}generateSocialPostsFromVideo${OFF};Turn a YouTube video's captions into an X thread and social captions with AI (needs a token, spends AI credits) (AUTH)
   ${CYAN}generateUsernames${OFF};Generate social media usernames
   ${CYAN}generateYoutubeDescription${OFF};Write three YouTube video descriptions with AI (needs a token, spends AI credits) (AUTH)
   ${CYAN}generateYoutubeTitles${OFF};Write five YouTube video titles with AI (needs a token, spends AI credits) (AUTH)
@@ -2220,7 +2228,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.62.0)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.64.1)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2278,7 +2286,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.62.0)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.64.1)${OFF}"
     echo ""
 }
 
@@ -3875,6 +3883,40 @@ print_buildHashtagGroups_help() {
 }
 ##############################################################################
 #
+# Print help for buildLinkedinCarousel operation
+#
+##############################################################################
+print_buildLinkedinCarousel_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}buildLinkedinCarousel - Turn text into LinkedIn carousel (PDF document) slides${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Turn text into LinkedIn carousel (PDF document) slides. The same logic as the free web tool at https://postboost.co/tools/linkedin-carousel-maker. No account needed: call it without a token, or with any API token." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+}
+##############################################################################
+#
 # Print help for buildUtmUrl operation
 #
 ##############################################################################
@@ -4841,6 +4883,46 @@ print_generateSocialPostsFromBlog_help() {
     echo -e "${BOLD}${WHITE}generateSocialPostsFromBlog - Turn a blog post (URL or text) into one social post per network with AI (needs a token, spends AI credits)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
     echo -e "Turn a blog post (URL or text) into one social post per network with AI (needs a token, spends AI credits). The same logic as the free web tool at https://postboost.co/tools/blog-to-social-media. Needs an API token (a scoped key needs the 'ai' ability and pays with its own workspace). Each post spends 1 AI credit of the workspace you name (or your active workspace), so a call costs one credit per platform that comes back; results are not cached." | paste -sd' ' | fold -sw 80
+    echo -e ""
+    echo -e "${BOLD}${WHITE}Parameters${OFF}"
+    echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo ""
+    echo -e "${BOLD}${WHITE}Responses${OFF}"
+    code=200
+    echo -e "${result_color_table[${code:0:1}]}  200;The tool output.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=401
+    echo -e "${result_color_table[${code:0:1}]}  401;No API token, or an invalid one. The body has 'register_url' to create a free account.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=403
+    echo -e "${result_color_table[${code:0:1}]}  403;'workspace' is not a workspace you belong to, or your account has no workspace, or a scoped API key lacks the 'ai' ability or is bound to another workspace ('code: insufficient_scope').${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=413
+    echo -e "${result_color_table[${code:0:1}]}  413;The request body is larger than 128 KB.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=422
+    echo -e "${result_color_table[${code:0:1}]}  422;${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=429
+    echo -e "${result_color_table[${code:0:1}]}  429;The workspace has no AI credits left this billing cycle ('code: ai_credits_exhausted', 'upgrade_url'), or the per-minute limit was reached. Rate limit reached. Without a token: 30 calls per minute and 500 per UTC day per IP address (IPv6 per /64). With a token: 300 per minute per user; the Free plan also has 1,000 calls per UTC day, paid plans have no daily cap.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+        echo -e "       ${BOLD}${WHITE}Response headers${OFF}"
+        echo -e "       ${BLUE}X-RateLimit-Limit${OFF} - Calls allowed in the limit window closest to running out." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}X-RateLimit-Remaining${OFF} - Calls left in that window." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+        echo -e "       ${BLUE}Retry-After${OFF} - Seconds until the limit resets." | paste -sd' ' | fold -sw 80 | sed '2,$s/^/        /'
+    code=502
+    echo -e "${result_color_table[${code:0:1}]}  502;The AI provider failed or timed out. No credit was spent.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+    code=503
+    echo -e "${result_color_table[${code:0:1}]}  503;AI tools are switched off right now.${OFF}" | paste -sd' ' | column -t -s ';' | fold -sw 80 | sed '2,$s/^/       /'
+}
+##############################################################################
+#
+# Print help for generateSocialPostsFromVideo operation
+#
+##############################################################################
+print_generateSocialPostsFromVideo_help() {
+    echo ""
+    echo -e "${BOLD}${WHITE}generateSocialPostsFromVideo - Turn a YouTube video's captions into an X thread and social captions with AI (needs a token, spends AI credits)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e ""
+    echo -e "Turn a YouTube video's captions into an X thread and social captions with AI (needs a token, spends AI credits). The same logic as the free web tool at https://postboost.co/tools/youtube-to-social-posts. Needs an API token (a scoped key needs the 'ai' ability and pays with its own workspace). A new generation spends 1 AI credit of the workspace you name (or your active workspace); a repeated identical request is answered from the cache for free." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}body${OFF} ${BLUE}[application/json]${OFF} ${RED}(required)${OFF}${OFF} - " | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -11686,6 +11768,84 @@ call_buildHashtagGroups() {
 
 ##############################################################################
 #
+# Call buildLinkedinCarousel operation
+#
+##############################################################################
+call_buildLinkedinCarousel() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=()
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/linkedin-carousel-maker" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
 # Call buildUtmUrl operation
 #
 ##############################################################################
@@ -13761,6 +13921,84 @@ call_generateSocialPostsFromBlog() {
     local path
 
     if ! path=$(build_request_path "/app/api/tools/blog-to-social-media" path_parameter_names query_parameter_names); then
+        ERROR_MSG=$path
+        exit 1
+    fi
+    local method="POST"
+    local headers_curl
+    headers_curl=$(header_arguments_to_curl)
+    if [[ -n $header_accept ]]; then
+        headers_curl="${headers_curl} -H 'Accept: ${header_accept}'"
+    fi
+
+    local basic_auth_option=""
+    if [[ -n $basic_auth_credential ]]; then
+        basic_auth_option="-u ${basic_auth_credential}"
+    fi
+    local body_json_curl=""
+
+    #
+    # Check if the user provided 'Content-type' headers in the
+    # command line. If not try to set them based on the OpenAPI specification
+    # if values produces and consumes are defined unambiguously
+    #
+    if [[ -z $header_content_type ]]; then
+        header_content_type="application/json"
+    fi
+
+
+    if [[ -z $header_content_type && "$force" = false ]]; then
+        :
+        echo "ERROR: Request's content-type not specified!!!"
+        echo "This operation expects content-type in one of the following formats:"
+        echo -e "\\t- application/json"
+        echo ""
+        echo "Use '--content-type' to set proper content type"
+        exit 1
+    else
+        headers_curl="${headers_curl} -H 'Content-type: ${header_content_type}'"
+    fi
+
+
+    #
+    # If we have received some body content over pipe, pass it from the
+    # temporary file to cURL
+    #
+    if [[ -n $body_content_temp_file ]]; then
+        if [[ "$print_curl" = true ]]; then
+            echo "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        else
+            eval "cat ${body_content_temp_file} | curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} \"${host}${path}\" -d @-"
+        fi
+        rm "${body_content_temp_file}"
+    #
+    # If not, try to build the content body from arguments KEY==VALUE and KEY:=VALUE
+    #
+    else
+        body_json_curl=$(body_parameters_to_json)
+        if [[ "$print_curl" = true ]]; then
+            echo "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        else
+            eval "curl ${basic_auth_option} ${curl_arguments} ${headers_curl} -X ${method} ${body_json_curl} \"${host}${path}\""
+        fi
+    fi
+}
+
+##############################################################################
+#
+# Call generateSocialPostsFromVideo operation
+#
+##############################################################################
+call_generateSocialPostsFromVideo() {
+    # ignore error about 'path_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local path_parameter_names=()
+    # ignore error about 'query_parameter_names' being unused; passed by reference
+    # shellcheck disable=SC2034
+    local query_parameter_names=(  )
+    local path
+
+    if ! path=$(build_request_path "/app/api/tools/youtube-to-social-posts" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -22026,6 +22264,9 @@ case $key in
     buildHashtagGroups)
     operation="buildHashtagGroups"
     ;;
+    buildLinkedinCarousel)
+    operation="buildLinkedinCarousel"
+    ;;
     buildUtmUrl)
     operation="buildUtmUrl"
     ;;
@@ -22109,6 +22350,9 @@ case $key in
     ;;
     generateSocialPostsFromBlog)
     operation="generateSocialPostsFromBlog"
+    ;;
+    generateSocialPostsFromVideo)
+    operation="generateSocialPostsFromVideo"
     ;;
     generateUsernames)
     operation="generateUsernames"
@@ -22773,6 +23017,9 @@ case $operation in
     buildHashtagGroups)
     call_buildHashtagGroups
     ;;
+    buildLinkedinCarousel)
+    call_buildLinkedinCarousel
+    ;;
     buildUtmUrl)
     call_buildUtmUrl
     ;;
@@ -22856,6 +23103,9 @@ case $operation in
     ;;
     generateSocialPostsFromBlog)
     call_generateSocialPostsFromBlog
+    ;;
+    generateSocialPostsFromVideo)
+    call_generateSocialPostsFromVideo
     ;;
     generateUsernames)
     call_generateUsernames

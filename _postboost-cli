@@ -343,6 +343,7 @@ case $state in
             "getCompetitor[Get a competitor]" \
             "listCompetitors[List competitors]"             "buildAgentSkill[Build a SKILL.md, AGENTS.md or system prompt for a social media agent]" \
             "buildHashtagGroups[Clean, dedupe and split hashtags into groups that fit a network's hashtag cap]" \
+            "buildLinkedinCarousel[Turn text into LinkedIn carousel (PDF document) slides]" \
             "buildUtmUrl[Build a UTM-tagged campaign URL]" \
             "calculateAspectRatio[Calculate an aspect ratio, or the missing side of an image at a given ratio]" \
             "calculateCarouselSlices[Split a wide image into seamless Instagram carousel slides]" \
@@ -371,6 +372,7 @@ case $state in
             "generateLinkedInHeadline[Write five LinkedIn profile headlines with AI (needs a token, spends AI credits)]" \
             "generateQrCode[Generate a QR code (SVG) for a link or text, with optional UTM tags]" \
             "generateSocialPostsFromBlog[Turn a blog post (URL or text) into one social post per network with AI (needs a token, spends AI credits)]" \
+            "generateSocialPostsFromVideo[Turn a YouTube video's captions into an X thread and social captions with AI (needs a token, spends AI credits)]" \
             "generateUsernames[Generate social media usernames]" \
             "generateYoutubeDescription[Write three YouTube video descriptions with AI (needs a token, spends AI credits)]" \
             "generateYoutubeTitles[Write five YouTube video titles with AI (needs a token, spends AI credits)]" \
@@ -929,6 +931,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
+      buildLinkedinCarousel)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
       buildUtmUrl)
         local -a _op_arguments
         _op_arguments=(
@@ -1095,6 +1103,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       generateSocialPostsFromBlog)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      generateSocialPostsFromVideo)
         local -a _op_arguments
         _op_arguments=(
                               )
