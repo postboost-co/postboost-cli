@@ -1843,7 +1843,7 @@ build_request_path() {
 print_help() {
 cat <<EOF
 
-${BOLD}${WHITE}PostBoost API command line client (API version 1.64.1)${OFF}
+${BOLD}${WHITE}PostBoost API command line client (API version 1.64.2)${OFF}
 
 ${BOLD}${WHITE}Usage${OFF}
 
@@ -2228,7 +2228,7 @@ echo -e "              \\t\\t\\t\\t(e.g. 'https://postboost.co')"
 ##############################################################################
 print_about() {
     echo ""
-    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.64.1)${OFF}"
+    echo -e "${BOLD}${WHITE}PostBoost API command line client (API version 1.64.2)${OFF}"
     echo ""
     echo -e "License: Commercial"
     echo -e "Contact: hi@postboost.co"
@@ -2286,7 +2286,7 @@ echo "$appdescription" | paste -sd' ' | fold -sw 80
 ##############################################################################
 print_version() {
     echo ""
-    echo -e "${BOLD}PostBoost API command line client (API version 1.64.1)${OFF}"
+    echo -e "${BOLD}PostBoost API command line client (API version 1.64.2)${OFF}"
     echo ""
 }
 
@@ -6202,7 +6202,7 @@ print_deleteMediaBulk_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteMediaBulk - Delete media (bulk)${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Delete one or more media items by their numeric IDs or UUIDs (both may be mixed, up to 500 per request)." | paste -sd' ' | fold -sw 80
+    echo -e "Delete one or more media items by their numeric IDs or UUIDs (both may be mixed, up to 500 per request). Deleting a media item also removes it from every post that uses it, including scheduled posts; those posts publish without it (or fail where the network requires media)." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
@@ -6228,7 +6228,7 @@ print_deleteMediaFolder_help() {
     echo ""
     echo -e "${BOLD}${WHITE}deleteMediaFolder - Delete media folder${OFF}${BLUE}(AUTH - )${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Deletes a folder. By default its media and sub-folders move up to the folder's parent; with 'delete_media' set to true every media item below the folder is deleted as well." | paste -sd' ' | fold -sw 80
+    echo -e "Deletes a folder. By default its media and sub-folders move up to the folder's parent; with 'delete_media' set to true every media item below the folder is deleted as well. Deleting a media item also removes it from every post that uses it, including scheduled posts; those posts publish without it (or fail where the network requires media)." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}workspaceUuid${OFF} ${BLUE}[string]${OFF} ${RED}(required)${OFF} ${CYAN}(default: null)${OFF} - UUID of the workspace. ${YELLOW}Specify as: workspaceUuid=value${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
