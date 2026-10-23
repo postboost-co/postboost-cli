@@ -365,6 +365,7 @@ case $state in
             "formatLinkedInPost[Format a LinkedIn post with bold, italic and lists]" \
             "generateAltText[Write alt text for an image with AI (needs a token, spends AI credits)]" \
             "generateBio[Write five profile bios with AI (needs a token, spends AI credits)]" \
+            "generateBrandVoice[Derive a brand voice from 3 to 10 of your posts with AI: traits with quoted evidence, a guide, an AI system prompt and PostBoost brand voice JSON (needs a token, spends AI credits)]" \
             "generateCaption[Write three post captions for a topic with AI (needs a token, spends AI credits)]" \
             "generateFancyText[Convert text to fancy Unicode styles]" \
             "generateHashtags[Generate hashtags for a post topic with AI (needs a token, spends AI credits)]" \
@@ -1061,6 +1062,12 @@ effect. Keys are scoped to your user, the workspace, the method and the path."
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
       generateBio)
+        local -a _op_arguments
+        _op_arguments=(
+                              )
+        _describe -t actions 'operations' _op_arguments -S '' && ret=0
+        ;;
+      generateBrandVoice)
         local -a _op_arguments
         _op_arguments=(
                               )

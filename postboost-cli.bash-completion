@@ -144,6 +144,7 @@ _postboost-cli()
     operations["formatLinkedInPost"]=1
     operations["generateAltText"]=1
     operations["generateBio"]=1
+    operations["generateBrandVoice"]=1
     operations["generateCaption"]=1
     operations["generateFancyText"]=1
     operations["generateHashtags"]=1
@@ -370,6 +371,7 @@ _postboost-cli()
     operation_parameters["formatLinkedInPost"]=""
     operation_parameters["generateAltText"]=""
     operation_parameters["generateBio"]=""
+    operation_parameters["generateBrandVoice"]=""
     operation_parameters["generateCaption"]=""
     operation_parameters["generateFancyText"]=""
     operation_parameters["generateHashtags"]=""
